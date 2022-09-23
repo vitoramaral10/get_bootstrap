@@ -4,26 +4,8 @@ import 'package:get_bootstrap/components/header.dart';
 import 'package:get_bootstrap/components/theme_data.dart';
 import 'package:get_bootstrap/layout/bt_container.dart';
 
-void main() {
-  runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: BootstrapThemeData.light,
-      routes: Routes.list,
-      home: const MyApp()));
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
+class Docs extends StatelessWidget {
+  const Docs({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +82,19 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ]),
+            ),
+          ),
+          Expanded(
+            child: BTContainer(
+              fluid: true,
+              child: SingleChildScrollView(
+                child: Column(
+                    children: List.generate(
+                        200,
+                        (index) => const ListTile(
+                              title: Text('asdsa'),
+                            ))),
+              ),
             ),
           ),
         ],
