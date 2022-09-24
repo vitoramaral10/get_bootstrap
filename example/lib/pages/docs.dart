@@ -14,7 +14,6 @@ class Docs extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Header(
-            elevation: 8,
             backgroundColor: const Color(0xFF712CF9),
             padding: const EdgeInsets.symmetric(vertical: 12),
             collapsedChild: Expanded(

@@ -20,7 +20,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (buildContext, boxConstraints) {
       return Material(
-        elevation: elevation,
+        elevation: 8,
         child: Container(
           padding: boxConstraints.maxWidth <= 768
               ? const EdgeInsets.symmetric(horizontal: 24, vertical: 8)
