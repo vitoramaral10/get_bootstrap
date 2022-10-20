@@ -9,6 +9,7 @@ class BTContainer extends StatelessWidget {
   final bool xl;
   final bool xxl;
   final bool fluid;
+  final EdgeInsetsGeometry? margin;
 
   const BTContainer({
     super.key,
@@ -19,6 +20,7 @@ class BTContainer extends StatelessWidget {
     this.xl = false,
     this.xxl = false,
     this.fluid = false,
+    this.margin,
   });
 
   @override
@@ -27,7 +29,7 @@ class BTContainer extends StatelessWidget {
       builder: (buildContext, boxConstraints) {
         return Center(
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+            margin: margin,
             width: _currentWidth(buildContext, boxConstraints),
             child: child,
           ),

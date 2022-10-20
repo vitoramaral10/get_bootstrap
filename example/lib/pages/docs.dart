@@ -1,29 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get_bootstrap/components/header.dart';
-import 'package:get_bootstrap/components/theme_data.dart';
+import 'package:get_bootstrap/bootstrap.dart';
 import 'package:get_bootstrap/layout/bt_container.dart';
 
 import 'widgets/header_widget.dart';
+import 'widgets/sidebar.dart';
 
 class Docs extends StatelessWidget {
   const Docs({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          const HeaderWidget(),
-          BTContainer(
-            xxl: true,
-            child: SingleChildScrollView(
-              child: Wrap(),
-            ),
+    return LayoutBuilder(builder: (context, boxConstraints) {
+      bool showSidebar = Bootstrap.showSidebar(boxConstraints);
+
+      return Scaffold(
+        drawer: (!showSidebar) ? const Sidebar() : null,
+        body: BTContainer(
+          xl: true,
+          child: Row(
+            children: [
+              if (showSidebar) const Sidebar(),
+              Expanded(
+                child: Column(
+                  children: [
+                    const HeaderWidget(),
+                    Container(
+                      color: Colors.red,
+                      height: 20,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    );
+        ),
+      );
+    });
   }
 }
