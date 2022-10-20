@@ -12,149 +12,154 @@ class HeaderWidget extends StatefulWidget {
 class _HeaderWidgetState extends State<HeaderWidget> {
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: const Color(0xFF712CF9),
-      title: (Scaffold.hasDrawer(context))
-          ? Center(
-              child: Image.asset(
-              'assets/images/bootstrap_logo.webp',
-              height: 42,
-            ))
-          : Row(children: [
-              Image.asset(
+    return SizedBox(
+      height: 56,
+      child: AppBar(
+        backgroundColor: const Color(0xFF712CF9),
+        title: (Scaffold.hasDrawer(context))
+            ? Center(
+                child: Image.asset(
                 'assets/images/bootstrap_logo.webp',
                 height: 42,
-              ),
-              TextButton(
-                onPressed: () {},
-                style: BootstrapThemeData.navLinkActive(),
-                child: const Text('Docs'),
-              ),
-              TextButton(
-                onPressed: () {},
-                style: BootstrapThemeData.navLink(),
-                child: const Text('Examples'),
-              ),
-              TextButton(
-                onPressed: () {},
-                style: BootstrapThemeData.navLink(),
-                child: const Text('Icons'),
-              ),
-              TextButton(
-                onPressed: () {},
-                style: BootstrapThemeData.navLink(),
-                child: const Text('Themes'),
-              ),
-              TextButton(
-                onPressed: () {},
-                style: BootstrapThemeData.navLink(),
-                child: const Text('Blog'),
-              ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    FontAwesomeIcons.github,
-                    color: Colors.white.withOpacity(0.85),
-                    size: 16,
-                  ),
+              ))
+            : Row(children: [
+                Image.asset(
+                  'assets/images/bootstrap_logo.webp',
+                  height: 42,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    FontAwesomeIcons.twitter,
-                    color: Colors.white.withOpacity(0.85),
-                    size: 16,
-                  ),
+                TextButton(
+                  onPressed: () {},
+                  style: BootstrapThemeData.navLinkActive(),
+                  child: const Text('Docs'),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    'assets/images/open.webp',
-                    color: Colors.white.withOpacity(0.85),
-                    height: 16,
-                  ),
+                TextButton(
+                  onPressed: () {},
+                  style: BootstrapThemeData.navLink(),
+                  child: const Text('Examples'),
                 ),
-              ),
-              Container(
-                height: 34,
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: VerticalDivider(
-                  color: Colors.white.withOpacity(0.25),
-                  width: 1,
+                TextButton(
+                  onPressed: () {},
+                  style: BootstrapThemeData.navLink(),
+                  child: const Text('Icons'),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: PopupMenuButton(
-                  offset: const Offset(0, 32),
-                  itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v5.2'),
-                    ),
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v5.1.3'),
-                    ),
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v5.0.2'),
-                    ),
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v4.6.x'),
-                    ),
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v3.4.1'),
-                    ),
-                    PopupMenuItem(
-                      height: 36,
-                      onTap: () async {},
-                      child: const Text('v2.3.2'),
-                    ),
-                  ],
-                  child: Center(
-                    child: Row(
-                      children: [
-                        Text(
-                          'v5.2',
-                          style:
-                              Theme.of(context).textTheme.labelLarge?.copyWith(
-                                    color: Colors.white.withOpacity(0.85),
-                                  ),
-                        ),
-                        const SizedBox(
-                          width: 8,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.caretDown,
-                          size: 12,
-                          color: Colors.white.withOpacity(0.85),
-                        )
-                      ],
+                TextButton(
+                  onPressed: () {},
+                  style: BootstrapThemeData.navLink(),
+                  child: const Text('Themes'),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  style: BootstrapThemeData.navLink(),
+                  child: const Text('Blog'),
+                ),
+                const Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Icon(
+                      FontAwesomeIcons.github,
+                      color: Colors.white.withOpacity(0.85),
+                      size: 16,
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                width: 12,
-              ),
-            ]),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Icon(
+                      FontAwesomeIcons.twitter,
+                      color: Colors.white.withOpacity(0.85),
+                      size: 16,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      'assets/images/open.webp',
+                      color: Colors.white.withOpacity(0.85),
+                      height: 16,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 34,
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: VerticalDivider(
+                    color: Colors.white.withOpacity(0.25),
+                    width: 1,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: PopupMenuButton(
+                    offset: const Offset(0, 32),
+                    itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v5.2'),
+                      ),
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v5.1.3'),
+                      ),
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v5.0.2'),
+                      ),
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v4.6.x'),
+                      ),
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v3.4.1'),
+                      ),
+                      PopupMenuItem(
+                        height: 36,
+                        onTap: () async {},
+                        child: const Text('v2.3.2'),
+                      ),
+                    ],
+                    child: Center(
+                      child: Row(
+                        children: [
+                          Text(
+                            'v5.2',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
+                                ?.copyWith(
+                                  color: Colors.white.withOpacity(0.85),
+                                ),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.caretDown,
+                            size: 12,
+                            color: Colors.white.withOpacity(0.85),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 12,
+                ),
+              ]),
+      ),
     );
   }
 }

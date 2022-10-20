@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class BootstrapThemeData {
   static ThemeData light = ThemeData(
-    fontFamily: 'DejaVu',
-    
+    scaffoldBackgroundColor: const Color(0xFFFFFFFF),
     popupMenuTheme: const PopupMenuThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(

@@ -12,22 +12,8 @@ dependencies:
     sdk: flutter
   google_fonts: ^3.0.1
 
+
 dev_dependencies:
   flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
-
-flutter:
-  plugin:
-    platforms:
-      some_platform:
-        pluginClass: somePluginClass
-  fonts:
-    - family: DejaVu
-      fonts:
-        - asset: assets/fonts/dejavu/DejaVuSans.ttf
-        - asset: assets/fonts/dejavu/DejaVuSans-Bold.ttf
-        - asset: assets/fonts/dejavu/DejaVuSansMono-Bold.ttf
-        - asset: assets/fonts/dejavu/DejaVuSansMono.ttf
-        - asset: assets/fonts/dejavu/DejaVuSerif-Bold.ttf
-        - asset: assets/fonts/dejavu/DejaVuSerif.ttf

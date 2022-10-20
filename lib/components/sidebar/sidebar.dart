@@ -12,12 +12,9 @@ class BTSidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       width: 268,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: children,
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: children,
       ),
     );
   }

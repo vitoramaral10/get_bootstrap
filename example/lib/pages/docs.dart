@@ -16,7 +16,6 @@ class Docs extends StatelessWidget {
       return Scaffold(
         drawer: (!showSidebar) ? const Sidebar() : null,
         body: BTContainer(
-          xl: true,
           child: Row(
             children: [
               if (showSidebar) const Sidebar(),
