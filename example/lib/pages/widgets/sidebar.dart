@@ -173,18 +173,23 @@ class Sidebar extends StatelessWidget {
             Text('Icons'),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'About',
           icon: FontAwesomeIcons.globe,
           iconColor: BTColors.indigo,
           children: [
-            Text('Overview'),
-            Text('Team'),
-            Text('Brand'),
-            Text('License'),
-            Text('Translations'),
+            const Text('Overview'),
+            const Text('Team'),
+            const Text('Brand'),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/about/license');
+              },
+              child: const Text('License'),
+            ),
+            const Text('Translations'),
           ],
-        )
+        ),
       ],
     );
   }

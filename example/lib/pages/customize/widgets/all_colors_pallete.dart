@@ -1,113 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get_bootstrap/bootstrap.dart';
 import 'package:get_bootstrap/grid/bt_col.dart';
 import 'package:get_bootstrap/grid/bt_row.dart';
 import 'package:get_bootstrap/helpers/colors.dart';
-import 'package:get_bootstrap/layout/bt_container.dart';
-
-import '../widgets/header_widget.dart';
-import '../widgets/sidebar.dart';
-
-class CustomizeColor extends StatelessWidget {
-  const CustomizeColor({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, boxConstraints) {
-      bool showSidebar = Bootstrap.showSidebar(boxConstraints);
-
-      return Title(
-        color: BTColors.purple,
-        title: 'Color · Bootstrap v5.2',
-        child: Scaffold(
-          drawer: (!showSidebar) ? const Sidebar() : null,
-          body: Stack(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 56),
-                child: BTContainer(
-                  xxl: true,
-                  child: Row(
-                    children: [
-                      if (showSidebar) const Sidebar(),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 16.0, right: 16.0, bottom: 16.0),
-                          child: ListView(
-                            shrinkWrap: true,
-                            children: [
-                              Text(
-                                'Color',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.',
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 32.0),
-                                child: Text(
-                                  'Theme colors',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium,
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'We use a subset of all colors to create a smaller color palette for generating color schemes, also available as variables.',
-                                ),
-                              ),
-                              const ThemePallete(),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'All these colors are available as a BTColor class.',
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 32.0),
-                                child: Text(
-                                  'All colors',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium,
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'All Bootstrap colors are available as variables.',
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'Be sure to monitor contrast ratios as you customize colors. As shown below, we’ve added three contrast ratios to each of the main colors—one for the swatch’s current colors, one for against white, and one for against black.',
-                                ),
-                              ),
-                              const AllColorsPallete(),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              HeaderWidget(showSidebarButton: showSidebar),
-            ],
-          ),
-        ),
-      );
-    });
-  }
-}
 
 class AllColorsPallete extends StatelessWidget {
   const AllColorsPallete({
@@ -133,8 +27,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -199,8 +95,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue500',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue500',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -213,8 +111,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue600',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue600',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -227,8 +127,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -241,8 +143,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -255,8 +159,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.blue900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.blue900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -278,8 +184,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.indigo',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.indigo',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -331,8 +239,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.indigo400',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.indigo400',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -345,8 +255,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.indigo500',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.indigo500',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -360,7 +272,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.indigo600',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -374,7 +286,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.indigo700',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -388,7 +300,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.indigo800',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -402,7 +314,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.indigo900',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -425,7 +337,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -491,7 +403,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple500',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -505,7 +417,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple600',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -519,7 +431,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple700',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -533,7 +445,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple800',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -547,7 +459,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.purple900',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -570,7 +482,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -636,7 +548,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink500',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -650,7 +562,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink600',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -664,7 +576,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink700',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -678,7 +590,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink800',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -692,7 +604,7 @@ class AllColorsPallete extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text('BTColors.pink900',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.white),),
                   ),
                 ),
               ),
@@ -714,8 +626,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -780,8 +694,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red500',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red500',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -794,8 +710,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red600',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red600',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -808,8 +726,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -822,8 +742,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -836,8 +758,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.red900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.red900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -950,8 +874,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.orange700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.orange700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -964,8 +890,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.orange800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.orange800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -978,8 +906,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.orange900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.orange900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1105,8 +1035,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.yellow800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.yellow800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1119,8 +1051,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.yellow900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.yellow900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1142,8 +1076,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1208,8 +1144,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green500',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green500',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1222,8 +1160,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green600',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green600',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1236,8 +1176,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1250,8 +1192,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1264,8 +1208,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.green900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.green900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1378,8 +1324,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.teal700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.teal700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1392,8 +1340,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.teal800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.teal800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1406,8 +1356,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.teal900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.teal900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1520,8 +1472,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.cyan700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.cyan700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1534,8 +1488,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.cyan800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.cyan800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1548,8 +1504,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.cyan900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.cyan900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1649,8 +1607,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.gray600',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.gray600',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1663,8 +1623,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.gray700',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.gray700',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1677,8 +1639,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.gray800',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.gray800',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1691,8 +1655,10 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.gray900',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.gray900',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -1714,14 +1680,16 @@ class AllColorsPallete extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('BTColors.black',
-                        style: TextStyle(color: Colors.white)),
+                    child: Text(
+                      'BTColors.black',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
               Container(
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1),
+                decoration: const BoxDecoration(
+                  border: Border.fromBorderSide(BorderSide(width: 1)),
                   color: BTColors.white,
                 ),
                 height: 50,
@@ -1736,170 +1704,6 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ThemePallete extends StatelessWidget {
-  const ThemePallete({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BTRow(
-      children: [
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.primary,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Primary', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.secondary,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Secondary', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.success,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Success', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.danger,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Danger', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.warning,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Warning',
-                ),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.info,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Info',
-                ),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.light,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Light',
-                ),
-              ),
-            ),
-          ),
-        ),
-        BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
-          child: Container(
-            height: 50,
-            margin: const EdgeInsets.all(8),
-            width: double.infinity,
-            color: BTColors.dark,
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Dark', style: TextStyle(color: Colors.white)),
-              ),
-            ),
           ),
         ),
       ],

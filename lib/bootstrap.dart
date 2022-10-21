@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Bootstrap {
+  /// Informa se pode mostrar o menu lateral conforme a largura da tela.
   static bool showSidebar(BoxConstraints boxConstraints) {
     return ['xxl', 'xl', 'lg'].contains(getLayoutSize(boxConstraints));
   }
 
+  /// Informa o tamanho da tela com base na largura de pixels da mesma.
   static String getLayoutSize(BoxConstraints boxConstraints) {
     const int xsWidth = 576;
     const int smWidth = 768;

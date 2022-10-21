@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Paleta de cores utilizadas no bootstrap.
 class BTColors {
   static const Color primary = Color(0xFF0D6EFD);
   static const Color secondary = Color(0xFF6C757D);
