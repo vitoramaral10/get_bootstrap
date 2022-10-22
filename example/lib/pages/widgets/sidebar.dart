@@ -11,23 +11,28 @@ class Sidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BTSidebar(
       children: [
-        const BTSidebarGroup(
-          title: 'Getting started',
+        BTSidebarGroup(
+          title: 'Começando',
           icon: FontAwesomeIcons.bookOpen,
           iconColor: BTColors.indigo,
           children: [
-            Text('Introduction'),
-            Text('Download'),
-            Text('Contents'),
-            Text('Browsers & devices'),
-            Text('JavaScript'),
-            Text('Webpack'),
-            Text('Parcel'),
-            Text('Vite'),
-            Text('Accessibility'),
-            Text('RFS'),
-            Text('RTL'),
-            Text('Contribute'),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/getting-started/introduction');
+              },
+              child: const Text('Introdução'),
+            ),
+            const Text('Download'),
+            const Text('Contents'),
+            const Text('Browsers & devices'),
+            const Text('JavaScript'),
+            const Text('Webpack'),
+            const Text('Parcel'),
+            const Text('Vite'),
+            const Text('Accessibility'),
+            const Text('RFS'),
+            const Text('RTL'),
+            const Text('Contribute'),
           ],
         ),
         BTSidebarGroup(
@@ -64,16 +69,21 @@ class Sidebar extends StatelessWidget {
             Text('CSS Grid'),
           ],
         ),
-        const BTSidebarGroup(
+         BTSidebarGroup(
           title: 'Content',
           icon: FontAwesomeIcons.file,
           iconColor: BTColors.gray600,
           children: [
-            Text('Reboot'),
-            Text('Typography'),
-            Text('Images'),
-            Text('Tables'),
-            Text('Figures'),
+            const Text('Reboot'),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/content/typography');
+              },
+              child: const Text('Typography'),
+            ),
+            const Text('Images'),
+            const Text('Tables'),
+            const Text('Figures'),
           ],
         ),
         const BTSidebarGroup(
