@@ -10,78 +10,13 @@ class BootstrapThemeData {
         ),
       ),
     ),
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
-        fontSize: 40,
-        fontWeight: FontWeight.w500,
-        height: 1.2,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      headlineMedium: TextStyle(
-        fontSize: 28,
-        fontWeight: FontWeight.w500,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      headlineSmall: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w500,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      displayLarge: TextStyle(
-        fontSize: 80,
-        fontWeight: FontWeight.w300,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      displayMedium: TextStyle(
-        fontSize: 60,
-        fontWeight: FontWeight.w300,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      displaySmall: TextStyle(
-        fontSize: 40,
-        fontWeight: FontWeight.w300,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-      ),
-      labelLarge: TextStyle(
-        fontSize: 16,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
-      bodyLarge: TextStyle(
-        fontSize: 16,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
-      bodyMedium: TextStyle(
-        fontSize: 14,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
-      bodySmall: TextStyle(
-        fontSize: 12,
-        height: 1.5,
-        letterSpacing: 1,
-        color: Colors.black,
-        fontWeight: FontWeight.w400,
-      ),
+    // ignore: prefer_const_constructors
+    dividerTheme: DividerThemeData(
+      color: BTColors.gray300,
+      thickness: 1,
+      space: 1,
     ),
+    textTheme: GoogleFonts.robotoTextTheme(),
   );
 
   static ButtonStyle navLink({Color color = Colors.white}) {
