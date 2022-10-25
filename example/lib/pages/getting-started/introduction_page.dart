@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_bootstrap/bootstrap.dart';
-import 'package:get_bootstrap/helpers/colors.dart';
-import 'package:get_bootstrap/layout/bt_container.dart';
+import 'package:get_bootstrap/get_bootstrap.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -12,7 +10,7 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, boxConstraints) {
-      bool showSidebar = Bootstrap.showSidebar(boxConstraints);
+      bool showSidebar = GetBootstrap.showSidebar(boxConstraints);
 
       return Title(
         color: BTColors.purple,

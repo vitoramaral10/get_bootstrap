@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of get_bootstrap;
 
 /// Os contêineres são um bloco de construção fundamental do Bootstrap que contém, preenche e alinha seu conteúdo em um determinado dispositivo ou viewport.
 class BTContainer extends StatelessWidget {

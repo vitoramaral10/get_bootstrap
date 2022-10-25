@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'bt_col.dart';
+part of get_bootstrap;
 
 class BTRow extends StatelessWidget {
   final List<BTCol> children;

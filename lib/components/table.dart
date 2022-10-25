@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../helpers/colors.dart';
+import '../get_bootstrap.dart';
 
 class BTTable extends StatelessWidget {
   final List<String> head;
