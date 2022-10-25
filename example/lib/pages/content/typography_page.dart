@@ -293,7 +293,7 @@ class TypographyPage extends StatelessWidget {
                                   style: GetBootstrap.typography.lead,
                                 ),
                                 footer: HighlightView(
-                                  'Text(\n    "This is a lead paragraph. It stands out from regular paragraphs.",\n    style: GetBootstrap.typography.lead,\n),',
+                                  'Text(\n    "Este é um parágrafo inicial. Destaca-se de parágrafos regulares.",\n    style: GetBootstrap.typography.lead,\n),',
                                   language: 'dart',
                                   theme: foundationTheme,
                                   padding: const EdgeInsets.all(8),
@@ -321,7 +321,7 @@ class TypographyPage extends StatelessWidget {
                                       'Esta linha mostra o texto padrão.',
                                     ),
                                     const Text(
-                                      'Esta linha de texto deve ser tratada como texto excluído..',
+                                      'Esta linha de texto deve ser tratada como texto excluído.',
                                       style: TextStyle(
                                         decoration: TextDecoration.lineThrough,
                                       ),
@@ -333,7 +333,7 @@ class TypographyPage extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                      'Esta linha de texto deve ser tratada como letras miúdas  .',
+                                      'Esta linha de texto deve ser tratada como letras miúdas.',
                                       style: GetBootstrap.typography.small,
                                     ),
                                     const Text(
@@ -356,7 +356,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text("You can use the mark tag to highlight text."),',
+                                        'Text("Esta linha mostra o texto padrão."),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
@@ -365,7 +365,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text(\n   "This line of text is meant to be treated as no longer accurate.",\n   style: TextStyle(\n     decoration: TextDecoration.lineThrough,\n   ),\n),',
+                                        'Text(\n   "Esta linha de texto deve ser tratada como texto excluído.",\n   style: TextStyle(\n     decoration: TextDecoration.lineThrough,\n   ),\n),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
@@ -374,7 +374,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text(\n   "This line of text will render as underlined.",\n   style: TextStyle(\n     decoration: TextDecoration.underline,\n   ),\n),',
+                                        'Text(\n   "Esta linha de texto será renderizada como sublinhada.",\n   style: TextStyle(\n     decoration: TextDecoration.underline,\n   ),\n),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
@@ -383,7 +383,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text(\n   "This line of text is meant to be treated as fine print.",\n   style: GetBootstrap.typography.small,\n),',
+                                        'Text(\n   "Esta linha de texto deve ser tratada como letras miúdas.",\n   style: GetBootstrap.typography.small,\n),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
@@ -392,7 +392,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text(\n   "This line rendered as bold text.",\n   style: TextStyle(fontWeight: FontWeight.bold,),\n),',
+                                        'Text(\n   "Esta linha renderizada como texto em negrito.",\n   style: TextStyle(fontWeight: FontWeight.bold,),\n),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
@@ -401,7 +401,7 @@ class TypographyPage extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: HighlightView(
-                                        'Text(\n   "This line rendered as italicized text.",\n   style: TextStyle(fontStyle: FontStyle.italic,),\n),',
+                                        'Text(\n   "Esta linha renderizada como texto em itálico.",\n   style: TextStyle(fontStyle: FontStyle.italic,),\n),',
                                         language: 'dart',
                                         theme: foundationTheme,
                                         padding: const EdgeInsets.all(8),
