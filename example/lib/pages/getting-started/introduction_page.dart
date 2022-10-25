@@ -42,8 +42,7 @@ class IntroductionPage extends StatelessWidget {
                               ),
                               Text(
                                 'Comece com o Bootstrap',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
+                                style: GetBootstrap.typography.headline1,
                               ),
                               Text(
                                 'Bootstrap é um poderoso kit de ferramentas de front-end repleto de recursos. Construa qualquer coisa – do protótipo à produção – em minutos.',
@@ -54,8 +53,7 @@ class IntroductionPage extends StatelessWidget {
                               ),
                               Text(
                                 'Começo rápido',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               const Text(
                                 'Comece incluindo CSS e JavaScript prontos para produção do Bootstrap via CDN sem a necessidade de etapas de compilação. Veja na prática com esta demonstração do Bootstrap CodePen .',

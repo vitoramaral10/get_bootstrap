@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_bootstrap/components/table.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
 
 import '../widgets/header_widget.dart';
@@ -42,8 +43,7 @@ class TypographyPage extends StatelessWidget {
                               ),
                               Text(
                                 'Typography',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
+                                style: GetBootstrap.typography.headline1,
                               ),
                               Text(
                                 'Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.',
@@ -54,8 +54,7 @@ class TypographyPage extends StatelessWidget {
                               ),
                               Text(
                                 'Global settings',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               const Text(
                                 'Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.',
@@ -91,86 +90,202 @@ class TypographyPage extends StatelessWidget {
                               ),
                               Text(
                                 'Headings',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  'All HTML headings, <h1> through <h6>, are available.',
+                                ),
+                              ),
+                              BTTable(
+                                head: const ['Heading', 'Example'],
+                                body: [
+                                  [
+                                    const Text('headline1'),
+                                    Text(
+                                      'h1. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline1,
+                                    ),
+                                  ],
+                                  [
+                                    const Text('headline2'),
+                                    Text(
+                                      'h2. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline2,
+                                    ),
+                                  ],
+                                  [
+                                    const Text('headline3'),
+                                    Text(
+                                      'h3. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline3,
+                                    ),
+                                  ],
+                                  [
+                                    const Text('headline4'),
+                                    Text(
+                                      'h4. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline4,
+                                    ),
+                                  ],
+                                  [
+                                    const Text('headline5'),
+                                    Text(
+                                      'h5. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline5,
+                                    ),
+                                  ],
+                                  [
+                                    const Text('headline6'),
+                                    Text(
+                                      'h6. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline6,
+                                    ),
+                                  ],
+                                ],
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  '.h1 through .h6 classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.',
+                                ),
+                              ),
+                              BTCard(
+                                footerBackground: BTColors.gray100,
+                                body: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'h1. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline1,
+                                    ),
+                                    Text(
+                                      'h2. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline2,
+                                    ),
+                                    Text(
+                                      'h3. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline3,
+                                    ),
+                                    Text(
+                                      'h4. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline4,
+                                    ),
+                                    Text(
+                                      'h5. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline5,
+                                    ),
+                                    Text(
+                                      'h6. Bootstrap heading',
+                                      style: GetBootstrap.typography.headline6,
+                                    ),
+                                  ],
+                                ),
+                                footer: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    SelectionArea(
+                                      child: Text(
+                                        'Text(\n    "h1. Bootstrap heading",\n    style: GetBootstrap.typography.headline1,\n),',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Text(
+                                'Display headings',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  'Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.',
+                                ),
+                              ),
+                              BTCard(
+                                footerBackground: BTColors.gray100,
+                                body: BTTable(
+                                  body: [
+                                    [
+                                      Text(
+                                        'Display 1',
+                                        style: GetBootstrap.typography.display1,
+                                      ),
+                                    ],
+                                    [
+                                      Text(
+                                        'Display 2',
+                                        style: GetBootstrap.typography.display2,
+                                      ),
+                                    ],
+                                    [
+                                      Text(
+                                        'Display 3',
+                                        style: GetBootstrap.typography.display3,
+                                      ),
+                                    ],
+                                    [
+                                      Text(
+                                        'Display 4',
+                                        style: GetBootstrap.typography.display4,
+                                      ),
+                                    ],
+                                    [
+                                      Text(
+                                        'Display 5',
+                                        style: GetBootstrap.typography.display5,
+                                      ),
+                                    ],
+                                    [
+                                      Text(
+                                        'Display 6',
+                                        style: GetBootstrap.typography.display6,
+                                      ),
+                                    ],
+                                  ],
+                                ),
+                                footer: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    SelectionArea(
+                                      child: Text(
+                                        'Text(\n    "Display 1",\n    style: GetBootstrap.typography.display1,\n),',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                                child: Text(
+                                  'Display headings are configured via the \$display-font-sizes Sass map and two variables, \$display-font-weight and \$display-line-height.',
+                                ),
                               ),
                               const Text(
-                                'All HTML headings, <h1> through <h6>, are available.',
+                                'Display headings are customizable via two variables, \$display-font-family and \$display-font-style.',
                               ),
-                              LayoutBuilder(
-                                builder: (context, constraints) {
-                                  final rowHeight =
-                                      (constraints.maxHeight - 40) / 6;
-
-                                  return DataTable(
-                                    dataRowHeight: rowHeight,
-                                    headingRowHeight: 40,
-                                    columns: const [
-                                      DataColumn(
-                                        label: Text('Heading'),
-                                      ),
-                                      DataColumn(
-                                        label: Text('Example'),
-                                      ),
-                                    ],
-                                    rows: [
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading1')),
-                                        DataCell(Text(
-                                          'h1. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline1,
-                                        )),
-                                      ]),
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading2')),
-                                        DataCell(Text(
-                                          'h2. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline2,
-                                        )),
-                                      ]),
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading3')),
-                                        DataCell(Text(
-                                          'h3. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline3,
-                                        )),
-                                      ]),
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading4')),
-                                        DataCell(Text(
-                                          'h4. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline4,
-                                        )),
-                                      ]),
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading5')),
-                                        DataCell(Text(
-                                          'h5. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline5,
-                                        )),
-                                      ]),
-                                      DataRow(cells: [
-                                        const DataCell(Text('heading6')),
-                                        DataCell(Text(
-                                          'h6. Bootstrap heading',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline6,
-                                        )),
-                                      ]),
-                                    ],
-                                  );
-                                },
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Text(
+                                'Lead',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  'Make a paragraph stand out by adding .lead.',
+                                ),
+                              ),
+                              const BTCard(
+                                footerBackground: BTColors.gray100,
+                                body: Text(
+                                  'This is a lead paragraph. It stands out from regular paragraphs.',
+                                ),
                               ),
                             ],
                           ),

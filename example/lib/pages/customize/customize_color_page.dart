@@ -40,8 +40,7 @@ class CustomizeColorPage extends StatelessWidget {
                             children: [
                               Text(
                                 'Color',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
+                                style: GetBootstrap.typography.headline1,
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 8.0),
@@ -53,9 +52,7 @@ class CustomizeColorPage extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 32.0),
                                 child: Text(
                                   'Theme colors',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium,
+                                  style: GetBootstrap.typography.headline2,
                                 ),
                               ),
                               const Padding(
@@ -75,9 +72,7 @@ class CustomizeColorPage extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 32.0),
                                 child: Text(
                                   'All colors',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium,
+                                  style: GetBootstrap.typography.headline2,
                                 ),
                               ),
                               const Padding(

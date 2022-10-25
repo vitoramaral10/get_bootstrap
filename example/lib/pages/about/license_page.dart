@@ -39,8 +39,7 @@ class LicensePage extends StatelessWidget {
                             children: [
                               Text(
                                 'Perguntas frequentes sobre licenças',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
+                                style: GetBootstrap.typography.headline1,
                               ),
                               Text(
                                 'Perguntas mais frequentes sobre a licença de código aberto do Bootstrap.',
@@ -54,8 +53,7 @@ class LicensePage extends StatelessWidget {
                               ),
                               Text(
                                 'Ele exige que você:',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -70,8 +68,7 @@ class LicensePage extends StatelessWidget {
                               ),
                               Text(
                                 'Ele permite que você:',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -95,8 +92,7 @@ class LicensePage extends StatelessWidget {
                               ),
                               Text(
                                 'Ele proíbe você de:',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -123,8 +119,7 @@ class LicensePage extends StatelessWidget {
                               ),
                               Text(
                                 'Não exige que você:',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
