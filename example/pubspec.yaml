@@ -10,6 +10,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  flutter_highlight: ^0.7.0
   flutter_svg: ^1.1.6
   font_awesome_flutter: ^10.2.1
   get_bootstrap:

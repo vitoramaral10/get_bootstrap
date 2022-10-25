@@ -16,7 +16,11 @@ class BootstrapThemeData {
       thickness: 1,
       space: 1,
     ),
-    textTheme: GoogleFonts.robotoTextTheme(),
+    textTheme: GoogleFonts.robotoTextTheme(
+      TextTheme(
+        bodyText2: GetBootstrap.typography.bodyText2
+      ),
+    ),
   );
 
   static ButtonStyle navLink({Color color = Colors.white}) {

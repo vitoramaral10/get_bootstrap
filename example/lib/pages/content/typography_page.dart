@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_highlight/flutter_highlight.dart';
+import 'package:flutter_highlight/themes/darcula.dart';
+import 'package:flutter_highlight/themes/dracula.dart';
+import 'package:flutter_highlight/themes/foundation.dart';
 import 'package:get_bootstrap/components/table.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:flutter_highlight/themes/codepen-embed.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -278,13 +283,131 @@ class TypographyPage extends StatelessWidget {
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 16.0),
                                 child: Text(
-                                  'Make a paragraph stand out by adding .lead.',
+                                  'Faça um parágrafo se destacar adicionando .lead.',
                                 ),
                               ),
-                              const BTCard(
+                              BTCard(
                                 footerBackground: BTColors.gray100,
                                 body: Text(
-                                  'This is a lead paragraph. It stands out from regular paragraphs.',
+                                  'Este é um parágrafo inicial. Destaca-se de parágrafos regulares.',
+                                  style: GetBootstrap.typography.lead,
+                                ),
+                                footer: HighlightView(
+                                  'Text(\n    "This is a lead paragraph. It stands out from regular paragraphs.",\n    style: GetBootstrap.typography.lead,\n),',
+                                  language: 'dart',
+                                  theme: foundationTheme,
+                                  padding: const EdgeInsets.all(8),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Text(
+                                'Elementos de texto embutidos',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  'Estilização para elementos inline comuns.',
+                                ),
+                              ),
+                              BTCard(
+                                footerBackground: BTColors.gray100,
+                                body: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      'Esta linha mostra o texto padrão.',
+                                    ),
+                                    const Text(
+                                      'Esta linha de texto deve ser tratada como texto excluído..',
+                                      style: TextStyle(
+                                        decoration: TextDecoration.lineThrough,
+                                      ),
+                                    ),
+                                    const Text(
+                                      'Esta linha de texto será renderizada como sublinhada.',
+                                      style: TextStyle(
+                                        decoration: TextDecoration.underline,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Esta linha de texto deve ser tratada como letras miúdas  .',
+                                      style: GetBootstrap.typography.small,
+                                    ),
+                                    const Text(
+                                      'Esta linha renderizada como texto em negrito.',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const Text(
+                                      'Esta linha renderizada como texto em itálico.',
+                                      style: TextStyle(
+                                        fontStyle: FontStyle.italic,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                footer: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text("You can use the mark tag to highlight text."),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text(\n   "This line of text is meant to be treated as no longer accurate.",\n   style: TextStyle(\n     decoration: TextDecoration.lineThrough,\n   ),\n),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text(\n   "This line of text will render as underlined.",\n   style: TextStyle(\n     decoration: TextDecoration.underline,\n   ),\n),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text(\n   "This line of text is meant to be treated as fine print.",\n   style: GetBootstrap.typography.small,\n),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text(\n   "This line rendered as bold text.",\n   style: TextStyle(fontWeight: FontWeight.bold,),\n),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: HighlightView(
+                                        'Text(\n   "This line rendered as italicized text.",\n   style: TextStyle(fontStyle: FontStyle.italic,),\n),',
+                                        language: 'dart',
+                                        theme: foundationTheme,
+                                        padding: const EdgeInsets.all(8),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
