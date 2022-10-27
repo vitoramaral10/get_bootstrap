@@ -46,7 +46,7 @@ class IntroductionPage extends StatelessWidget {
                               ),
                               Text(
                                 'Bootstrap é um poderoso kit de ferramentas de front-end repleto de recursos. Construa qualquer coisa – do protótipo à produção – em minutos.',
-                                style: Theme.of(context).textTheme.titleLarge,
+                                style: GetBootstrap.typography.lead,
                               ),
                               const SizedBox(
                                 height: 32,
