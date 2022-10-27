@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_bootstrap/components/theme_data.dart';
+import 'package:get_bootstrap/get_bootstrap.dart';
 
 import 'config/routes.dart';
 

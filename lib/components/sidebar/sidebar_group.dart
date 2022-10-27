@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of get_bootstrap;
 
 class BTSidebarGroup extends StatelessWidget {
   final String title;

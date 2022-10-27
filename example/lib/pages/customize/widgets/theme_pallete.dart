@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_bootstrap/grid/bt_col.dart';
-import 'package:get_bootstrap/grid/bt_row.dart';
-import 'package:get_bootstrap/helpers/colors.dart';
+import 'package:get_bootstrap/get_bootstrap.dart';
 
 class ThemePallete extends StatelessWidget {
   const ThemePallete({

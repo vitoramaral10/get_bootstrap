@@ -1,8 +1,6 @@
-library responsive_grid;
+part of get_bootstrap;
 
-import 'package:flutter/widgets.dart';
 
-import '../core/grid_tier.dart';
 
 class BTCol extends StatelessWidget {
   final _config = <int?>[]..length = 6;

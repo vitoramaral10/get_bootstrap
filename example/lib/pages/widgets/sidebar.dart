@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get_bootstrap/components/sidebar/sidebar.dart';
-import 'package:get_bootstrap/components/sidebar/sidebar_group.dart';
-import 'package:get_bootstrap/helpers/colors.dart';
+import 'package:get_bootstrap/get_bootstrap.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({super.key});
@@ -69,7 +67,7 @@ class Sidebar extends StatelessWidget {
             Text('CSS Grid'),
           ],
         ),
-         BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Content',
           icon: FontAwesomeIcons.file,
           iconColor: BTColors.gray600,

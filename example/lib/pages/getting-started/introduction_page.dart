@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_bootstrap/bootstrap.dart';
-import 'package:get_bootstrap/helpers/colors.dart';
-import 'package:get_bootstrap/layout/bt_container.dart';
+import 'package:get_bootstrap/get_bootstrap.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -12,7 +10,7 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, boxConstraints) {
-      bool showSidebar = Bootstrap.showSidebar(boxConstraints);
+      bool showSidebar = GetBootstrap.showSidebar(boxConstraints);
 
       return Title(
         color: BTColors.purple,
@@ -44,20 +42,18 @@ class IntroductionPage extends StatelessWidget {
                               ),
                               Text(
                                 'Comece com o Bootstrap',
-                                style:
-                                    Theme.of(context).textTheme.headlineLarge,
+                                style: GetBootstrap.typography.headline1,
                               ),
                               Text(
                                 'Bootstrap é um poderoso kit de ferramentas de front-end repleto de recursos. Construa qualquer coisa – do protótipo à produção – em minutos.',
-                                style: Theme.of(context).textTheme.titleLarge,
+                                style: GetBootstrap.typography.lead,
                               ),
                               const SizedBox(
                                 height: 32,
                               ),
                               Text(
                                 'Começo rápido',
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium,
+                                style: GetBootstrap.typography.headline2,
                               ),
                               const Text(
                                 'Comece incluindo CSS e JavaScript prontos para produção do Bootstrap via CDN sem a necessidade de etapas de compilação. Veja na prática com esta demonstração do Bootstrap CodePen .',
