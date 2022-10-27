@@ -3,9 +3,9 @@
 
 name: Deploy to Firebase Hosting on merge
 'on':
-  push:
+  merge:
     branches:
-      - hospedagem-da-documentacao
+      - master
 jobs:
   build:
     name: flutter build
