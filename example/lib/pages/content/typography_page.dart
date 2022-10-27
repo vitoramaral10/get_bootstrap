@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/foundation.dart';
-import 'package:get_bootstrap/components/table.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
 
 import '../widgets/header_widget.dart';

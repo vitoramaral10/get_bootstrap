@@ -5,12 +5,13 @@ import 'package:google_fonts/google_fonts.dart';
 import '../core/grid_tier.dart';
 import 'core/typography.dart';
 
+part 'components/card.dart';
+part 'components/table.dart';
+part 'components/theme_data.dart';
+part 'components/sidebar/sidebar.dart';
+part 'components/sidebar/sidebar_group.dart';
 part 'grid/bt_col.dart';
 part 'grid/bt_row.dart';
-part 'components/card.dart';
-part 'components/theme_data.dart';
-part 'components/sidebar/sidebar_group.dart';
-part 'components/sidebar/sidebar.dart';
 part 'helpers/colors.dart';
 part 'layout/bt_container.dart';
 
