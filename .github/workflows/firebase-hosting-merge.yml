@@ -16,7 +16,7 @@ jobs:
       - uses: subosito/flutter-action@v2
       - run: flutter pub get
       - run: flutter analyze
-      - run: flutter test
+      - run: flutter build web
   # build_and_deploy:
   #   runs-on: ubuntu-latest
   #   steps:
