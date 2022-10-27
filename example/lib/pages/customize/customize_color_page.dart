@@ -38,53 +38,58 @@ class CustomizeColorPage extends StatelessWidget {
                           child: ListView(
                             shrinkWrap: true,
                             children: [
+                              const SizedBox(
+                                height: 32,
+                              ),
                               Text(
-                                'Color',
+                                'Cor',
                                 style: GetBootstrap.typography.headline1,
                               ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
                                 child: Text(
-                                  'Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.',
+                                  'O Bootstrap é suportado por um extenso sistema de cores que tem como tema nossos estilos e componentes. Isso permite uma personalização e extensão mais abrangentes para qualquer projeto.',
+                                  style: GetBootstrap.typography.lead,
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 32.0),
                                 child: Text(
-                                  'Theme colors',
+                                  'Cores do tema',
                                   style: GetBootstrap.typography.headline2,
                                 ),
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 8.0),
                                 child: Text(
-                                  'We use a subset of all colors to create a smaller color palette for generating color schemes, also available as variables.',
+                                  'Usamos um subconjunto de todas as cores para criar uma paleta de cores menor para gerar esquemas de cores.',
                                 ),
                               ),
                               const ThemePallete(),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 8.0),
                                 child: Text(
-                                  'All these colors are available as a BTColor class.',
+                                  'Todas as cores estão disponíveis pela classe BTColor.',
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 32.0),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Text(
+                                'Todas as cores',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 8.0),
                                 child: Text(
-                                  'All colors',
-                                  style: GetBootstrap.typography.headline2,
+                                  'Todas as cores do bootstrap estão disponíveis pro variável.',
                                 ),
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 8.0),
                                 child: Text(
-                                  'All Bootstrap colors are available as variables.',
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'Be sure to monitor contrast ratios as you customize colors. As shown below, we’ve added three contrast ratios to each of the main colors—one for the swatch’s current colors, one for against white, and one for against black.',
+                                  'Certifique-se de monitorar as taxas de contraste ao personalizar as cores. Conforme mostrado abaixo, adicionamos três taxas de contraste a cada uma das cores principais – uma para as cores atuais da amostra, uma para o branco e uma para o preto.',
                                 ),
                               ),
                               const AllColorsPallete(),
