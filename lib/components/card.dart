@@ -7,6 +7,9 @@ class BTCard extends StatelessWidget {
   final Color? headBackground;
   final Color? bodyBackground;
   final Color? footerBackground;
+  final EdgeInsetsGeometry? headPadding;
+  final EdgeInsetsGeometry? bodyPadding;
+  final EdgeInsetsGeometry? footerPadding;
 
   const BTCard({
     super.key,
@@ -16,6 +19,9 @@ class BTCard extends StatelessWidget {
     this.headBackground,
     this.bodyBackground,
     this.footerBackground,
+    this.headPadding,
+    this.bodyPadding,
+    this.footerPadding,
   });
 
   @override
@@ -28,7 +34,7 @@ class BTCard extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         if (head != null)
           Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: headPadding ?? const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
               color: headBackground,
@@ -41,7 +47,7 @@ class BTCard extends StatelessWidget {
           ),
         if (head != null) const Divider(),
         Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: bodyPadding ?? const EdgeInsets.all(16.0),
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -55,7 +61,7 @@ class BTCard extends StatelessWidget {
         if (footer != null) const Divider(),
         if (footer != null)
           Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: footerPadding ?? const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
               color: footerBackground,

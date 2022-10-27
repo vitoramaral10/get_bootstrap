@@ -1,11 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/darcula.dart';
-import 'package:flutter_highlight/themes/dracula.dart';
 import 'package:flutter_highlight/themes/foundation.dart';
 import 'package:get_bootstrap/components/table.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
-import 'package:flutter_highlight/themes/codepen-embed.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -47,22 +45,41 @@ class TypographyPage extends StatelessWidget {
                                 height: 32,
                               ),
                               Text(
-                                'Typography',
+                                'Tipografia',
                                 style: GetBootstrap.typography.headline1,
                               ),
                               Text(
-                                'Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.',
-                                style: Theme.of(context).textTheme.titleLarge,
+                                'Documentação e exemplos para tipografia Bootstrap, incluindo configurações globais, títulos, corpo de texto, listas e muito mais.',
+                                style: GetBootstrap.typography.lead,
                               ),
                               const SizedBox(
                                 height: 32,
                               ),
                               Text(
-                                'Global settings',
+                                'Configurações globais',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              const Text(
-                                'Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.',
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text:
+                                          'O Bootstrap define os estilos básicos de exibição global, tipografia e link. Quando for necessário mais controle, confira as ',
+                                      style: GetBootstrap.typography.bodyText2,
+                                    ),
+                                    TextSpan(
+                                      text: 'classes de utilitários textuais.',
+                                      style: GetBootstrap.typography.link,
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () {
+                                          Navigator.pushNamed(
+                                            context,
+                                            '/utilities/text',
+                                          );
+                                        },
+                                    ),
+                                  ],
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -70,145 +87,95 @@ class TypographyPage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: const [
                                     Text(
-                                      '• Use a native font stack that selects the best font-family for each OS and device.',
-                                    ),
-                                    Text(
-                                      '• For a more inclusive and accessible type scale, we use the browser’s default root font-size (typically 16px) so visitors can customize their browser defaults as needed.',
-                                    ),
-                                    Text(
-                                      '• Use the \$font-family-base, \$font-size-base, and \$line-height-base attributes as our typographic base applied to the <body>.',
-                                    ),
-                                    Text(
-                                      '• Set the global link color via \$link-color.',
-                                    ),
-                                    Text(
-                                      '• Use \$body-bg to set a background-color on the <body> (#fff by default).',
+                                      '• Para uma escala de tipo mais inclusiva e acessível, usamos a raiz padrão font-size (16px) para que os visitantes possam personalizar os padrões do navegador conforme necessário.',
                                     ),
                                   ],
                                 ),
-                              ),
-                              const Text(
-                                'These styles can be found within _reboot.scss, and the global variables are defined in _variables.scss. Make sure to set \$font-size-base in rem.',
                               ),
                               const SizedBox(
                                 height: 32,
                               ),
                               Text(
-                                'Headings',
+                                'Títulos',
                                 style: GetBootstrap.typography.headline2,
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 16.0),
                                 child: Text(
-                                  'All HTML headings, <h1> through <h6>, are available.',
+                                  'Todos os cabeçalhos disponíveis.',
                                 ),
                               ),
                               BTTable(
-                                head: const ['Heading', 'Example'],
+                                head: const ['Cabeçalho', 'Exemplo'],
                                 body: [
                                   [
                                     const Text('headline1'),
                                     Text(
-                                      'h1. Bootstrap heading',
+                                      'h1. Título de inicialização',
                                       style: GetBootstrap.typography.headline1,
                                     ),
                                   ],
                                   [
                                     const Text('headline2'),
                                     Text(
-                                      'h2. Bootstrap heading',
+                                      'h2. Título de inicialização',
                                       style: GetBootstrap.typography.headline2,
                                     ),
                                   ],
                                   [
                                     const Text('headline3'),
                                     Text(
-                                      'h3. Bootstrap heading',
+                                      'h3. Título de inicialização',
                                       style: GetBootstrap.typography.headline3,
                                     ),
                                   ],
                                   [
                                     const Text('headline4'),
                                     Text(
-                                      'h4. Bootstrap heading',
+                                      'h4. Título de inicialização',
                                       style: GetBootstrap.typography.headline4,
                                     ),
                                   ],
                                   [
                                     const Text('headline5'),
                                     Text(
-                                      'h5. Bootstrap heading',
+                                      'h5. Título de inicialização',
                                       style: GetBootstrap.typography.headline5,
                                     ),
                                   ],
                                   [
                                     const Text('headline6'),
                                     Text(
-                                      'h6. Bootstrap heading',
+                                      'h6. Título de inicialização',
                                       style: GetBootstrap.typography.headline6,
                                     ),
                                   ],
                                 ],
                               ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 16.0),
-                                child: Text(
-                                  '.h1 through .h6 classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.',
-                                ),
-                              ),
-                              BTCard(
-                                footerBackground: BTColors.gray100,
-                                body: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'h1. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline1,
-                                    ),
-                                    Text(
-                                      'h2. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline2,
-                                    ),
-                                    Text(
-                                      'h3. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline3,
-                                    ),
-                                    Text(
-                                      'h4. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline4,
-                                    ),
-                                    Text(
-                                      'h5. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline5,
-                                    ),
-                                    Text(
-                                      'h6. Bootstrap heading',
-                                      style: GetBootstrap.typography.headline6,
-                                    ),
-                                  ],
-                                ),
-                                footer: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
-                                    SelectionArea(
-                                      child: Text(
-                                        'Text(\n    "h1. Bootstrap heading",\n    style: GetBootstrap.typography.headline1,\n),',
-                                      ),
-                                    ),
-                                  ],
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 16.0),
+                                child: BTCard(
+                                  bodyPadding: EdgeInsets.zero,
+                                  body: HighlightView(
+                                    'Text("h1. Título de inicialização", style: GetBootstrap.typography.headline1),\n\nText("h2. Título de inicialização", style: GetBootstrap.typography.headline2),\n\nText("h3. Título de inicialização", style: GetBootstrap.typography.headline3),\n\nText("h4. Título de inicialização", style: GetBootstrap.typography.headline4),\n\nText("h5. Título de inicialização", style: GetBootstrap.typography.headline5),\n\nText("h6. Título de inicialização", style: GetBootstrap.typography.headline6),',
+                                    language: 'dart',
+                                    theme: foundationTheme,
+                                    padding: const EdgeInsets.all(16),
+                                  ),
                                 ),
                               ),
                               const SizedBox(
                                 height: 32,
                               ),
                               Text(
-                                'Display headings',
+                                'Display',
                                 style: GetBootstrap.typography.headline2,
                               ),
                               const Padding(
                                 padding: EdgeInsets.symmetric(vertical: 16.0),
                                 child: Text(
-                                  'Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.',
+                                  'Os elementos de título tradicionais são projetados para funcionar melhor na carne do conteúdo da sua página. Quando você precisar que um título se destaque, considere usar um display — um estilo de título maior e um pouco mais opinativo.',
                                 ),
                               ),
                               BTCard(
@@ -253,25 +220,13 @@ class TypographyPage extends StatelessWidget {
                                     ],
                                   ],
                                 ),
-                                footer: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
-                                    SelectionArea(
-                                      child: Text(
-                                        'Text(\n    "Display 1",\n    style: GetBootstrap.typography.display1,\n),',
-                                      ),
-                                    ),
-                                  ],
+                                footerPadding: EdgeInsets.zero,
+                                footer: HighlightView(
+                                  'Text(\n    "Display 1",\n    style: GetBootstrap.typography.display1,\n),',
+                                  language: 'dart',
+                                  theme: foundationTheme,
+                                  padding: const EdgeInsets.all(16),
                                 ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'Display headings are configured via the \$display-font-sizes Sass map and two variables, \$display-font-weight and \$display-line-height.',
-                                ),
-                              ),
-                              const Text(
-                                'Display headings are customizable via two variables, \$display-font-family and \$display-font-style.',
                               ),
                               const SizedBox(
                                 height: 32,
@@ -287,16 +242,17 @@ class TypographyPage extends StatelessWidget {
                                 ),
                               ),
                               BTCard(
-                                footerBackground: BTColors.gray100,
                                 body: Text(
                                   'Este é um parágrafo inicial. Destaca-se de parágrafos regulares.',
                                   style: GetBootstrap.typography.lead,
                                 ),
+                                footerPadding: EdgeInsets.zero,
+                                footerBackground: BTColors.gray100,
                                 footer: HighlightView(
                                   'Text(\n    "Este é um parágrafo inicial. Destaca-se de parágrafos regulares.",\n    style: GetBootstrap.typography.lead,\n),',
                                   language: 'dart',
                                   theme: foundationTheme,
-                                  padding: const EdgeInsets.all(8),
+                                  padding: const EdgeInsets.all(16),
                                 ),
                               ),
                               const SizedBox(
@@ -350,64 +306,85 @@ class TypographyPage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                footer: Column(
+                                footerPadding: EdgeInsets.zero,
+                                footer: HighlightView(
+                                  'Text("Esta linha mostra o texto padrão."),\n\nText(\n   "Esta linha de texto deve ser tratada como texto excluído.",\n   style: TextStyle(\n     decoration: TextDecoration.lineThrough,\n   ),\n),\n\nText(\n   "Esta linha de texto será renderizada como sublinhada.",\n   style: TextStyle(\n     decoration: TextDecoration.underline,\n   ),\n),\n\nText(\n   "Esta linha de texto deve ser tratada como letras miúdas.",\n   style: GetBootstrap.typography.small,\n),\n\nText(\n   "Esta linha renderizada como texto em negrito.",\n   style: TextStyle(fontWeight: FontWeight.bold,),\n),\n\nText(\n   "Esta linha renderizada como texto em itálico.",\n   style: TextStyle(fontStyle: FontStyle.italic,),\n),',
+                                  language: 'dart',
+                                  theme: foundationTheme,
+                                  padding: const EdgeInsets.all(16),
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                  'Esteja ciente de que esses estilos devem ser usados para fins semânticos:',
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text("Esta linha mostra o texto padrão."),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
+                                  children: const [
+                                    Text(
+                                      '• {small} representa comentários laterais e letras pequenas, como direitos autorais e texto legal.',
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text(\n   "Esta linha de texto deve ser tratada como texto excluído.",\n   style: TextStyle(\n     decoration: TextDecoration.lineThrough,\n   ),\n),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
+                                    Text(
+                                      '• {lineThrough} representa elementos que não são mais relevantes ou não são mais precisos.',
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text(\n   "Esta linha de texto será renderizada como sublinhada.",\n   style: TextStyle(\n     decoration: TextDecoration.underline,\n   ),\n),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text(\n   "Esta linha de texto deve ser tratada como letras miúdas.",\n   style: GetBootstrap.typography.small,\n),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text(\n   "Esta linha renderizada como texto em negrito.",\n   style: TextStyle(fontWeight: FontWeight.bold,),\n),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: HighlightView(
-                                        'Text(\n   "Esta linha renderizada como texto em itálico.",\n   style: TextStyle(fontStyle: FontStyle.italic,),\n),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(8),
-                                      ),
+                                    Text(
+                                      '• {underline} representa um intervalo de texto embutido que deve ser renderizado de forma a indicar que possui uma anotação não textual.',
                                     ),
                                   ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              Text(
+                                'Utilitários de texto',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 16.0),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text:
+                                            'Altere o alinhamento do texto, transforme, estilo, peso, altura da linha, decoração e cor com nossos ',
+                                        style:
+                                            GetBootstrap.typography.bodyText2,
+                                      ),
+                                      TextSpan(
+                                        text: 'utilitários de texto',
+                                        style: GetBootstrap.typography.link,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              '/utilities/text',
+                                            );
+                                          },
+                                      ),
+                                      TextSpan(
+                                        text: ' e ',
+                                        style:
+                                            GetBootstrap.typography.bodyText2,
+                                      ),
+                                      TextSpan(
+                                        text: 'utilitários de cores.',
+                                        style: GetBootstrap.typography.link,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              '/utilities/colors',
+                                            );
+                                          },
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],

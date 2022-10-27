@@ -13,6 +13,7 @@ dependencies:
   flutter_highlight: ^0.7.0
   flutter_svg: ^1.1.6
   font_awesome_flutter: ^10.2.1
+  url_launcher: ^6.1.6
   get_bootstrap:
     path: ../
 

@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -37,19 +39,25 @@ class LicensePage extends StatelessWidget {
                           child: ListView(
                             shrinkWrap: true,
                             children: [
+                              const SizedBox(
+                                height: 32,
+                              ),
                               Text(
                                 'Perguntas frequentes sobre licenças',
                                 style: GetBootstrap.typography.headline1,
                               ),
                               Text(
                                 'Perguntas mais frequentes sobre a licença de código aberto do Bootstrap.',
-                                style: Theme.of(context).textTheme.titleLarge,
+                                style: GetBootstrap.typography.lead,
                               ),
                               const SizedBox(
                                 height: 32,
                               ),
                               const Text(
                                 'Bootstrap é lançado sob a licença do MIT e é copyright 2022 Twitter. Resumido em pedaços menores, pode ser descrito com as seguintes condições.',
+                              ),
+                              const SizedBox(
+                                height: 32,
                               ),
                               Text(
                                 'Ele exige que você:',
@@ -65,6 +73,9 @@ class LicensePage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                              ),
+                              const SizedBox(
+                                height: 32,
                               ),
                               Text(
                                 'Ele permite que você:',
@@ -89,6 +100,9 @@ class LicensePage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                              ),
+                              const SizedBox(
+                                height: 32,
                               ),
                               Text(
                                 'Ele proíbe você de:',
@@ -117,6 +131,9 @@ class LicensePage extends StatelessWidget {
                                   ],
                                 ),
                               ),
+                              const SizedBox(
+                                height: 32,
+                              ),
                               Text(
                                 'Não exige que você:',
                                 style: GetBootstrap.typography.headline2,
@@ -135,8 +152,36 @@ class LicensePage extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              const Text(
-                                'A licença completa do Bootstrap está localizada no repositório do projeto para obter mais informações.',
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text:
+                                            'A licença completa do Bootstrap está localizada ',
+                                        style:
+                                            GetBootstrap.typography.bodyText2,
+                                      ),
+                                      TextSpan(
+                                        text: 'no repositório do projeto',
+                                        style: GetBootstrap.typography.link,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            launchUrl(Uri.parse(
+                                              'https://github.com/vitoramaral10/get_bootstrap',
+                                            ));
+                                          },
+                                      ),
+                                      TextSpan(
+                                        text: ' para obter mais informações.',
+                                        style:
+                                            GetBootstrap.typography.bodyText2,
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),
