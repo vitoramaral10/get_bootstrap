@@ -35,7 +35,7 @@ class BTSidebarGroup extends StatelessWidget {
               ),
             Text(
               title,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             ),
           ],
         ),
