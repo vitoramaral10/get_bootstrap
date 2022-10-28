@@ -18,53 +18,126 @@ class Sidebar extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/getting-started/introduction');
               },
-              child: const Text('Introdução'),
+              child: Text(
+                'Introdução',
+                style: GetBootstrap.typography.small,
+              ),
             ),
-            const Text('Download'),
-            const Text('Contents'),
-            const Text('Browsers & devices'),
-            const Text('JavaScript'),
-            const Text('Webpack'),
-            const Text('Parcel'),
-            const Text('Vite'),
-            const Text('Accessibility'),
-            const Text('RFS'),
-            const Text('RTL'),
-            const Text('Contribute'),
+            Text(
+              'Download',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Contents',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Browsers & devices',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'JavaScript',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Webpack',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Parcel',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Vite',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Accessibility',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'RFS',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'RTL',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Contribute',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
         BTSidebarGroup(
-          title: 'Customize',
+          title: 'Customizar',
           icon: FontAwesomeIcons.swatchbook,
           iconColor: BTColors.pink,
           children: [
-            const Text('Overview'),
-            const Text('Sass'),
-            const Text('Options'),
+            Text(
+              'Overview',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Options',
+              style: GetBootstrap.typography.small,
+            ),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/customize/color');
               },
-              child: const Text('Color'),
+              child: Text(
+                'Color',
+                style: GetBootstrap.typography.small,
+              ),
             ),
-            const Text('Components'),
-            const Text('CSS Variables'),
-            const Text('Optimize'),
+            Text(
+              'Components',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'CSS Variables',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Layout',
           icon: FontAwesomeIcons.cubesStacked,
           iconColor: BTColors.teal,
           children: [
-            Text('Breackpoints'),
-            Text('Containers'),
-            Text('Grid'),
-            Text('Columns'),
-            Text('Gutters'),
-            Text('Utilities'),
-            Text('Z-index'),
-            Text('CSS Grid'),
+            Text(
+              'Breackpoints',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Containers',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Grid',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Columns',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Gutters',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Utilities',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Z-index',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'CSS Grid',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
         BTSidebarGroup(
@@ -72,113 +145,314 @@ class Sidebar extends StatelessWidget {
           icon: FontAwesomeIcons.file,
           iconColor: BTColors.gray600,
           children: [
-            const Text('Reboot'),
+            Text(
+              'Reboot',
+              style: GetBootstrap.typography.small,
+            ),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/content/typography');
               },
-              child: const Text('Typography'),
+              child: Text(
+                'Typography',
+                style: GetBootstrap.typography.small,
+              ),
             ),
-            const Text('Images'),
-            const Text('Tables'),
-            const Text('Figures'),
+            Text(
+              'Images',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Tables',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Figures',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Forms',
           icon: FontAwesomeIcons.listUl,
           iconColor: BTColors.blue,
           children: [
-            Text('Overview'),
-            Text('Form control'),
-            Text('Select'),
-            Text('Checks & radios'),
-            Text('Range'),
-            Text('Input group'),
-            Text('Floating labels'),
-            Text('layout'),
-            Text('Validation'),
+            Text(
+              'Overview',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Form control',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Select',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Checks & radios',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Range',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Input group',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Floating labels',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'layout',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Validation',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Components',
           icon: FontAwesomeIcons.cubes,
           iconColor: BTColors.cyan,
           children: [
-            Text('Accordion'),
-            Text('Alerts'),
-            Text('Badge'),
-            Text('Breadcrumb'),
-            Text('Buttons'),
-            Text('Button group'),
-            Text('Card'),
-            Text('Carousel'),
-            Text('Close button'),
-            Text('Collapse'),
-            Text('Dropdowns'),
-            Text('List group'),
-            Text('Modal'),
-            Text('Navbar'),
-            Text('Navs & tabs'),
-            Text('Offcanvas'),
-            Text('Pagination'),
-            Text('Placeholders'),
-            Text('Popovers'),
-            Text('Progress'),
-            Text('Scrollspy'),
-            Text('Spinners'),
-            Text('Toasts'),
-            Text('Tooltips'),
+            Text(
+              'Accordion',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Alerts',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Badge',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Breadcrumb',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Buttons',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Button group',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Card',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Carousel',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Close button',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Collapse',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Dropdowns',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'List group',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Modal',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Navbar',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Navs & tabs',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Offcanvas',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Pagination',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Placeholders',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Popovers',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Progress',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Scrollspy',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Spinners',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Toasts',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Tooltips',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Helpers',
           icon: FontAwesomeIcons.wandMagicSparkles,
           iconColor: BTColors.orange,
           children: [
-            Text('Clearfix'),
-            Text('Color & background'),
-            Text('Colored links'),
-            Text('Position'),
-            Text('Ratio'),
-            Text('Stacks'),
-            Text('Stretched link'),
-            Text('Text truncation'),
-            Text('Vertical rule'),
-            Text('Visually hidden'),
+            Text(
+              'Clearfix',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Color & background',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Colored links',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Position',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Ratio',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Stacks',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Stretched link',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Text truncation',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Vertical rule',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Visually hidden',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Utilities',
           icon: FontAwesomeIcons.diaspora,
           iconColor: BTColors.red,
           children: [
-            Text('API'),
-            Text('Background'),
-            Text('Borders'),
-            Text('Colors'),
-            Text('Display'),
-            Text('Flex'),
-            Text('Float'),
-            Text('Interactions'),
-            Text('Opacity'),
-            Text('Overflow'),
-            Text('Position'),
-            Text('Shadows'),
-            Text('Sizing'),
-            Text('Spacing'),
-            Text('Text'),
-            Text('Vertical align'),
-            Text('Visibility'),
+            Text(
+              'API',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Background',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Borders',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Colors',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Display',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Flex',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Float',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Interactions',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Opacity',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Overflow',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Position',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Shadows',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Sizing',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Spacing',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Text',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Vertical align',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Visibility',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
-        const BTSidebarGroup(
+        BTSidebarGroup(
           title: 'Extend',
           icon: FontAwesomeIcons.screwdriverWrench,
           iconColor: BTColors.blue,
           children: [
-            Text('Approach'),
-            Text('Icons'),
+            Text(
+              'Approach',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Icons',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
         BTSidebarGroup(
@@ -186,16 +460,31 @@ class Sidebar extends StatelessWidget {
           icon: FontAwesomeIcons.globe,
           iconColor: BTColors.indigo,
           children: [
-            const Text('Overview'),
-            const Text('Team'),
-            const Text('Brand'),
+            Text(
+              'Overview',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Team',
+              style: GetBootstrap.typography.small,
+            ),
+            Text(
+              'Brand',
+              style: GetBootstrap.typography.small,
+            ),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/about/license');
               },
-              child: const Text('License'),
+              child: Text(
+                'License',
+                style: GetBootstrap.typography.small,
+              ),
             ),
-            const Text('Translations'),
+            Text(
+              'Translations',
+              style: GetBootstrap.typography.small,
+            ),
           ],
         ),
       ],
