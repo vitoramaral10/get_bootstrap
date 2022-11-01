@@ -72,7 +72,7 @@ dart_code_metrics:
     - format-comment
     - member-ordering:
       alphabetize: true
-    - member-ordering-extended
+    - member-ordering
     - newline-before-return
     - no-boolean-literal-compare
     - no-empty-block

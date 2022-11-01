@@ -23,6 +23,8 @@ class BTTypography {
   TextStyle? highlight;
   TextStyle? link;
 
+  //
+  // ignore: long-method
   BTTypography({
     this.headline1,
     this.headline2,

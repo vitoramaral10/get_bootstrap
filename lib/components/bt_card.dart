@@ -27,9 +27,9 @@ class BTCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: BTColors.gray300),
-        borderRadius: BorderRadius.circular(6),
+      decoration: const BoxDecoration(
+        border: Border.fromBorderSide(BorderSide(color: BTColors.gray300)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         if (head != null)
@@ -71,7 +71,7 @@ class BTCard extends StatelessWidget {
               ),
             ),
             child: footer!,
-          )
+          ),
       ]),
     );
   }

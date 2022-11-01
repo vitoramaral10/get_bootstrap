@@ -18,10 +18,7 @@ class BTSidebarGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> items = [
       Padding(
-        padding: const EdgeInsets.only(
-          top: 4.0,
-          bottom: 4.0,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: Row(
           children: [
             if (icon != null)
