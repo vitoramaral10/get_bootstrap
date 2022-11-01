@@ -17,27 +17,28 @@ class BTTable extends StatelessWidget {
     if (head != null && head!.isNotEmpty) {
       rows.add(
         TableRow(
-            decoration: const BoxDecoration(
-              border: Border(
-                bottom: BorderSide(color: BTColors.dark),
-              ),
+          decoration: const BoxDecoration(
+            border: Border(
+              bottom: BorderSide(color: BTColors.dark),
             ),
-            children: head
-                ?.map(
-                  (e) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      e,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        height: 1.2,
-                        letterSpacing: 1,
-                      ),
+          ),
+          children: head
+              ?.map(
+                (e) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    e,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2,
+                      letterSpacing: 1,
                     ),
                   ),
-                )
-                .toList(),),
+                ),
+              )
+              .toList(),
+        ),
       );
     }
 
@@ -66,10 +67,13 @@ class BTTable extends StatelessWidget {
       }
     }
 
-    return Table(
-      defaultColumnWidth: const IntrinsicColumnWidth(),
-      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-      children: rows,
+    return SizedBox(
+      width: double.maxFinite,
+      child: Table(
+        defaultColumnWidth: const IntrinsicColumnWidth(),
+        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+        children: rows,
+      ),
     );
   }
 }
