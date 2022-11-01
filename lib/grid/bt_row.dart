@@ -32,7 +32,7 @@ class BTRow extends StatelessWidget {
           crossAxisAlignment: crossAxisAlignment,
           children: cols,
         ));
-        // clear
+
         cols = <Widget>[];
         accumulatedWidth = 0;
       }

@@ -6,6 +6,8 @@ class ResponsiveBreakpoints {
   final double xl;
   final double xxl;
 
+  static final ResponsiveBreakpoints value = ResponsiveBreakpoints();
+
   ResponsiveBreakpoints({
     this.xs = 576,
     this.sm = 768,
@@ -14,6 +16,4 @@ class ResponsiveBreakpoints {
     this.xl = 1400,
     this.xxl = double.infinity,
   });
-
-  static ResponsiveBreakpoints value = ResponsiveBreakpoints();
 }

@@ -1,7 +1,7 @@
 part of get_bootstrap;
 
 class BootstrapThemeData {
-  static ThemeData light = ThemeData(
+  static final ThemeData light = ThemeData(
     scaffoldBackgroundColor: const Color(0xFFFFFFFF),
     popupMenuTheme: const PopupMenuThemeData(
       shape: RoundedRectangleBorder(
@@ -10,13 +10,11 @@ class BootstrapThemeData {
         ),
       ),
     ),
-    // ignore: prefer_const_constructors
-    dividerTheme: DividerThemeData(
+    dividerTheme: const DividerThemeData(
       color: BTColors.gray300,
       thickness: 1,
       space: 1,
     ),
-
     textTheme: GoogleFonts.openSansTextTheme(
       TextTheme(bodyText2: GetBootstrap.typography.bodyText2),
     ),

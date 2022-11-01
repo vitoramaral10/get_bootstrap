@@ -37,7 +37,7 @@ class BTTable extends StatelessWidget {
                     ),
                   ),
                 )
-                .toList()),
+                .toList(),),
       );
     }
 
