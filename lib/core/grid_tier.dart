@@ -18,7 +18,6 @@ GridTier currentSize(BuildContext context) {
   } else if (width < breakpoints.lg) {
     return GridTier.lg;
   } else {
-    // width >= 1200
     return GridTier.xl;
   }
 }

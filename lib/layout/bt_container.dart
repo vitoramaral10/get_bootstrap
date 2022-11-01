@@ -24,22 +24,7 @@ class BTContainer extends StatelessWidget {
     this.margin,
   });
 
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (buildContext, boxConstraints) {
-        return Center(
-          child: Container(
-            margin: margin,
-            width: _currentWidth(buildContext, boxConstraints),
-            child: child,
-          ),
-        );
-      },
-    );
-  }
-
-  double _currentWidth(buildContext, boxConstraints) {
+  double _currentWidth(buildContext) {
     double width = MediaQuery.of(buildContext).size.width;
 
     if ((sm || md || lg || xl || xxl) && width >= 1400) {
@@ -55,5 +40,20 @@ class BTContainer extends StatelessWidget {
     } else {
       return width;
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (buildContext, boxConstraints) {
+        return Center(
+          child: Container(
+            margin: margin,
+            width: _currentWidth(buildContext),
+            child: child,
+          ),
+        );
+      },
+    );
   }
 }

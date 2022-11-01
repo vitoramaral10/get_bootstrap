@@ -51,6 +51,7 @@ dart_code_metrics:
     #Common code
     - avoid-banned-imports
     - avoid-border-all
+    - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types
     - avoid-duplicate-exports
     - avoid-dynamic
@@ -72,7 +73,7 @@ dart_code_metrics:
     - format-comment
     - member-ordering:
       alphabetize: true
-    - member-ordering-extended
+    - member-ordering
     - newline-before-return
     - no-boolean-literal-compare
     - no-empty-block
