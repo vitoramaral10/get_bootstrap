@@ -162,7 +162,8 @@ class LicensePage extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 8.0),
+                                      vertical: 8.0,
+                                    ),
                                     child: RichText(
                                       text: TextSpan(
                                         children: [
