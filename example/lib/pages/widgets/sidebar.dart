@@ -74,14 +74,6 @@ class Sidebar extends StatelessWidget {
           icon: FontAwesomeIcons.swatchbook,
           iconColor: BTColors.pink,
           children: [
-            Text(
-              'Overview',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Options',
-              style: GetBootstrap.typography.small,
-            ),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/customize/color');
@@ -91,14 +83,6 @@ class Sidebar extends StatelessWidget {
                 style: GetBootstrap.typography.small,
               ),
             ),
-            Text(
-              'Components',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'CSS Variables',
-              style: GetBootstrap.typography.small,
-            ),
           ],
         ),
         BTSidebarGroup(
@@ -106,9 +90,14 @@ class Sidebar extends StatelessWidget {
           icon: FontAwesomeIcons.cubesStacked,
           iconColor: BTColors.teal,
           children: [
-            Text(
-              'Breackpoints',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/layout/breakpoints');
+              },
+              child: Text(
+                'Breakpoints',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Containers',
