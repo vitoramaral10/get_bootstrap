@@ -167,7 +167,8 @@ class TypographyPage extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 16.0),
+                                      vertical: 16.0,
+                                    ),
                                     child: BTCard(
                                       bodyPadding: EdgeInsets.zero,
                                       body: HighlightView(
@@ -373,7 +374,7 @@ class TypographyPage extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 16.0),
+                                        vertical: 16.0,),
                                     child: RichText(
                                       text: TextSpan(
                                         children: [

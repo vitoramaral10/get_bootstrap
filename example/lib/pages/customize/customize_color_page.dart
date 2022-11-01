@@ -51,7 +51,7 @@ class CustomizeColorPage extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 8.0),
+                                        vertical: 8.0,),
                                     child: Text(
                                       'O Bootstrap é suportado por um extenso sistema de cores que tem como tema nossos estilos e componentes. Isso permite uma personalização e extensão mais abrangentes para qualquer projeto.',
                                       style: GetBootstrap.typography.lead,
