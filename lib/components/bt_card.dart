@@ -53,6 +53,10 @@ class BTCard extends StatelessWidget {
             borderRadius: BorderRadius.only(
               topLeft: head == null ? const Radius.circular(6) : Radius.zero,
               topRight: head == null ? const Radius.circular(6) : Radius.zero,
+              bottomLeft:
+                  footer == null ? const Radius.circular(6) : Radius.zero,
+              bottomRight:
+                  footer == null ? const Radius.circular(6) : Radius.zero,
             ),
             color: bodyBackground,
           ),
