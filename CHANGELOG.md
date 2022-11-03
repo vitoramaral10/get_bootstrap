@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.0...v0.2.1) (2022-11-03)
+
+
+### Features
+
+* nova página de breakpoints ([9ae87d0](https://github.com/vitoramaral10/get_bootstrap/commit/9ae87d0c96737e96f0d2fcca034faad5b1078291))
+* v0.2.0 ([6ab30a4](https://github.com/vitoramaral10/get_bootstrap/commit/6ab30a4ca3db91bca4dd344b89cda7e337fecdad))
+* widget de rodapé ([1c360e7](https://github.com/vitoramaral10/get_bootstrap/commit/1c360e7bf52a29a7d1facf73875eaca2dc765d51))
+
+
+### Bug Fixes
+
+* correção do radius no BTCard quando não é passado o parâmetro footer ([8c34145](https://github.com/vitoramaral10/get_bootstrap/commit/8c3414520b52239f8b217f96aeefbe8706ad3a77))
+
 ## [0.2.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.1.0...v0.2.0) (2022-10-27)
 
 
