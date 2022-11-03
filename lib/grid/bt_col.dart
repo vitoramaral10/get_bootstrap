@@ -1,7 +1,5 @@
 part of get_bootstrap;
 
-
-
 class BTCol extends StatelessWidget {
   final _config = <int?>[]..length = 6;
   final Widget child;
