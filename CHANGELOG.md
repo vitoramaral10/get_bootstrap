@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.1...v0.2.2) (2022-11-07)
+
+
+### Bug Fixes
+
+* cor de fundo padrão no card ([4c63daa](https://github.com/vitoramaral10/get_bootstrap/commit/4c63daab62794495f7e6e1afe6494039b95a601a))
+
 ### [0.2.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.0...v0.2.1) (2022-11-03)
 
 
