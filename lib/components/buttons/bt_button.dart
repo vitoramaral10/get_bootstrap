@@ -1,6 +1,7 @@
 part of get_bootstrap;
 
 class BTButton extends StatelessWidget {
+  /// The text to displayed in button, this lenght have a max 70 characters.
   final String text;
   final bool? lg;
   final bool? sm;
@@ -9,14 +10,14 @@ class BTButton extends StatelessWidget {
   final IconData? icon;
 
   const BTButton({
-    Key? key,
+    super.key,
     required this.text,
     this.lg,
     this.sm,
     this.onPressed,
     this.backgroundColor,
     this.icon,
-  }) : super(key: key);
+  }) : assert(text.length <= 70);
 
   @override
   Widget build(BuildContext context) {
