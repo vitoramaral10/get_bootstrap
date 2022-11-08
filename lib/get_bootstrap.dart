@@ -6,6 +6,7 @@ import '../core/grid_tier.dart';
 import 'core/bt_typography.dart';
 
 part 'components/buttons/bt_button.dart';
+part 'components/buttons/bt_button_outline.dart';
 part 'components/bt_card.dart';
 part 'components/bt_table.dart';
 part 'components/bootstrap_theme_data.dart';
