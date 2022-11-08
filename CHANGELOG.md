@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.3.0...v0.4.0) (2022-11-08)
+
+
+### Features
+
+* adicção do botão com outline ([307650d](https://github.com/vitoramaral10/get_bootstrap/commit/307650dbcfb4705410c28d35c50db3abe587b235))
+
 ## [0.3.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.2...v0.3.0) (2022-11-08)
 
 
