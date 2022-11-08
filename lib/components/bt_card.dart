@@ -37,7 +37,7 @@ class BTCard extends StatelessWidget {
             padding: headPadding ?? const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: headBackground ?? BTColors.white,
+              color: headBackground ?? const Color(0xFFF7F7F7),
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(6),
                 topRight: Radius.circular(6),
@@ -45,7 +45,11 @@ class BTCard extends StatelessWidget {
             ),
             child: head!,
           ),
-        if (head != null) const Divider(),
+        if (head != null)
+          const Divider(
+            color: BTColors.gray300,
+            height: 1,
+          ),
         Container(
           padding: bodyPadding ?? const EdgeInsets.all(16.0),
           width: double.infinity,
@@ -68,7 +72,7 @@ class BTCard extends StatelessWidget {
             padding: footerPadding ?? const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: footerBackground ?? BTColors.white,
+              color: footerBackground ?? const Color(0xFFF7F7F7),
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(6),
                 bottomRight: Radius.circular(6),

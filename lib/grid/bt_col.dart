@@ -30,7 +30,10 @@ class BTCol extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: currentConfig(context) ?? 1,
-      child: child,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4.0),
+        child: child,
+      ),
     );
   }
 }

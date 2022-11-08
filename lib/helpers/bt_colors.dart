@@ -130,7 +130,7 @@ class BTColors {
   static const Color gray600 = Color(0xFF6C757D);
   static const Color gray700 = Color(0xFF495057);
   static const Color gray800 = Color(0xFF343A40);
-  static const Color gray900 = Color(0xFF222529);
+  static const Color gray900 = Color(0xFF212529);
 
   static const Color black = Color(0xFF000000);
   static const Color white = Color(0xFFFFFFFF);
