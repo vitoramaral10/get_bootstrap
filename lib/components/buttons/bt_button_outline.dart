@@ -34,7 +34,8 @@ class BTButtonOutline extends StatelessWidget {
           )),
           backgroundColor: MaterialStateProperty.all(Colors.white),
           foregroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.hovered)) {
+            if (states.contains(MaterialState.pressed) ||
+                states.contains(MaterialState.hovered)) { 
               return (backgroundColor ?? BTColors.primary).computeLuminance() >
                       0.5
                   ? BTColors.dark
