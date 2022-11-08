@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.2...v0.3.0) (2022-11-08)
+
+
+### Features
+
+* classe de botões do bootstrap ([8f5fe3e](https://github.com/vitoramaral10/get_bootstrap/commit/8f5fe3e481d98c8db81285a058970a23765cb492))
+
 ### [0.2.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.2.1...v0.2.2) (2022-11-07)
 
 
