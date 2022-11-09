@@ -225,9 +225,14 @@ class Sidebar extends StatelessWidget {
               'Breadcrumb',
               style: GetBootstrap.typography.small,
             ),
-            Text(
-              'Buttons',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/components/buttons');
+              },
+              child: Text(
+                'Botões',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Button group',

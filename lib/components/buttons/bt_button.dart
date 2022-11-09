@@ -30,24 +30,28 @@ class BTButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           side: MaterialStateProperty.all(BorderSide(
-            color: backgroundColor ?? Theme.of(context).primaryColor,
+            color: (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.0),
           )),
           backgroundColor: MaterialStateProperty.all(
-            backgroundColor ?? Theme.of(context).primaryColor,
+            (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           ),
-          foregroundColor: MaterialStateProperty.resolveWith((states) {
-            return (backgroundColor ?? Theme.of(context).primaryColor)
+          foregroundColor: MaterialStateProperty.all(
+            (backgroundColor ?? Theme.of(context).primaryColor)
                         .computeLuminance() >
                     0.5
                 ? BTColors.dark
-                : BTColors.light;
-          }),
+                : BTColors.light,
+          ),
           overlayColor: MaterialStateProperty.all(
-            backgroundColor ?? Theme.of(context).primaryColor,
+            (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           ),
           textStyle: MaterialStateProperty.resolveWith((states) {
             return TextStyle(
-              color: backgroundColor ?? Theme.of(context).primaryColor,
+              color: (backgroundColor ?? Theme.of(context).primaryColor)
+                  .withOpacity(onPressed != null ? 1 : 0.65),
               fontWeight: FontWeight.w500,
               fontSize: 14,
             );

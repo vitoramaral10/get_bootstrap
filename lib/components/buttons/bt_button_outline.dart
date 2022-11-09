@@ -30,7 +30,8 @@ class BTButtonOutline extends StatelessWidget {
       child: OutlinedButton(
         style: ButtonStyle(
           side: MaterialStateProperty.all(BorderSide(
-            color: backgroundColor ?? BTColors.primary,
+            color: (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           )),
           backgroundColor: MaterialStateProperty.all(Colors.white),
           foregroundColor: MaterialStateProperty.resolveWith((states) {
@@ -42,14 +43,17 @@ class BTButtonOutline extends StatelessWidget {
                   : Colors.white;
             }
 
-            return backgroundColor ?? BTColors.primary;
+            return (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65);
           }),
           overlayColor: MaterialStateProperty.all(
-            backgroundColor ?? BTColors.primary,
+            (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           ),
           textStyle: MaterialStateProperty.resolveWith((states) {
             return TextStyle(
-              color: backgroundColor ?? BTColors.primary,
+              color: (backgroundColor ?? Theme.of(context).primaryColor)
+                  .withOpacity(onPressed != null ? 1 : 0.65),
               fontWeight: FontWeight.w500,
               fontSize: 14,
             );
