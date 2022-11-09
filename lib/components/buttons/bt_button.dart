@@ -23,10 +23,10 @@ class BTButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: lg == true
-          ? 42
+          ? 48
           : sm == true
-              ? 24
-              : 32,
+              ? 31
+              : 38,
       child: ElevatedButton(
         style: ButtonStyle(
           side: MaterialStateProperty.all(BorderSide(
@@ -52,6 +52,7 @@ class BTButton extends StatelessWidget {
               fontSize: 14,
             );
           }),
+          elevation: MaterialStateProperty.all(0),
         ),
         onPressed: onPressed,
         child: Row(

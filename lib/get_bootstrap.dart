@@ -1,8 +1,9 @@
 library get_bootstrap;
 
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../core/grid_tier.dart';
 import 'core/bt_typography.dart';
 
 part 'components/buttons/bt_button.dart';
@@ -13,6 +14,7 @@ part 'components/bt_table.dart';
 part 'components/bootstrap_theme_data.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
+part 'grid/bootstrap_visibility.dart';
 part 'grid/bt_col.dart';
 part 'grid/bt_row.dart';
 part 'helpers/bt_colors.dart';

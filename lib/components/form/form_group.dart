@@ -7,15 +7,17 @@ class FormGroup extends StatelessWidget {
   final bool? required;
   final int? maxLines;
   final int? maxLength;
+  final bool obscureText;
 
   const FormGroup({
     super.key,
     this.title,
     this.required = false,
-    this.maxLines,
+    this.maxLines = 1,
     this.maxLength,
     this.lg = false,
     this.sm = false,
+    this.obscureText = false,
   });
 
   @override
@@ -37,7 +39,7 @@ class FormGroup extends StatelessWidget {
                 ),
             ],
           ),
-        if (title != null) const SizedBox(height: 8),
+        if (title != null) const SizedBox(height: 4),
         SizedBox(
           height: lg!
               ? 48 + (maxLength != null ? 18 : 0)
@@ -47,6 +49,7 @@ class FormGroup extends StatelessWidget {
           child: TextField(
             maxLines: maxLines,
             maxLength: maxLength,
+            obscureText: obscureText,
             decoration: InputDecoration(
               isDense: false,
               contentPadding: EdgeInsets.symmetric(

@@ -66,7 +66,11 @@ class BTCard extends StatelessWidget {
           ),
           child: body,
         ),
-        if (footer != null) const Divider(),
+        if (footer != null)
+          const Divider(
+            color: BTColors.gray300,
+            height: 1,
+          ),
         if (footer != null)
           Container(
             padding: footerPadding ?? const EdgeInsets.all(16.0),

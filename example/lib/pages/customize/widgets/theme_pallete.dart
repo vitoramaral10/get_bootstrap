@@ -11,12 +11,9 @@ class ThemePallete extends StatelessWidget {
     return BTRow(
       children: [
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.primary,
             child: const Padding(
@@ -29,12 +26,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.secondary,
             child: const Padding(
@@ -47,12 +41,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.success,
             child: const Padding(
@@ -65,12 +56,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.danger,
             child: const Padding(
@@ -83,12 +71,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.warning,
             child: const Padding(
@@ -103,12 +88,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.info,
             child: const Padding(
@@ -123,12 +105,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.light,
             child: const Padding(
@@ -143,12 +122,9 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          xxl: 4,
-          xl: 4,
-          lg: 4,
+          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
             height: 50,
-            margin: const EdgeInsets.all(8),
             width: double.infinity,
             color: BTColors.dark,
             child: const Padding(
