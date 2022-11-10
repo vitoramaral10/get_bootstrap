@@ -75,64 +75,64 @@ class ButtonsPage extends StatelessWidget {
                                       children: [
                                         BTButton(
                                           onPressed: () => log('primary'),
-                                          text: 'Primary',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Primary'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('secondary'),
-                                          text: 'Secondary',
                                           backgroundColor: BTColors.secondary,
+                                          child: const Text('Secondary'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('success'),
-                                          text: 'Success',
                                           backgroundColor: BTColors.success,
+                                          child: const Text('Success'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('danger'),
-                                          text: 'Danger',
                                           backgroundColor: BTColors.danger,
+                                          child: const Text('Danger'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('warning'),
-                                          text: 'Warning',
                                           backgroundColor: BTColors.warning,
+                                          child: const Text('Warning'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('info'),
-                                          text: 'Info',
                                           backgroundColor: BTColors.info,
+                                          child: const Text('Info'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('light'),
-                                          text: 'Light',
                                           backgroundColor: BTColors.light,
+                                          child: const Text('Light'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('dark'),
-                                          text: 'Dark',
                                           backgroundColor: BTColors.dark,
+                                          child: const Text('Dark'),
                                         ),
                                         const SizedBox(
                                           width: 8,
@@ -343,8 +343,8 @@ BTButtonOutline(
                                         BTButton(
                                           lg: true,
                                           onPressed: () => log('primary'),
-                                          text: 'Botão grande',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Botão grande'),
                                         ),
                                         const SizedBox(
                                           width: 8,
@@ -352,8 +352,8 @@ BTButtonOutline(
                                         BTButton(
                                           lg: true,
                                           onPressed: () => log('secondary'),
-                                          text: 'Botão grande',
                                           backgroundColor: BTColors.secondary,
+                                          child: const Text('Botão grande'),
                                         ),
                                       ],
                                     ),
@@ -382,8 +382,8 @@ BTButton(
                                         BTButton(
                                           sm: true,
                                           onPressed: () => log('primary'),
-                                          text: 'Botão pequeno',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Botão pequeno'),
                                         ),
                                         const SizedBox(
                                           width: 8,
@@ -391,8 +391,8 @@ BTButton(
                                         BTButton(
                                           sm: true,
                                           onPressed: () => log('secondary'),
-                                          text: 'Botão pequeno',
                                           backgroundColor: BTColors.secondary,
+                                          child: const Text('Botão pequeno'),
                                         ),
                                       ],
                                     ),
@@ -429,15 +429,15 @@ BTButton(
                                     body: Row(
                                       children: const [
                                         BTButton(
-                                          text: 'Botão principal',
                                           backgroundColor: BTColors.primary,
+                                          child: Text('Botão principal'),
                                         ),
                                         SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
-                                          text: 'Botão',
                                           backgroundColor: BTColors.secondary,
+                                          child: Text('Botão'),
                                         ),
                                         SizedBox(
                                           width: 8,
@@ -488,15 +488,15 @@ BTButton(
                                     body: Row(
                                       children: const [
                                         BTButton(
-                                          text: 'Botão principal',
                                           backgroundColor: BTColors.primary,
+                                          child: Text('Botão principal'),
                                         ),
                                         SizedBox(
                                           width: 8,
                                         ),
                                         BTButton(
-                                          text: 'Botão',
                                           backgroundColor: BTColors.secondary,
+                                          child: Text('Botão'),
                                         ),
                                         SizedBox(
                                           width: 8,
@@ -549,16 +549,16 @@ BTButton(
                                       children: [
                                         BTButton(
                                           onPressed: () => log('primary'),
-                                          text: 'Botão',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Botão'),
                                         ),
                                         const SizedBox(
                                           height: 8,
                                         ),
                                         BTButton(
                                           onPressed: () => log('primary'),
-                                          text: 'Botão',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Botão'),
                                         ),
                                       ],
                                     ),

@@ -2,7 +2,7 @@ part of get_bootstrap;
 
 class BTTable extends StatelessWidget {
   final List<String>? head;
-  final List<List<Widget>> body;
+  final List<List<BTCell>> body;
   @override
   const BTTable({
     Key? key,
@@ -43,7 +43,7 @@ class BTTable extends StatelessWidget {
     }
 
     if (body.isNotEmpty) {
-      for (List element in body) {
+      for (List<BTCell> element in body) {
         rows.add(
           TableRow(
             decoration: const BoxDecoration(
@@ -58,7 +58,10 @@ class BTTable extends StatelessWidget {
                 .map(
                   (e) => Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: e,
+                    child: Row(
+                      mainAxisAlignment: e.alignment ?? MainAxisAlignment.start,
+                      children: [e.child],
+                    ),
                   ),
                 )
                 .toList(),

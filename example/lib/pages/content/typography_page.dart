@@ -116,51 +116,63 @@ class TypographyPage extends StatelessWidget {
                                     head: const ['Cabeçalho', 'Exemplo'],
                                     body: [
                                       [
-                                        const Text('headline1'),
-                                        Text(
-                                          'h1. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline1,
+                                        const BTCell(child: Text('headline1')),
+                                        BTCell(
+                                          child: Text(
+                                            'h1. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline1,
+                                          ),
                                         ),
                                       ],
                                       [
-                                        const Text('headline2'),
-                                        Text(
-                                          'h2. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline2,
+                                        const BTCell(child: Text('headline2')),
+                                        BTCell(
+                                          child: Text(
+                                            'h2. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline2,
+                                          ),
                                         ),
                                       ],
                                       [
-                                        const Text('headline3'),
-                                        Text(
-                                          'h3. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline3,
+                                        const BTCell(child: Text('headline3')),
+                                        BTCell(
+                                          child: Text(
+                                            'h3. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline3,
+                                          ),
                                         ),
                                       ],
                                       [
-                                        const Text('headline4'),
-                                        Text(
-                                          'h4. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline4,
+                                        const BTCell(child: Text('headline4')),
+                                        BTCell(
+                                          child: Text(
+                                            'h4. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline4,
+                                          ),
                                         ),
                                       ],
                                       [
-                                        const Text('headline5'),
-                                        Text(
-                                          'h5. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline5,
+                                        const BTCell(child: Text('headline5')),
+                                        BTCell(
+                                          child: Text(
+                                            'h5. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline5,
+                                          ),
                                         ),
                                       ],
                                       [
-                                        const Text('headline6'),
-                                        Text(
-                                          'h6. Título de inicialização',
-                                          style:
-                                              GetBootstrap.typography.headline6,
+                                        const BTCell(child: Text('headline6')),
+                                        BTCell(
+                                          child: Text(
+                                            'h6. Título de inicialização',
+                                            style: GetBootstrap
+                                                .typography.headline6,
+                                          ),
                                         ),
                                       ],
                                     ],
@@ -198,45 +210,57 @@ class TypographyPage extends StatelessWidget {
                                     body: BTTable(
                                       body: [
                                         [
-                                          Text(
-                                            'Display 1',
-                                            style: GetBootstrap
-                                                .typography.display1,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 1',
+                                              style: GetBootstrap
+                                                  .typography.display1,
+                                            ),
                                           ),
                                         ],
                                         [
-                                          Text(
-                                            'Display 2',
-                                            style: GetBootstrap
-                                                .typography.display2,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 2',
+                                              style: GetBootstrap
+                                                  .typography.display2,
+                                            ),
                                           ),
                                         ],
                                         [
-                                          Text(
-                                            'Display 3',
-                                            style: GetBootstrap
-                                                .typography.display3,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 3',
+                                              style: GetBootstrap
+                                                  .typography.display3,
+                                            ),
                                           ),
                                         ],
                                         [
-                                          Text(
-                                            'Display 4',
-                                            style: GetBootstrap
-                                                .typography.display4,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 4',
+                                              style: GetBootstrap
+                                                  .typography.display4,
+                                            ),
                                           ),
                                         ],
                                         [
-                                          Text(
-                                            'Display 5',
-                                            style: GetBootstrap
-                                                .typography.display5,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 5',
+                                              style: GetBootstrap
+                                                  .typography.display5,
+                                            ),
                                           ),
                                         ],
                                         [
-                                          Text(
-                                            'Display 6',
-                                            style: GetBootstrap
-                                                .typography.display6,
+                                          BTCell(
+                                            child: Text(
+                                              'Display 6',
+                                              style: GetBootstrap
+                                                  .typography.display6,
+                                            ),
                                           ),
                                         ],
                                       ],
@@ -374,7 +398,8 @@ class TypographyPage extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 16.0,),
+                                      vertical: 16.0,
+                                    ),
                                     child: RichText(
                                       text: TextSpan(
                                         children: [

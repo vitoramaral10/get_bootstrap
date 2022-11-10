@@ -2,22 +2,22 @@ part of get_bootstrap;
 
 class BTButton extends StatelessWidget {
   /// The text to displayed in button, this lenght have a max 70 characters.
-  final String text;
+  final Widget child;
   final bool? lg;
   final bool? sm;
+  final bool square;
   final VoidCallback? onPressed;
   final Color? backgroundColor;
-  final IconData? icon;
 
   const BTButton({
     super.key,
-    required this.text,
+    required this.child,
     this.lg,
     this.sm,
+    this.square = false,
     this.onPressed,
     this.backgroundColor,
-    this.icon,
-  }) : assert(text.length <= 70);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +27,16 @@ class BTButton extends StatelessWidget {
           : sm == true
               ? 31
               : 38,
+      width: !square
+          ? null
+          : lg == true
+              ? 48
+              : sm == true
+                  ? 31
+                  : 38,
       child: ElevatedButton(
         style: ButtonStyle(
+          padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
           side: MaterialStateProperty.all(BorderSide(
             color: (backgroundColor ?? Theme.of(context).primaryColor)
                 .withOpacity(onPressed != null ? 1 : 0.0),
@@ -62,15 +70,7 @@ class BTButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (icon != null)
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Icon(icon),
-              ),
-            if (icon != null) const Spacer(),
-            Text(
-              text,
-            ),
+            child,
           ],
         ),
       ),

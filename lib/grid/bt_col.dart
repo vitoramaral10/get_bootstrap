@@ -215,7 +215,7 @@ class BTCol extends StatelessWidget {
     // First, the sizes (flex => col-*)
     //
     initArray(
-      referenceArgument: sizes!,
+      referenceArgument: sizes ?? [],
       map: _ratiosPerSize,
       argPrefix: 'col',
       minMaxFct: math.min,

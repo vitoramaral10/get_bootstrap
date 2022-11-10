@@ -1,11 +1,11 @@
 part of get_bootstrap;
 
 class FormGroup extends StatelessWidget {
-  final bool? lg;
-  final bool? sm;
+  final bool lg;
+  final bool sm;
   final String? title;
-  final bool? required;
-  final int? maxLines;
+  final bool required;
+  final int maxLines;
   final int? maxLength;
   final bool obscureText;
 
@@ -29,7 +29,7 @@ class FormGroup extends StatelessWidget {
           Row(
             children: [
               Text(title!),
-              if (required!)
+              if (required)
                 const Padding(
                   padding: EdgeInsets.only(left: 4.0),
                   child: Text(
@@ -41,9 +41,9 @@ class FormGroup extends StatelessWidget {
           ),
         if (title != null) const SizedBox(height: 4),
         SizedBox(
-          height: lg!
+          height: lg
               ? 48 + (maxLength != null ? 18 : 0)
-              : sm!
+              : sm
                   ? 31 + (maxLength != null ? 18 : 0)
                   : 38 + (maxLength != null ? 18 : 0),
           child: TextField(
@@ -53,14 +53,14 @@ class FormGroup extends StatelessWidget {
             decoration: InputDecoration(
               isDense: false,
               contentPadding: EdgeInsets.symmetric(
-                vertical: lg!
+                vertical: lg
                     ? 8
-                    : sm!
+                    : sm
                         ? 4
                         : 6,
-                horizontal: lg!
+                horizontal: lg
                     ? 16
-                    : sm!
+                    : sm
                         ? 8
                         : 12,
               ),

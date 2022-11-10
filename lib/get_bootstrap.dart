@@ -6,12 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'core/bt_typography.dart';
 
+part 'components/bootstrap_theme_data.dart';
+part 'components/bt_card.dart';
 part 'components/buttons/bt_button.dart';
 part 'components/buttons/bt_button_outline.dart';
 part 'components/form/form_group.dart';
-part 'components/bt_card.dart';
-part 'components/bt_table.dart';
-part 'components/bootstrap_theme_data.dart';
+part 'components/table/bt_cell.dart';
+part 'components/table/bt_table.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
 part 'grid/bootstrap_visibility.dart';

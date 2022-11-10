@@ -149,74 +149,90 @@ class BreakpointsPage extends StatelessWidget {
                                       ],
                                       body: [
                                         const [
-                                          Text('Extra small'),
-                                          Text(
-                                            'None',
-                                            style: TextStyle(
-                                              fontStyle: FontStyle.italic,
+                                          BTCell(child: Text('Extra small')),
+                                          BTCell(
+                                            child: Text(
+                                              'None',
+                                              style: TextStyle(
+                                                fontStyle: FontStyle.italic,
+                                              ),
                                             ),
                                           ),
-                                          Text('<576px'),
+                                          BTCell(child: Text('<576px')),
                                         ],
                                         [
-                                          const Text('Small'),
-                                          Text(
-                                            'sm',
-                                            style: GetBootstrap
-                                                .typography.highlight
-                                                ?.copyWith(
-                                              color: BTColors.red,
+                                          const BTCell(child: Text('Small')),
+                                          BTCell(
+                                            child: Text(
+                                              'sm',
+                                              style: GetBootstrap
+                                                  .typography.highlight
+                                                  ?.copyWith(
+                                                color: BTColors.red,
+                                              ),
                                             ),
                                           ),
-                                          const Text('≥576px'),
+                                          const BTCell(child: Text('≥576px')),
                                         ],
                                         [
-                                          const Text('Medium'),
-                                          Text(
-                                            'md',
-                                            style: GetBootstrap
-                                                .typography.highlight
-                                                ?.copyWith(
-                                              color: BTColors.red,
+                                          const BTCell(child: Text('Medium')),
+                                          BTCell(
+                                            child: Text(
+                                              'md',
+                                              style: GetBootstrap
+                                                  .typography.highlight
+                                                  ?.copyWith(
+                                                color: BTColors.red,
+                                              ),
                                             ),
                                           ),
-                                          const Text('≥768px'),
+                                          const BTCell(child: Text('≥768px')),
                                         ],
                                         [
-                                          const Text('Large'),
-                                          Text(
-                                            'lg',
-                                            style: GetBootstrap
-                                                .typography.highlight
-                                                ?.copyWith(
-                                              color: BTColors.red,
+                                          const BTCell(child: Text('Large')),
+                                          BTCell(
+                                            child: Text(
+                                              'lg',
+                                              style: GetBootstrap
+                                                  .typography.highlight
+                                                  ?.copyWith(
+                                                color: BTColors.red,
+                                              ),
                                             ),
                                           ),
-                                          const Text('≥992px'),
+                                          const BTCell(child: Text('≥992px')),
                                         ],
                                         [
-                                          const Text('Extra large'),
-                                          Text(
-                                            'xl',
-                                            style: GetBootstrap
-                                                .typography.highlight
-                                                ?.copyWith(
-                                              color: BTColors.red,
+                                          const BTCell(
+                                            child: Text('Extra large'),
+                                          ),
+                                          BTCell(
+                                            child: Text(
+                                              'xl',
+                                              style: GetBootstrap
+                                                  .typography.highlight
+                                                  ?.copyWith(
+                                                color: BTColors.red,
+                                              ),
                                             ),
                                           ),
-                                          const Text('≥1200px'),
+                                          const BTCell(child: Text('≥1200px')),
                                         ],
                                         [
-                                          const Text('Extra extra large'),
-                                          Text(
-                                            'xxl',
-                                            style: GetBootstrap
-                                                .typography.highlight
-                                                ?.copyWith(
-                                              color: BTColors.red,
+                                          const BTCell(
+                                            child: Text('Extra extra large'),
+                                          ),
+                                          BTCell(
+                                            child: Text(
+                                              'xxl',
+                                              style: GetBootstrap
+                                                  .typography.highlight
+                                                  ?.copyWith(
+                                                color: BTColors.red,
+                                              ),
                                             ),
                                           ),
-                                          const Text('≥1400px'),
+                                          const BTCell(child: Text('≥1400px')),
                                         ],
                                       ],
                                     ),
