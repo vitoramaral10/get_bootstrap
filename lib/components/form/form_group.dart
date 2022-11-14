@@ -8,6 +8,11 @@ class FormGroup extends StatelessWidget {
   final int maxLines;
   final int? maxLength;
   final bool obscureText;
+  final List<TextInputFormatter>? inputFormatters;
+  final String? Function(String?)? validator;
+  final AutovalidateMode? autovalidateMode;
+  final TextEditingController? controller;
+  final void Function()? onEditingComplete;
 
   const FormGroup({
     super.key,
@@ -18,6 +23,11 @@ class FormGroup extends StatelessWidget {
     this.lg = false,
     this.sm = false,
     this.obscureText = false,
+    this.inputFormatters,
+    this.validator,
+    this.autovalidateMode,
+    this.controller,
+    this.onEditingComplete,
   });
 
   @override
@@ -40,30 +50,28 @@ class FormGroup extends StatelessWidget {
             ],
           ),
         if (title != null) const SizedBox(height: 4),
-        SizedBox(
-          height: lg
-              ? 48 + (maxLength != null ? 18 : 0)
-              : sm
-                  ? 31 + (maxLength != null ? 18 : 0)
-                  : 38 + (maxLength != null ? 18 : 0),
-          child: TextField(
-            maxLines: maxLines,
-            maxLength: maxLength,
-            obscureText: obscureText,
-            decoration: InputDecoration(
-              isDense: false,
-              contentPadding: EdgeInsets.symmetric(
-                vertical: lg
-                    ? 8
-                    : sm
-                        ? 4
-                        : 6,
-                horizontal: lg
-                    ? 16
-                    : sm
-                        ? 8
-                        : 12,
-              ),
+        TextFormField(
+          onEditingComplete: onEditingComplete,
+          controller: controller,
+          maxLines: maxLines,
+          maxLength: maxLength,
+          obscureText: obscureText,
+          inputFormatters: inputFormatters,
+          validator: validator,
+          autovalidateMode: autovalidateMode,
+          decoration: InputDecoration(
+            isDense: true,
+            contentPadding: EdgeInsets.symmetric(
+              vertical: lg
+                  ? 13
+                  : sm
+                      ? 4.5
+                      : 8,
+              horizontal: lg
+                  ? 16
+                  : sm
+                      ? 8
+                      : 12,
             ),
           ),
         ),

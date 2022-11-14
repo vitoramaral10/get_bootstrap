@@ -70,13 +70,10 @@ class BTTable extends StatelessWidget {
       }
     }
 
-    return SizedBox(
-      width: double.maxFinite,
-      child: Table(
-        defaultColumnWidth: const IntrinsicColumnWidth(),
-        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        children: rows,
-      ),
+    return Table(
+      defaultColumnWidth: const IntrinsicColumnWidth(),
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      children: rows,
     );
   }
 }

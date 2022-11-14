@@ -59,6 +59,7 @@ dart_code_metrics:
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
+    - avoid-non-ascii-symbols
     - avoid-redundant-async 
     - avoid-returning-widgets
     - avoid-throw-in-catch-block
@@ -81,7 +82,7 @@ dart_code_metrics:
     - no-object-declaration
     - prefer-async-await
     - prefer-commenting-analyzer-ignores
-    - prefer-conditional-expression
+    - prefer-conditional-expressions
     - prefer-correct-edge-insets-constructor
     - prefer-correct-identifier-length:
       exceptions: [ 'z' ]
@@ -102,7 +103,7 @@ dart_code_metrics:
     - avoid-returning-widgets
     - avoid-unnecessary-setstate
     - avoid-wrapping-in-padding
-    - avoid-use-expanded-as-spacer
+    - avoid-expanded-as-spacer
     - prefer-const-border-radius
     - prefer-correct-edge-insets-constructor
     - prefer-single-widget-per-file
