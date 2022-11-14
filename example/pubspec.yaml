@@ -13,18 +13,17 @@ dependencies:
   flutter_highlight: ^0.7.0
   flutter_svg: ^1.1.6
   font_awesome_flutter: ^10.2.1
-  url_launcher: ^6.1.6
   get_bootstrap:
     path: ../
+  url_launcher: ^6.1.6
 
 dev_dependencies:
-  dart_code_metrics: ^4.21.2
+  dart_code_metrics: ^5.0.1
   flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:

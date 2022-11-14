@@ -23,33 +23,37 @@ class BTButtonOutline extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: lg == true
-          ? 40
+          ? 48
           : sm == true
-              ? 24
-              : 32,
+              ? 31
+              : 38,
       child: OutlinedButton(
         style: ButtonStyle(
           side: MaterialStateProperty.all(BorderSide(
-            color: backgroundColor ?? BTColors.primary,
+            color: (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           )),
           backgroundColor: MaterialStateProperty.all(Colors.white),
           foregroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed) ||
-                states.contains(MaterialState.hovered)) { 
+                states.contains(MaterialState.hovered)) {
               return (backgroundColor ?? BTColors.primary).computeLuminance() >
                       0.5
                   ? BTColors.dark
                   : Colors.white;
             }
 
-            return backgroundColor ?? BTColors.primary;
+            return (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65);
           }),
           overlayColor: MaterialStateProperty.all(
-            backgroundColor ?? BTColors.primary,
+            (backgroundColor ?? Theme.of(context).primaryColor)
+                .withOpacity(onPressed != null ? 1 : 0.65),
           ),
           textStyle: MaterialStateProperty.resolveWith((states) {
             return TextStyle(
-              color: backgroundColor ?? BTColors.primary,
+              color: (backgroundColor ?? Theme.of(context).primaryColor)
+                  .withOpacity(onPressed != null ? 1 : 0.65),
               fontWeight: FontWeight.w500,
               fontSize: 14,
             );
