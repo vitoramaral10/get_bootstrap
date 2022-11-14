@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.4.0...v0.5.0) (2022-11-14)
+
+
+### Features
+
+* limitação do tamanho do texto dentro dos botões para 70 caracteres ([4747fb1](https://github.com/vitoramaral10/get_bootstrap/commit/4747fb1b65d8c0a7f88914808209fc5acf6a4bd8))
+* melhorias no widget de tabela ([5b5041e](https://github.com/vitoramaral10/get_bootstrap/commit/5b5041e6e32e7b3899d00d76c5af6ffc41e4e762))
+* novo grid system e ajustes nos componentes ([0536ca0](https://github.com/vitoramaral10/get_bootstrap/commit/0536ca047c0b3025287dc176667416a4bc731410))
+* novos parâmetros para trabalhar com o form_group ([8881fb0](https://github.com/vitoramaral10/get_bootstrap/commit/8881fb070c8775958bafdafa1604eb82b88d793b))
+* página de botões ([9eaef20](https://github.com/vitoramaral10/get_bootstrap/commit/9eaef20ebd90638f7516fb2d7bfaa498b6fad6c1))
+* tela de splash, inicial, e lgpd ([05c8b5c](https://github.com/vitoramaral10/get_bootstrap/commit/05c8b5c630c762097ac84e8b52fef6263bb45be6))
+* widget de form_group ([2b5425a](https://github.com/vitoramaral10/get_bootstrap/commit/2b5425ab1cddbcf069d647623bede4eb06efd356))
+
+
+### Bug Fixes
+
+* ajuste de tamanho da column ([fcc614e](https://github.com/vitoramaral10/get_bootstrap/commit/fcc614e81b44745a6e19ff6d11b98a93a678cdd9))
+* correção de background quando o botão é clicado ([082ac15](https://github.com/vitoramaral10/get_bootstrap/commit/082ac15653e6c2fd80aef80685d83dbedf49d0cb))
+
 ## [0.4.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.3.0...v0.4.0) (2022-11-08)
 
 
