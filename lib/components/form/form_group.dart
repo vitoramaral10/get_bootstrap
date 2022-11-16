@@ -1,9 +1,15 @@
 part of get_bootstrap;
 
 class FormGroup extends StatelessWidget {
+  final TextInputType? keyboardType;
+  final bool disabled;
+  final TextCapitalization textCapitalization;
+  final Iterable<String>? autofillHints;
+  final bool readonly;
   final bool lg;
   final bool sm;
   final String? title;
+  final String? placeholder;
   final bool required;
   final int maxLines;
   final int? maxLength;
@@ -13,10 +19,18 @@ class FormGroup extends StatelessWidget {
   final AutovalidateMode? autovalidateMode;
   final TextEditingController? controller;
   final void Function()? onEditingComplete;
+  final void Function(String)? onChanged;
+  final void Function(String)? onFieldSubmitted;
 
   const FormGroup({
     super.key,
+    this.keyboardType,
+    this.textCapitalization = TextCapitalization.none,
+    this.autofillHints,
+    this.disabled = false,
+    this.readonly = false,
     this.title,
+    this.placeholder,
     this.required = false,
     this.maxLines = 1,
     this.maxLength,
@@ -28,6 +42,8 @@ class FormGroup extends StatelessWidget {
     this.autovalidateMode,
     this.controller,
     this.onEditingComplete,
+    this.onChanged,
+    this.onFieldSubmitted,
   });
 
   @override
@@ -51,7 +67,14 @@ class FormGroup extends StatelessWidget {
           ),
         if (title != null) const SizedBox(height: 4),
         TextFormField(
+          keyboardType: keyboardType,
+          autofillHints: autofillHints,
+          textCapitalization: textCapitalization,
+          readOnly: readonly,
+          enabled: !disabled,
           onEditingComplete: onEditingComplete,
+          onChanged: onChanged,
+          onFieldSubmitted: onFieldSubmitted,
           controller: controller,
           maxLines: maxLines,
           maxLength: maxLength,
@@ -59,14 +82,33 @@ class FormGroup extends StatelessWidget {
           inputFormatters: inputFormatters,
           validator: validator,
           autovalidateMode: autovalidateMode,
+          style: TextStyle(
+            fontSize: lg
+                ? 20
+                : sm
+                    ? 14
+                    : 16,
+          ),
           decoration: InputDecoration(
+            filled: true,
+            fillColor: disabled ? BTColors.gray200 : null,
+            hintText: placeholder,
             isDense: true,
+            hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
+                ?.copyWith(
+              color: readonly ? BTColors.gray900 : null,
+              fontSize: lg
+                  ? 20
+                  : sm
+                      ? 14
+                      : 16,
+            ),
             contentPadding: EdgeInsets.symmetric(
               vertical: lg
-                  ? 13
+                  ? 16
                   : sm
-                      ? 4.5
-                      : 8,
+                      ? 8
+                      : 12,
               horizontal: lg
                   ? 16
                   : sm

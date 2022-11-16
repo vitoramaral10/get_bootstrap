@@ -59,7 +59,6 @@ dart_code_metrics:
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
-    - avoid-non-ascii-symbols
     - avoid-redundant-async 
     - avoid-returning-widgets
     - avoid-throw-in-catch-block

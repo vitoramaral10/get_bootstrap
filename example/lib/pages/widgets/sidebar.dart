@@ -170,9 +170,14 @@ class Sidebar extends StatelessWidget {
               'Overview',
               style: GetBootstrap.typography.small,
             ),
-            Text(
-              'Form control',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/forms/form_control');
+              },
+              child: Text(
+                'Controles de formulário',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Select',

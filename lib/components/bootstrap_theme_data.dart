@@ -16,25 +16,39 @@ class BootstrapThemeData {
     inputDecorationTheme: InputDecorationTheme(
       isDense: true,
       contentPadding: const EdgeInsets.all(16),
-      labelStyle: const TextStyle(
-        color: BTColors.dark,
+      labelStyle: const TextStyle(color: BTColors.dark, fontSize: 16),
+      hintStyle: const TextStyle(color: BTColors.gray600, fontSize: 16),
+      fillColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      border: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: BTColors.gray400,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
-      hintStyle: const TextStyle(
-        color: BTColors.dark,
-      ),
-      fillColor: BTColors.orange,
-      border: const OutlineInputBorder(),
       errorBorder: const OutlineInputBorder(
         borderSide: BorderSide(color: BTColors.danger),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
-      enabledBorder: const OutlineInputBorder(),
-      focusedBorder: const OutlineInputBorder(),
+      enabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: BTColors.gray400,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide:
+            BorderSide(color: BTColors.blue500.withOpacity(0.3), width: 4),
+        borderRadius: const BorderRadius.all(Radius.circular(6)),
+      ),
       disabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(6)),
         borderSide: BorderSide(
           color: BTColors.gray400,
         ),
       ),
       focusedErrorBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(6)),
         borderSide: BorderSide(color: BTColors.danger),
       ),
       errorStyle: GoogleFonts.inter(
