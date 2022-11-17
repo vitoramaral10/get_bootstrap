@@ -18,6 +18,8 @@ class FormGroupInline extends StatelessWidget {
   final void Function()? onEditingComplete;
   final void Function(String)? onChanged;
   final void Function(String)? onFieldSubmitted;
+  final List<String> sizesTitle;
+  final List<String> sizesField;
 
   const FormGroupInline({
     super.key,
@@ -38,6 +40,16 @@ class FormGroupInline extends StatelessWidget {
     this.onEditingComplete,
     this.onChanged,
     this.onFieldSubmitted,
+    this.sizesTitle = const [
+      'col-xl-2',
+      'col-sm-12',
+      'col-xs-12',
+    ],
+    this.sizesField = const [
+      'col-xl-2',
+      'col-sm-12',
+      'col-xs-12',
+    ],
   });
 
   @override
@@ -46,12 +58,9 @@ class FormGroupInline extends StatelessWidget {
       children: [
         if (title != null)
           BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-sm-12',
-              'col-xs-12',
-            ],
+            sizes: sizesTitle,
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(title!),
                 if (required)
@@ -66,11 +75,7 @@ class FormGroupInline extends StatelessWidget {
             ),
           ),
         BTCol(
-          sizes: const [
-            'col-xl-10',
-            'col-sm-12',
-            'col-xs-12',
-          ],
+          sizes: sizesField,
           child: TextFormField(
             readOnly: readonly,
             enabled: !disabled,

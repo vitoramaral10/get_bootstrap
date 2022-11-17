@@ -15,7 +15,11 @@ class FooterWidget extends StatelessWidget {
       child: BTRow(
         children: [
           BTCol(
-            sizes: const ['col-lg-4'],
+            sizes: const [
+              'col-xl-4',
+              'col-lg-4',
+              'col-md-12',
+            ],
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -63,7 +67,11 @@ class FooterWidget extends StatelessWidget {
             ),
           ),
           BTCol(
-            sizes: const ['col-lg-2'],
+            sizes: const [
+              'col-xl-2',
+              'col-lg-2',
+              'col-md-6',
+            ],
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -108,7 +116,11 @@ class FooterWidget extends StatelessWidget {
             ),
           ),
           BTCol(
-            sizes: const ['col-lg-2'],
+            sizes: const [
+              'col-xl-2',
+              'col-lg-2',
+              'col-md-6',
+            ],
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -145,7 +157,11 @@ class FooterWidget extends StatelessWidget {
             ),
           ),
           BTCol(
-            sizes: const ['col-lg-2'],
+            sizes: const [
+              'col-xl-2',
+              'col-lg-2',
+              'col-md-6',
+            ],
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -182,7 +198,11 @@ class FooterWidget extends StatelessWidget {
             ),
           ),
           BTCol(
-            sizes: const ['col-lg-2'],
+            sizes: const [
+              'col-xl-2',
+              'col-lg-2',
+              'col-md-6',
+            ],
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

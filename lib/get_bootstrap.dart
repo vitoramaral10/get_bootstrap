@@ -12,6 +12,7 @@ part 'components/bt_card.dart';
 part 'components/buttons/bt_button.dart';
 part 'components/buttons/bt_button_outline.dart';
 part 'components/form/form_group.dart';
+part 'components/form/form_group_file.dart';
 part 'components/form/form_group_inline.dart';
 part 'components/form/form_group_inline_plain_text.dart';
 part 'components/form/form_group_plain_text.dart';

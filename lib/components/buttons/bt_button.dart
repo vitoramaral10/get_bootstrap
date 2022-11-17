@@ -36,6 +36,11 @@ class BTButton extends StatelessWidget {
                   : 38,
       child: ElevatedButton(
         style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(6)),
+            ),
+          ),
           padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
           side: MaterialStateProperty.all(BorderSide(
             color: (backgroundColor ?? Theme.of(context).primaryColor)

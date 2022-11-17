@@ -4,12 +4,24 @@ class FormGroupInlinePlainText extends StatelessWidget {
   final String? title;
   final String value;
   final bool required;
+  final List<String> sizesTitle;
+  final List<String> sizesField;
 
   const FormGroupInlinePlainText({
     super.key,
     this.title,
     required this.value,
     this.required = false,
+    this.sizesTitle = const [
+      'col-xl-2',
+      'col-sm-12',
+      'col-xs-12',
+    ],
+    this.sizesField = const [
+      'col-xl-2',
+      'col-sm-12',
+      'col-xs-12',
+    ],
   });
 
   @override
@@ -18,12 +30,9 @@ class FormGroupInlinePlainText extends StatelessWidget {
       children: [
         if (title != null)
           BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-sm-12',
-              'col-xs-12',
-            ],
+            sizes: sizesTitle,
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,  
               children: [
                 Text(title!),
                 if (required)
@@ -38,11 +47,7 @@ class FormGroupInlinePlainText extends StatelessWidget {
             ),
           ),
         BTCol(
-          sizes: const [
-            'col-xl-10',
-            'col-sm-12',
-            'col-xs-12',
-          ],
+          sizes: sizesField,
           child: Text(value),
         ),
       ],
