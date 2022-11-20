@@ -228,64 +228,64 @@ TextButton(
                                       children: [
                                         BTButtonOutline(
                                           onPressed: () => log('primary'),
-                                          text: 'Primary',
                                           backgroundColor: BTColors.primary,
+                                          child: const Text('Primary'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('secondary'),
-                                          text: 'Secondary',
                                           backgroundColor: BTColors.secondary,
+                                          child: const Text('Secondary'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('success'),
-                                          text: 'Success',
                                           backgroundColor: BTColors.success,
+                                          child: const Text('Success'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('danger'),
-                                          text: 'Danger',
                                           backgroundColor: BTColors.danger,
+                                          child: const Text('Danger'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('warning'),
-                                          text: 'Warning',
                                           backgroundColor: BTColors.warning,
+                                          child: const Text('Warning'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('info'),
-                                          text: 'Info',
                                           backgroundColor: BTColors.info,
+                                          child: const Text('Info'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('light'),
-                                          text: 'Light',
                                           backgroundColor: BTColors.light,
+                                          child: const Text('Light'),
                                         ),
                                         const SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
                                           onPressed: () => log('dark'),
-                                          text: 'Dark',
                                           backgroundColor: BTColors.dark,
+                                          child: const Text('Dark'),
                                         ),
                                       ],
                                     ),
@@ -443,15 +443,15 @@ BTButton(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
-                                          text: 'Botão principal',
                                           backgroundColor: BTColors.primary,
+                                          child: Text('Botão principal'),
                                         ),
                                         SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
-                                          text: 'Botão',
                                           backgroundColor: BTColors.secondary,
+                                          child: Text('Botão'),
                                         ),
                                       ],
                                     ),
@@ -502,15 +502,15 @@ BTButton(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
-                                          text: 'Botão principal',
                                           backgroundColor: BTColors.primary,
+                                          child: Text('Botão principal'),
                                         ),
                                         SizedBox(
                                           width: 8,
                                         ),
                                         BTButtonOutline(
-                                          text: 'Botão',
                                           backgroundColor: BTColors.secondary,
+                                          child: Text('Botão'),
                                         ),
                                       ],
                                     ),
