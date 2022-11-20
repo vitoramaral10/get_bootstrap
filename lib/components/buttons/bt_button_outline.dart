@@ -2,7 +2,7 @@ part of get_bootstrap;
 
 class BTButtonOutline extends StatelessWidget {
   /// The text to displayed in button, this lenght have a max 70 characters.
-  final String text;
+  final Widget child;
   final bool? lg;
   final bool? sm;
   final bool? outline;
@@ -11,13 +11,13 @@ class BTButtonOutline extends StatelessWidget {
 
   const BTButtonOutline({
     super.key,
-    required this.text,
+    required this.child,
     this.lg,
     this.sm,
     this.outline,
     this.onPressed,
     this.backgroundColor,
-  }) : assert(text.length <= 70);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +60,7 @@ class BTButtonOutline extends StatelessWidget {
           }),
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-        ),
+        child: child,
       ),
     );
   }
