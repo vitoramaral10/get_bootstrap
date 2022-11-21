@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.5.0...v0.6.0) (2022-11-21)
+
+
+### Features
+
+* adicionado o form_group_inline e form_group_inline_plain_text ([2b0ba37](https://github.com/vitoramaral10/get_bootstrap/commit/2b0ba37943b6e0a67f63c8b9ab57fe9329b9efaa))
+* ajuste no botão outline para receber widget ([3fbdc1a](https://github.com/vitoramaral10/get_bootstrap/commit/3fbdc1a756a886b336959a4f33c1d98dfb530a26))
+* **form_group:** adicionado o focusNode dentro do FormGroup ([8dc080b](https://github.com/vitoramaral10/get_bootstrap/commit/8dc080bf8adde6ac3a02b6c640eca0f4919635b5))
+* melhorias extremas no form_group e novos widgets: form_group_inline e com plain_text ([e1550ac](https://github.com/vitoramaral10/get_bootstrap/commit/e1550acc1bff90075ad126ebe9dc94f0f2700312))
+
+
+### Bug Fixes
+
+* atualização da documentação ([fdf19e9](https://github.com/vitoramaral10/get_bootstrap/commit/fdf19e9d1b085b11b1bb3bfeb4c7d4d9ab3c8dc6))
+
 ## [0.5.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.4.0...v0.5.0) (2022-11-14)
 
 
