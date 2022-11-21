@@ -1,7 +1,5 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 ## [0.6.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.5.0...v0.6.0) (2022-11-21)
 
 
@@ -89,13 +87,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* página de liçensa ([f0c2450](https://github.com/vitoramaral10/get_bootstrap/commit/f0c24503edffcba211e005122631171a4d21d17c))
+* página de licença ([f0c2450](https://github.com/vitoramaral10/get_bootstrap/commit/f0c24503edffcba211e005122631171a4d21d17c))
 
-### [0.0.3](https://github.com/vitoramaral10/get_bootstrap/compare/v0.0.2...v0.0.3) (2022-10-21)
+## [0.0.3](https://github.com/vitoramaral10/get_bootstrap/compare/v0.0.2...v0.0.3) (2022-10-21)
 
-### [0.0.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.0.1...v0.0.2) (2022-10-21)
+## [0.0.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.0.1...v0.0.2) (2022-10-21)
 
-### 0.0.1 (2022-10-21)
+## 0.0.1 (2022-10-21)
 
 
 ### Features
