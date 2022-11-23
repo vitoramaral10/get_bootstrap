@@ -3,12 +3,10 @@ part of get_bootstrap;
 class BTTable extends StatelessWidget {
   final List<String>? head;
   final List<List<BTCell>> body;
+  final ValueChanged<int>? onClickRow;
   @override
-  const BTTable({
-    Key? key,
-    this.head,
-    required this.body,
-  }) : super(key: key);
+  const BTTable({Key? key, this.head, required this.body, this.onClickRow})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,7 @@ class BTTable extends StatelessWidget {
     }
 
     if (body.isNotEmpty) {
-      for (List<BTCell> element in body) {
+      for (var index = 0; index < body.length; index++) {
         rows.add(
           TableRow(
             decoration: const BoxDecoration(
@@ -54,13 +52,18 @@ class BTTable extends StatelessWidget {
                 ),
               ),
             ),
-            children: element
+            children: body[index]
                 .map(
-                  (e) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: e.alignment ?? MainAxisAlignment.start,
-                      children: [e.child],
+                  (e) => InkWell(
+                    onTap:
+                        (onClickRow != null) ? () => onClickRow!(index) : null,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment:
+                            e.alignment ?? MainAxisAlignment.start,
+                        children: [e.child],
+                      ),
                     ),
                   ),
                 )
