@@ -67,7 +67,7 @@ class FormGroup extends StatelessWidget {
                 ),
             ],
           ),
-        if (title != null) const SizedBox(height: 4),
+        if (title != null) const SizedBox(height: 8),
         TextFormField(
           focusNode: focusNode,
           keyboardType: keyboardType,
