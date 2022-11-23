@@ -71,6 +71,7 @@ class BootstrapThemeData {
         bodyText1: GetBootstrap.typography.bodyText1,
         bodyText2: GetBootstrap.typography.bodyText2,
         subtitle1: GetBootstrap.typography.small,
+        button: GetBootstrap.typography.button,
       ),
     ),
   );

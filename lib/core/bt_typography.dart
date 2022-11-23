@@ -22,6 +22,7 @@ class BTTypography {
   TextStyle? small;
   TextStyle? highlight;
   TextStyle? link;
+  TextStyle? button;
 
   //
   // ignore: long-method
@@ -44,106 +45,99 @@ class BTTypography {
     this.small,
     this.highlight,
     this.link,
+    this.button,
   }) {
     headline1 = GoogleFonts.openSans(
       fontSize: 40,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     headline2 = GoogleFonts.openSans(
       fontSize: 32,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     headline3 = GoogleFonts.openSans(
       fontSize: 28,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     headline4 = GoogleFonts.openSans(
       fontSize: 24,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     headline5 = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     headline6 = GoogleFonts.openSans(
       fontSize: 16,
       fontWeight: FontWeight.w500,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display1 = GoogleFonts.openSans(
       fontSize: 80,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display2 = GoogleFonts.openSans(
       fontSize: 72,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display3 = GoogleFonts.openSans(
       fontSize: 65,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display4 = GoogleFonts.openSans(
       fontSize: 56,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display5 = GoogleFonts.openSans(
       fontSize: 48,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     display6 = GoogleFonts.openSans(
       fontSize: 40,
       fontWeight: FontWeight.w100,
       height: 1.2,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     lead = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     bodyText1 = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
-      letterSpacing: 1,
       color: BTColors.gray900,
     );
     bodyText2 = GoogleFonts.openSans(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      height: 1.5,
+      color: BTColors.gray900,
+    );
+    button = GoogleFonts.openSans(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       height: 1.5,
