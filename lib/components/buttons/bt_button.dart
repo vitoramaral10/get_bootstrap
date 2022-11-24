@@ -23,10 +23,10 @@ class BTButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: lg == true
-          ? 48
+          ? 54
           : sm == true
-              ? 31
-              : 38,
+              ? 29
+              : 40,
       width: !square
           ? null
           : lg == true
