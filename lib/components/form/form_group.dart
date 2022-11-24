@@ -22,6 +22,7 @@ class FormGroup extends StatelessWidget {
   final void Function(String)? onChanged;
   final void Function(String)? onFieldSubmitted;
   final FocusNode? focusNode;
+  final Function()? onPressed;
 
   const FormGroup({
     super.key,
@@ -46,6 +47,7 @@ class FormGroup extends StatelessWidget {
     this.onChanged,
     this.onFieldSubmitted,
     this.focusNode,
+    this.onPressed,
   });
 
   @override
@@ -69,6 +71,7 @@ class FormGroup extends StatelessWidget {
           ),
         if (title != null) const SizedBox(height: 8),
         TextFormField(
+          onTap: onPressed,
           focusNode: focusNode,
           keyboardType: keyboardType,
           autofillHints: autofillHints,
