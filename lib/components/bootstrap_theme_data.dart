@@ -51,7 +51,7 @@ class BootstrapThemeData {
         borderRadius: BorderRadius.all(Radius.circular(6)),
         borderSide: BorderSide(color: BTColors.danger),
       ),
-      errorStyle: GoogleFonts.inter(
+      errorStyle: const TextStyle(
         color: BTColors.danger,
       ),
     ),
@@ -60,19 +60,17 @@ class BootstrapThemeData {
       thickness: 1,
       space: 16,
     ),
-    textTheme: GoogleFonts.openSansTextTheme(
-      TextTheme(
-        headline1: GetBootstrap.typography.headline1,
-        headline2: GetBootstrap.typography.headline2,
-        headline3: GetBootstrap.typography.headline3,
-        headline4: GetBootstrap.typography.headline4,
-        headline5: GetBootstrap.typography.headline5,
-        headline6: GetBootstrap.typography.headline6,
-        bodyText1: GetBootstrap.typography.bodyText1,
-        bodyText2: GetBootstrap.typography.bodyText2,
-        subtitle1: GetBootstrap.typography.small,
-        button: GetBootstrap.typography.button,
-      ),
+    textTheme: TextTheme(
+      headline1: GetBootstrap.typography.headline1,
+      headline2: GetBootstrap.typography.headline2,
+      headline3: GetBootstrap.typography.headline3,
+      headline4: GetBootstrap.typography.headline4,
+      headline5: GetBootstrap.typography.headline5,
+      headline6: GetBootstrap.typography.headline6,
+      bodyText1: GetBootstrap.typography.bodyText1,
+      bodyText2: GetBootstrap.typography.bodyText2,
+      subtitle1: GetBootstrap.typography.small,
+      button: GetBootstrap.typography.button,
     ),
   );
 
