@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.5
+  data_table_2: ^2.3.8
   file_picker: ^5.2.2
   flutter:
     sdk: flutter
