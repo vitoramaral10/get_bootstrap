@@ -4,8 +4,8 @@ part of get_bootstrap;
 /// Implementation of the Bootstrap .col-*
 ///
 class BTCol extends StatelessWidget {
-  final List<String> _prefixes = ['xl', 'lg', 'md', 'sm', ''];
-  final List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl'];
+  final List<String> _prefixes = ['xxl','xl', 'lg', 'md', 'sm', ''];
+  final List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl','xxl'];
 
   ///
   /// Sizes
@@ -89,6 +89,7 @@ class BTCol extends StatelessWidget {
   // Flex ratios per size, based on the column's definition
   //
   final Map<String, int> _ratiosPerSize = {
+    'xxl': 100,
     'xl': 100,
     'lg': 100,
     'md': 100,
@@ -100,6 +101,7 @@ class BTCol extends StatelessWidget {
   // Offsets per size, based on the column's definition
   //
   final Map<String, int> _offsetsPerSize = {
+    'xxl': -100,
     'xl': -100,
     'lg': -100,
     'md': -100,
@@ -111,6 +113,7 @@ class BTCol extends StatelessWidget {
   // Sequence order per size, based on the column's definition
   //
   final Map<String, int> orderPerSize = {
+    'xxl': 0,
     'xl': 0,
     'lg': 0,
     'md': 0,
@@ -122,6 +125,7 @@ class BTCol extends StatelessWidget {
   // Sequence order per size, based on the column's definition
   //
   final Map<String, bool> hiddenPerSize = {
+    'xxl': false,
     'xl': false,
     'lg': false,
     'md': false,
@@ -259,7 +263,7 @@ class BTCol extends StatelessWidget {
             .where((t) => t.trim().isNotEmpty)
             .toList();
     for (var pfx in parts) {
-      if (['xl', 'lg', 'md', 'sm', 'xs'].contains(pfx)) {
+      if (['xxl','xl', 'lg', 'md', 'sm', 'xs'].contains(pfx)) {
         hiddenPerSize[pfx == 'xs' ? '' : pfx] = true;
       }
     }

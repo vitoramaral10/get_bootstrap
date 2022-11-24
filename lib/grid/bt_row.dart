@@ -1,7 +1,7 @@
 part of get_bootstrap;
 
-List<String> _prefixes = ['xl', 'lg', 'md', 'sm', ''];
-List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl'];
+List<String> _prefixes = ['xxl', 'xl', 'lg', 'md', 'sm', ''];
+List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
 double _oneColumnRatio = 0.083333;
 double _gutterSize = 48.0;
@@ -46,19 +46,22 @@ void bootstrapGridParameters({
 String bootstrapPrefixBasedOnWidth(double width) {
   String pfx = "";
 
-  if (width > 1200) {
+  if (width >= 1400) {
+    return "xxl";
+  }
+  if (width >= 1200) {
     return "xl";
   }
 
-  if (width > 992) {
+  if (width >= 992) {
     return "lg";
   }
 
-  if (width > 767) {
+  if (width >= 768) {
     return "md";
   }
 
-  if (width > 575) {
+  if (width >= 576) {
     return "sm";
   }
 
