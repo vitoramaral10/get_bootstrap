@@ -43,6 +43,7 @@ class TypographyPage extends StatelessWidget {
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
                                 children: [
                                   const SizedBox(
                                     height: 32,
@@ -112,83 +113,88 @@ class TypographyPage extends StatelessWidget {
                                       'Todos os cabeçalhos disponíveis.',
                                     ),
                                   ),
-                                  BTTable(
-                                    head: const ['Cabeçalho', 'Exemplo'],
-                                    body: [
-                                      [
-                                        const BTCell(child: Text('headline1')),
-                                        BTCell(
-                                          child: Text(
-                                            'h1. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline1,
-                                          ),
+                                  BTCard(
+                                    body: Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            const Text('headline1'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h1. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline1,
+                                            ),
+                                          ],
+                                        ),
+                                        const Divider(),
+                                        Row(
+                                          children: [
+                                            const Text('headline2'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h2. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline2,
+                                            ),
+                                          ],
+                                        ),
+                                        const Divider(),
+                                        Row(
+                                          children: [
+                                            const Text('headline3'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h3. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline3,
+                                            ),
+                                          ],
+                                        ),
+                                        const Divider(),
+                                        Row(
+                                          children: [
+                                            const Text('headline4'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h4. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline4,
+                                            ),
+                                          ],
+                                        ),
+                                        const Divider(),
+                                        Row(
+                                          children: [
+                                            const Text('headline5'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h5. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline5,
+                                            ),
+                                          ],
+                                        ),
+                                        const Divider(),
+                                        Row(
+                                          children: [
+                                            const Text('headline6'),
+                                            const SizedBox(width: 16),
+                                            Text(
+                                              'h6. Título de inicialização',
+                                              style: GetBootstrap
+                                                  .typography.headline6,
+                                            ),
+                                          ],
                                         ),
                                       ],
-                                      [
-                                        const BTCell(child: Text('headline2')),
-                                        BTCell(
-                                          child: Text(
-                                            'h2. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline2,
-                                          ),
-                                        ),
-                                      ],
-                                      [
-                                        const BTCell(child: Text('headline3')),
-                                        BTCell(
-                                          child: Text(
-                                            'h3. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline3,
-                                          ),
-                                        ),
-                                      ],
-                                      [
-                                        const BTCell(child: Text('headline4')),
-                                        BTCell(
-                                          child: Text(
-                                            'h4. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline4,
-                                          ),
-                                        ),
-                                      ],
-                                      [
-                                        const BTCell(child: Text('headline5')),
-                                        BTCell(
-                                          child: Text(
-                                            'h5. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline5,
-                                          ),
-                                        ),
-                                      ],
-                                      [
-                                        const BTCell(child: Text('headline6')),
-                                        BTCell(
-                                          child: Text(
-                                            'h6. Título de inicialização',
-                                            style: GetBootstrap
-                                                .typography.headline6,
-                                          ),
-                                        ),
-                                      ],
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 16.0,
                                     ),
-                                    child: BTCard(
-                                      bodyPadding: EdgeInsets.zero,
-                                      body: HighlightView(
-                                        'Text("h1. Título de inicialização", style: GetBootstrap.typography.headline1),\n\nText("h2. Título de inicialização", style: GetBootstrap.typography.headline2),\n\nText("h3. Título de inicialização", style: GetBootstrap.typography.headline3),\n\nText("h4. Título de inicialização", style: GetBootstrap.typography.headline4),\n\nText("h5. Título de inicialização", style: GetBootstrap.typography.headline5),\n\nText("h6. Título de inicialização", style: GetBootstrap.typography.headline6),',
-                                        language: 'dart',
-                                        theme: foundationTheme,
-                                        padding: const EdgeInsets.all(16),
-                                      ),
+                                    footerPadding: EdgeInsets.zero,
+                                    footer: HighlightView(
+                                      'Text("h1. Título de inicialização", style: GetBootstrap.typography.headline1),\n\nText("h2. Título de inicialização", style: GetBootstrap.typography.headline2),\n\nText("h3. Título de inicialização", style: GetBootstrap.typography.headline3),\n\nText("h4. Título de inicialização", style: GetBootstrap.typography.headline4),\n\nText("h5. Título de inicialização", style: GetBootstrap.typography.headline5),\n\nText("h6. Título de inicialização", style: GetBootstrap.typography.headline6),',
+                                      language: 'dart',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
                                     ),
                                   ),
                                   const SizedBox(
@@ -207,62 +213,45 @@ class TypographyPage extends StatelessWidget {
                                   ),
                                   BTCard(
                                     footerBackground: BTColors.gray100,
-                                    body: BTTable(
-                                      body: [
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 1',
-                                              style: GetBootstrap
-                                                  .typography.display1,
-                                            ),
-                                          ),
-                                        ],
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 2',
-                                              style: GetBootstrap
-                                                  .typography.display2,
-                                            ),
-                                          ),
-                                        ],
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 3',
-                                              style: GetBootstrap
-                                                  .typography.display3,
-                                            ),
-                                          ),
-                                        ],
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 4',
-                                              style: GetBootstrap
-                                                  .typography.display4,
-                                            ),
-                                          ),
-                                        ],
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 5',
-                                              style: GetBootstrap
-                                                  .typography.display5,
-                                            ),
-                                          ),
-                                        ],
-                                        [
-                                          BTCell(
-                                            child: Text(
-                                              'Display 6',
-                                              style: GetBootstrap
-                                                  .typography.display6,
-                                            ),
-                                          ),
-                                        ],
+                                    body: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Display 1',
+                                          style:
+                                              GetBootstrap.typography.display1,
+                                        ),
+                                        const Divider(),
+                                        Text(
+                                          'Display 2',
+                                          style:
+                                              GetBootstrap.typography.display2,
+                                        ),
+                                        const Divider(),
+                                        Text(
+                                          'Display 3',
+                                          style:
+                                              GetBootstrap.typography.display3,
+                                        ),
+                                        const Divider(),
+                                        Text(
+                                          'Display 4',
+                                          style:
+                                              GetBootstrap.typography.display4,
+                                        ),
+                                        const Divider(),
+                                        Text(
+                                          'Display 5',
+                                          style:
+                                              GetBootstrap.typography.display5,
+                                        ),
+                                        const Divider(),
+                                        Text(
+                                          'Display 6',
+                                          style:
+                                              GetBootstrap.typography.display6,
+                                        ),
                                       ],
                                     ),
                                     footerPadding: EdgeInsets.zero,

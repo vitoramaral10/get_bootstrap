@@ -1,3 +1,4 @@
+import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
 
@@ -137,103 +138,117 @@ class BreakpointsPage extends StatelessWidget {
                                       'O Bootstrap inclui seis pontos de interrupção padrão, às vezes chamados de camadas de grade , para construção responsiva. Esses pontos de interrupção podem ser personalizados se você estiver usando nossos arquivos Sass de origem.',
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 8.0,
-                                    ),
-                                    child: BTTable(
-                                      head: const [
-                                        'Breakpoint',
-                                        'Class infix',
-                                        'Dimensões',
+                                  SizedBox(
+                                    height: 350,
+                                    child: DataTable2(
+                                      columns: [
+                                        DataColumn(
+                                          label: Text(
+                                            'Breakpoint',
+                                            style: GetBootstrap
+                                                .typography.headline5,
+                                          ),
+                                        ),
+                                        DataColumn(
+                                          label: Text(
+                                            'Class infix',
+                                            style: GetBootstrap
+                                                .typography.headline5,
+                                          ),
+                                        ),
+                                        DataColumn(
+                                          label: Text(
+                                            'Dimensões',
+                                            style: GetBootstrap
+                                                .typography.headline5,
+                                          ),
+                                        ),
                                       ],
-                                      body: [
-                                        const [
-                                          BTCell(child: Text('Extra small')),
-                                          BTCell(
-                                            child: Text(
+                                      rows: [
+                                        const DataRow(
+                                          cells: [
+                                            DataCell(Text('Extra small')),
+                                            DataCell(Text(
                                               'None',
                                               style: TextStyle(
                                                 fontStyle: FontStyle.italic,
                                               ),
-                                            ),
-                                          ),
-                                          BTCell(child: Text('<576px')),
-                                        ],
-                                        [
-                                          const BTCell(child: Text('Small')),
-                                          BTCell(
-                                            child: Text(
+                                            )),
+                                            DataCell(Text('< 576px')),
+                                          ],
+                                        ),
+                                        DataRow(
+                                          cells: [
+                                            const DataCell(Text('Small')),
+                                            DataCell(Text(
                                               'sm',
                                               style: GetBootstrap
                                                   .typography.highlight
                                                   ?.copyWith(
                                                 color: BTColors.red,
                                               ),
-                                            ),
-                                          ),
-                                          const BTCell(child: Text('≥576px')),
-                                        ],
-                                        [
-                                          const BTCell(child: Text('Medium')),
-                                          BTCell(
-                                            child: Text(
+                                            )),
+                                            const DataCell(Text('≥ 576px')),
+                                          ],
+                                        ),
+                                        DataRow(
+                                          cells: [
+                                            const DataCell(Text('Medium')),
+                                            DataCell(Text(
                                               'md',
                                               style: GetBootstrap
                                                   .typography.highlight
                                                   ?.copyWith(
                                                 color: BTColors.red,
                                               ),
-                                            ),
-                                          ),
-                                          const BTCell(child: Text('≥768px')),
-                                        ],
-                                        [
-                                          const BTCell(child: Text('Large')),
-                                          BTCell(
-                                            child: Text(
+                                            )),
+                                            const DataCell(Text('≥ 768px')),
+                                          ],
+                                        ),
+                                        DataRow(
+                                          cells: [
+                                            const DataCell(Text('Large')),
+                                            DataCell(Text(
                                               'lg',
                                               style: GetBootstrap
                                                   .typography.highlight
                                                   ?.copyWith(
                                                 color: BTColors.red,
                                               ),
-                                            ),
-                                          ),
-                                          const BTCell(child: Text('≥992px')),
-                                        ],
-                                        [
-                                          const BTCell(
-                                            child: Text('Extra large'),
-                                          ),
-                                          BTCell(
-                                            child: Text(
+                                            )),
+                                            const DataCell(Text('≥ 992px')),
+                                          ],
+                                        ),
+                                        DataRow(
+                                          cells: [
+                                            const DataCell(Text('Extra large')),
+                                            DataCell(Text(
                                               'xl',
                                               style: GetBootstrap
                                                   .typography.highlight
                                                   ?.copyWith(
                                                 color: BTColors.red,
                                               ),
+                                            )),
+                                            const DataCell(Text('≥ 1200px')),
+                                          ],
+                                        ),
+                                        DataRow(
+                                          cells: [
+                                            const DataCell(
+                                              Text('Extra extra large'),
                                             ),
-                                          ),
-                                          const BTCell(child: Text('≥1200px')),
-                                        ],
-                                        [
-                                          const BTCell(
-                                            child: Text('Extra extra large'),
-                                          ),
-                                          BTCell(
-                                            child: Text(
+                                            DataCell(Text(
                                               'xxl',
                                               style: GetBootstrap
                                                   .typography.highlight
                                                   ?.copyWith(
                                                 color: BTColors.red,
                                               ),
-                                            ),
-                                          ),
-                                          const BTCell(child: Text('≥1400px')),
-                                        ],
+                                            )),
+                                            const DataCell(Text('≥ 1400px')),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
