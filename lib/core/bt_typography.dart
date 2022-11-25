@@ -137,9 +137,8 @@ class BTTypography {
       color: BTColors.gray900,
     );
     button = const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w400,
-      height: 1.5,
+      fontWeight: FontWeight.w500,
+      fontSize: 14,
       color: BTColors.gray900,
     );
     highlight = const TextStyle(

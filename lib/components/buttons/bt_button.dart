@@ -1,13 +1,25 @@
 part of get_bootstrap;
 
 class BTButton extends StatelessWidget {
-  /// The text to displayed in button, this lenght have a max 70 characters.
   final Widget child;
   final bool? lg;
   final bool? sm;
   final bool square;
   final VoidCallback? onPressed;
   final Color? backgroundColor;
+
+  double get heightButton => lg == true
+      ? 54
+      : sm == true
+          ? 29
+          : 40;
+  double? get widthButton => !square
+      ? null
+      : lg == true
+          ? 48
+          : sm == true
+              ? 31
+              : 38;
 
   const BTButton({
     super.key,
@@ -22,18 +34,8 @@ class BTButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: lg == true
-          ? 54
-          : sm == true
-              ? 29
-              : 40,
-      width: !square
-          ? null
-          : lg == true
-              ? 48
-              : sm == true
-                  ? 31
-                  : 38,
+      height: heightButton,
+      width: widthButton,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -62,22 +64,15 @@ class BTButton extends StatelessWidget {
                 .withOpacity(onPressed != null ? 1 : 0.65),
           ),
           textStyle: MaterialStateProperty.resolveWith((states) {
-            return TextStyle(
+            return GetBootstrap.typography.button!.copyWith(
               color: (backgroundColor ?? Theme.of(context).primaryColor)
                   .withOpacity(onPressed != null ? 1 : 0.65),
-              fontWeight: FontWeight.w500,
-              fontSize: 14,
             );
           }),
           elevation: MaterialStateProperty.all(0),
         ),
         onPressed: onPressed,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            child,
-          ],
-        ),
+        child: child,
       ),
     );
   }
