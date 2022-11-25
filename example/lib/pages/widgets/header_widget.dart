@@ -5,8 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
 
 class HeaderWidget extends StatefulWidget {
-  final bool? showSidebarButton;
-  const HeaderWidget({super.key, this.showSidebarButton});
+  final bool showSidebarButton;
+  const HeaderWidget({super.key, required this.showSidebarButton});
 
   @override
   State<HeaderWidget> createState() => _HeaderWidgetState();
@@ -19,7 +19,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
       height: 56,
       child: AppBar(
         backgroundColor: const Color(0xFF712CF9),
-        leading: widget.showSidebarButton! ? Container() : null,
+        leading: widget.showSidebarButton ? Container() : null,
         title: BTContainer(
           xxl: true,
           child: (Scaffold.hasDrawer(context))
