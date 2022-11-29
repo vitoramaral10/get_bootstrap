@@ -8,7 +8,7 @@ void main() {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: BootstrapThemeData.light,
+    theme: BootstrapThemeData.light.copyWith(),
     routes: Routes.list,
     initialRoute: Routes.initialRoute,
   ));

@@ -38,35 +38,48 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     onPressed: () {
                       log('a');
                     },
-                    style: BootstrapThemeData.navLinkActive(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: BTColors.white,
+                      textStyle: GetBootstrap.themeData.textTheme.labelLarge?.copyWith(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                     child: const Text('Docs'),
                   ),
                   TextButton(
                     onPressed: () {
                       log('a');
                     },
-                    style: BootstrapThemeData.navLink(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: BTColors.white.withOpacity(0.85),
+                    ),
                     child: const Text('Examples'),
                   ),
                   TextButton(
                     onPressed: () {
                       log('a');
                     },
-                    style: BootstrapThemeData.navLink(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: BTColors.white.withOpacity(0.85),
+                    ),
                     child: const Text('Icons'),
                   ),
                   TextButton(
                     onPressed: () {
                       log('a');
                     },
-                    style: BootstrapThemeData.navLink(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: BTColors.white.withOpacity(0.85),
+                    ),
                     child: const Text('Themes'),
                   ),
                   TextButton(
                     onPressed: () {
                       log('a');
                     },
-                    style: BootstrapThemeData.navLink(),
+                    style: TextButton.styleFrom(
+                      foregroundColor: BTColors.white.withOpacity(0.85),
+                    ),
                     child: const Text('Blog'),
                   ),
                   const Spacer(),
