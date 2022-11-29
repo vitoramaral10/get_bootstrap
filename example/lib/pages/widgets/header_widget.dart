@@ -40,7 +40,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: BTColors.white,
-                      textStyle: GetBootstrap.themeData.textTheme.labelLarge?.copyWith(
+                      textStyle:
+                          GetBootstrap.themeData.textTheme.labelLarge?.copyWith(
                         fontWeight: FontWeight.w700,
                       ),
                     ),
