@@ -4,8 +4,8 @@ part of get_bootstrap;
 /// Implementation of the Bootstrap .col-*
 ///
 class BTCol extends StatelessWidget {
-  final List<String> _prefixes = ['xxl','xl', 'lg', 'md', 'sm', ''];
-  final List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl','xxl'];
+  final List<String> _prefixes = ['xxl', 'xl', 'lg', 'md', 'sm', ''];
+  final List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
   ///
   /// Sizes
@@ -263,7 +263,7 @@ class BTCol extends StatelessWidget {
             .where((t) => t.trim().isNotEmpty)
             .toList();
     for (var pfx in parts) {
-      if (['xxl','xl', 'lg', 'md', 'sm', 'xs'].contains(pfx)) {
+      if (['xxl', 'xl', 'lg', 'md', 'sm', 'xs'].contains(pfx)) {
         hiddenPerSize[pfx == 'xs' ? '' : pfx] = true;
       }
     }

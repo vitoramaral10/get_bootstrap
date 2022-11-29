@@ -36,20 +36,34 @@ class BTCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           if (head != null)
-            Head(headPadding: headPadding, headBackground: headBackground, head: head),
+            Head(
+              headPadding: headPadding,
+              headBackground: headBackground,
+              head: head,
+            ),
           if (head != null)
             const Divider(
               color: BTColors.gray300,
               height: 1,
             ),
-          Body(bodyPadding: bodyPadding, head: head, footer: footer, bodyBackground: bodyBackground, body: body),
+          Body(
+            bodyPadding: bodyPadding,
+            head: head,
+            footer: footer,
+            bodyBackground: bodyBackground,
+            body: body,
+          ),
           if (footer != null)
             const Divider(
               color: BTColors.gray300,
               height: 1,
             ),
           if (footer != null)
-            Footer(footerPadding: footerPadding, footerBackground: footerBackground, footer: footer),
+            Footer(
+              footerPadding: footerPadding,
+              footerBackground: footerBackground,
+              footer: footer,
+            ),
         ],
       ),
     );

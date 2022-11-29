@@ -32,7 +32,7 @@ class FormGroupInlinePlainText extends StatelessWidget {
           BTCol(
             sizes: sizesTitle,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,  
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(title!),
                 if (required)
