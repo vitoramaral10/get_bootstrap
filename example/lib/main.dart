@@ -7,9 +7,9 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: BootstrapThemeData.light.copyWith(),
     routes: Routes.list,
     initialRoute: Routes.initialRoute,
+    theme: BootstrapThemeData.light.copyWith(),
+    debugShowCheckedModeBanner: false,
   ));
 }

@@ -13,14 +13,17 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.primary,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Primary', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Primary',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -28,14 +31,17 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.secondary,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Secondary', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Secondary',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -43,14 +49,17 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.success,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Success', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Success',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -58,14 +67,17 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.danger,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Danger', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Danger',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -73,16 +85,14 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.warning,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Warning',
-                ),
+                child: Text('Warning'),
               ),
             ),
           ),
@@ -90,16 +100,14 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.info,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Info',
-                ),
+                child: Text('Info'),
               ),
             ),
           ),
@@ -107,16 +115,14 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.light,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Light',
-                ),
+                child: Text('Light'),
               ),
             ),
           ),
@@ -124,14 +130,17 @@ class ThemePallete extends StatelessWidget {
         BTCol(
           sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
           child: Container(
-            height: 50,
-            width: double.infinity,
             color: BTColors.dark,
+            width: double.infinity,
+            height: 50,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Dark', style: TextStyle(color: Colors.white)),
+                child: Text(
+                  'Dark',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),

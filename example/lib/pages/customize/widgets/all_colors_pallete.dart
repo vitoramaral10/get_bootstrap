@@ -15,9 +15,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -33,9 +33,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -45,9 +45,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -57,9 +57,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -69,9 +69,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -81,9 +81,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -96,9 +96,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -111,9 +111,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -126,9 +126,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -141,9 +141,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.blue900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -163,9 +163,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -181,9 +181,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -193,9 +193,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -205,9 +205,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -217,9 +217,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -232,9 +232,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -247,9 +247,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -262,9 +262,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -277,9 +277,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -292,9 +292,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.indigo900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -314,9 +314,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -332,9 +332,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -344,9 +344,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -356,9 +356,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -368,9 +368,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -380,9 +380,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -395,9 +395,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -410,9 +410,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -425,9 +425,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -440,9 +440,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.purple900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -462,9 +462,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -480,9 +480,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -492,9 +492,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -504,9 +504,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -516,9 +516,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -528,9 +528,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -543,9 +543,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -558,9 +558,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -573,9 +573,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -588,9 +588,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.pink900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -610,9 +610,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -628,9 +628,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -640,9 +640,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -652,9 +652,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -664,9 +664,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -676,9 +676,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -691,9 +691,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -706,9 +706,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -721,9 +721,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -736,9 +736,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.red900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -758,9 +758,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -773,9 +773,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -785,9 +785,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -797,9 +797,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -809,9 +809,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -821,9 +821,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -833,9 +833,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -845,9 +845,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -860,9 +860,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -875,9 +875,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.orange900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -897,9 +897,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -912,9 +912,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -924,9 +924,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -936,9 +936,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -948,9 +948,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -960,9 +960,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -972,9 +972,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -984,9 +984,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -996,9 +996,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1011,9 +1011,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.yellow900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1033,9 +1033,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1051,9 +1051,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1063,9 +1063,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1075,9 +1075,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1087,9 +1087,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1099,9 +1099,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1114,9 +1114,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1129,9 +1129,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1144,9 +1144,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1159,9 +1159,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.green900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1181,9 +1181,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1196,9 +1196,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1208,9 +1208,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1220,9 +1220,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1232,9 +1232,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1244,9 +1244,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1256,9 +1256,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1268,9 +1268,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1283,9 +1283,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1298,9 +1298,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.teal900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1320,9 +1320,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1335,9 +1335,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1347,9 +1347,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1359,9 +1359,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1371,9 +1371,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1383,9 +1383,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1395,9 +1395,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1407,9 +1407,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1422,9 +1422,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1437,9 +1437,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.cyan900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1459,9 +1459,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1474,9 +1474,9 @@ class AllColorsPallete extends StatelessWidget {
                 height: 8,
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray100,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1486,9 +1486,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray200,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1498,9 +1498,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray300,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1510,9 +1510,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray400,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1522,9 +1522,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray500,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1534,9 +1534,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray600,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1549,9 +1549,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray700,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1564,9 +1564,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray800,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1579,9 +1579,9 @@ class AllColorsPallete extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.gray900,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1601,9 +1601,9 @@ class AllColorsPallete extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 50,
-                width: double.infinity,
                 color: BTColors.black,
+                width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -1620,11 +1620,11 @@ class AllColorsPallete extends StatelessWidget {
               ),
               Container(
                 decoration: const BoxDecoration(
-                  border: Border.fromBorderSide(BorderSide(width: 1)),
                   color: BTColors.white,
+                  border: Border.fromBorderSide(BorderSide(width: 1)),
                 ),
-                height: 50,
                 width: double.infinity,
+                height: 50,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
