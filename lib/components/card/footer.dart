@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../get_bootstrap.dart';
 
@@ -18,14 +19,15 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: footerPadding ?? const EdgeInsets.all(8.0),
-      width: double.infinity,
       decoration: BoxDecoration(
-        color: footerBackground ?? BTColors.white,
+        color: footerBackground ??
+            (Get.isDarkMode ? BTColors.gray800 : BTColors.light),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(6),
           bottomRight: Radius.circular(6),
         ),
       ),
+      width: double.infinity,
       child: footer!,
     );
   }

@@ -105,7 +105,7 @@ packages:
       name: dart_code_metrics
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.1"
+    version: "5.1.0"
   dart_style:
     dependency: transitive
     description:
@@ -113,13 +113,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.4"
-  data_table_2:
-    dependency: "direct main"
-    description:
-      name: data_table_2
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.3.8"
   fake_async:
     dependency: transitive
     description:
@@ -147,7 +140,7 @@ packages:
       name: file_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.2.2"
+    version: "5.2.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -198,13 +191,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "10.2.1"
+  get:
+    dependency: transitive
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.6.5"
   get_bootstrap:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.8.0"
+    version: "0.8.1"
   glob:
     dependency: transitive
     description:

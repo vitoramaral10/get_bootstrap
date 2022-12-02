@@ -4,6 +4,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'components/card/body.dart';
 import 'components/card/footer.dart';
 import 'components/card/head.dart';
@@ -30,7 +31,6 @@ part 'layout/bt_container.dart';
 
 class GetBootstrap {
   static final BTTypography typography = BTTypography();
-  static final ThemeData themeData = BootstrapThemeData.light;
 
   /// Informa se pode mostrar o menu lateral conforme a largura da tela.
   static bool showSidebar(BoxConstraints boxConstraints) {

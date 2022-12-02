@@ -71,35 +71,10 @@ class FormGroup extends StatelessWidget {
           ),
         if (title != null) const SizedBox(height: 8),
         TextFormField(
-          onTap: onPressed,
-          focusNode: focusNode,
-          keyboardType: keyboardType,
-          autofillHints: autofillHints,
-          textCapitalization: textCapitalization,
-          readOnly: readonly,
-          enabled: !disabled,
-          onEditingComplete: onEditingComplete,
-          onChanged: onChanged,
-          onFieldSubmitted: onFieldSubmitted,
           controller: controller,
-          maxLines: maxLines,
-          maxLength: maxLength,
-          obscureText: obscureText,
-          inputFormatters: inputFormatters,
-          validator: validator,
-          autovalidateMode: autovalidateMode,
-          style: TextStyle(
-            fontSize: lg
-                ? 20
-                : sm
-                    ? 14
-                    : 16,
-          ),
+          focusNode: focusNode,
           decoration: InputDecoration(
-            filled: true,
-            fillColor: disabled ? BTColors.gray200 : null,
             hintText: placeholder,
-            isDense: true,
             hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
                 ?.copyWith(
               color: readonly ? BTColors.gray900 : null,
@@ -109,6 +84,7 @@ class FormGroup extends StatelessWidget {
                       ? 14
                       : 16,
             ),
+            isDense: true,
             contentPadding: EdgeInsets.symmetric(
               vertical: lg
                   ? 16
@@ -121,7 +97,31 @@ class FormGroup extends StatelessWidget {
                       ? 8
                       : 12,
             ),
+            filled: true,
+            fillColor: disabled ? BTColors.gray200 : null,
           ),
+          keyboardType: keyboardType,
+          textCapitalization: textCapitalization,
+          style: TextStyle(
+            fontSize: lg
+                ? 20
+                : sm
+                    ? 14
+                    : 16,
+          ),
+          readOnly: readonly,
+          obscureText: obscureText,
+          maxLines: maxLines,
+          maxLength: maxLength,
+          onChanged: onChanged,
+          onTap: onPressed,
+          onEditingComplete: onEditingComplete,
+          onFieldSubmitted: onFieldSubmitted,
+          validator: validator,
+          inputFormatters: inputFormatters,
+          enabled: !disabled,
+          autofillHints: autofillHints,
+          autovalidateMode: autovalidateMode,
         ),
       ],
     );

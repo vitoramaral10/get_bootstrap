@@ -235,9 +235,9 @@ class BTCol extends StatelessWidget {
       map: _offsetsPerSize,
       argPrefix: 'offset',
       minMaxFct: math.max,
+      lowerBoundValue: -1,
       noValue: -100,
       minMaxNoValueReference: 0,
-      lowerBoundValue: -1,
     );
 
     //
@@ -325,9 +325,9 @@ class BTCol extends StatelessWidget {
                 ? EdgeInsets.zero
                 : EdgeInsets.only(
                     left: _gutterSize / 12,
+                    top: marginTop ?? _gutterSize / 12,
                     right: _gutterSize / 12,
                     bottom: _gutterSize / 12,
-                    top: marginTop ?? _gutterSize / 12,
                   ),
             child: child,
           ),

@@ -1,7 +1,7 @@
 name: get_bootstrap
 description: Este projeto foi desenvolvido com base a documentação do Bootstrap,
   porém foi desenvolvido a mão para uso no Flutter.
-version: 0.8.0
+version: 0.8.1
 homepage: https://github.com/vitoramaral10/get_bootstrap
 
 environment:
@@ -11,9 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.5
 
 dev_dependencies:
-  dart_code_metrics: ^5.0.1
+  dart_code_metrics: ^5.1.0
   flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter

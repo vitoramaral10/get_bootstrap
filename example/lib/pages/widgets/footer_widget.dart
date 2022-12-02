@@ -10,238 +10,194 @@ class FooterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(48.0),
-      width: double.infinity,
       color: BTColors.gray100,
-      child: BTRow(
-        children: [
-          BTCol(
-            sizes: const [
-              'col-xl-4',
-              'col-lg-4',
-              'col-md-12',
+      width: double.infinity,
+      child: BTRow(children: [
+        BTCol(
+          sizes: const ['col-xl-4', 'col-lg-4', 'col-md-12'],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(children: [
+                Image.asset(
+                  'assets/images/bootstrap_logo.webp',
+                  height: 42,
+                  color: BTColors.black,
+                ),
+                Text(
+                  'Bootstrap',
+                  style: GetBootstrap.typography.headline5,
+                ),
+              ]),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(
+                  'Projetado e construído com todo o amor do mundo pela equipe Bootstrap com a ajuda de nossos colaboradores .',
+                  style: GetBootstrap.typography.small,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(
+                  'Código licenciado MIT , docs CC BY 3.0 .',
+                  style: GetBootstrap.typography.small,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: Text(
+                  'Atualmente v5.2.2.',
+                  style: GetBootstrap.typography.small,
+                ),
+              ),
             ],
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/bootstrap_logo.webp',
-                      height: 42,
-                      color: BTColors.black,
-                    ),
-                    Text(
-                      'Bootstrap',
-                      style: GetBootstrap.typography.headline5,
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 8.0,
-                  ),
-                  child: Text(
-                    'Projetado e construído com todo o amor do mundo pela equipe Bootstrap com a ajuda de nossos colaboradores .',
-                    style: GetBootstrap.typography.small,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 8.0,
-                  ),
-                  child: Text(
-                    'Código licenciado MIT , docs CC BY 3.0 .',
-                    style: GetBootstrap.typography.small,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 8.0,
-                  ),
-                  child: Text(
-                    'Atualmente v5.2.2.',
-                    style: GetBootstrap.typography.small,
-                  ),
-                ),
-              ],
-            ),
           ),
-          BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-lg-2',
-              'col-md-6',
+        ),
+        BTCol(
+          sizes: const ['col-xl-2', 'col-lg-2', 'col-md-6'],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text(
+                  'Links',
+                  style: GetBootstrap.typography.headline5,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Casa'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Documentos'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Exemplos'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Ícones'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Temas'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Blog'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Loja de brindes'),
+              ),
             ],
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 8.0,
-                  ),
-                  child: Text(
-                    'Links',
-                    style: GetBootstrap.typography.headline5,
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Casa'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Documentos'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Exemplos'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Ícones'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Temas'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Blog'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Loja de brindes'),
-                ),
-              ],
-            ),
           ),
-          BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-lg-2',
-              'col-md-6',
+        ),
+        BTCol(
+          sizes: const ['col-xl-2', 'col-lg-2', 'col-md-6'],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text(
+                  'Guias',
+                  style: GetBootstrap.typography.headline5,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Começando'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Modelo inicial'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Webpack'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Parcela'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 8.0),
+                child: Text('Vite'),
+              ),
             ],
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 8.0,
-                  ),
-                  child: Text(
-                    'Guias',
-                    style: GetBootstrap.typography.headline5,
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Começando'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Modelo inicial'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Webpack'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Parcela'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Vite'),
-                ),
-              ],
-            ),
           ),
-          BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-lg-2',
-              'col-md-6',
-            ],
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 8.0,
-                  ),
-                  child: Text(
-                    'Projetos',
-                    style: GetBootstrap.typography.headline5,
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Bootstrap 5'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Bootstrap 4'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Ícones'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('RFS'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('npm inicializador'),
-                ),
-              ],
+        ),
+        BTCol(
+          sizes: const ['col-xl-2', 'col-lg-2', 'col-md-6'],
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Text(
+                'Projetos',
+                style: GetBootstrap.typography.headline5,
+              ),
             ),
-          ),
-          BTCol(
-            sizes: const [
-              'col-xl-2',
-              'col-lg-2',
-              'col-md-6',
-            ],
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 8.0,
-                  ),
-                  child: Text(
-                    'Comunidade',
-                    style: GetBootstrap.typography.headline5,
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Problemas'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Discussões'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    'Patrocinadores corporativos',
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Coletivo Aberto'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Estouro de pilha'),
-                ),
-              ],
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Bootstrap 5'),
             ),
-          ),
-        ],
-      ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Bootstrap 4'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Ícones'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('RFS'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('npm inicializador'),
+            ),
+          ]),
+        ),
+        BTCol(
+          sizes: const ['col-xl-2', 'col-lg-2', 'col-md-6'],
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Text(
+                'Comunidade',
+                style: GetBootstrap.typography.headline5,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Problemas'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Discussões'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Patrocinadores corporativos'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Coletivo Aberto'),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Estouro de pilha'),
+            ),
+          ]),
+        ),
+      ]),
     );
   }
 }

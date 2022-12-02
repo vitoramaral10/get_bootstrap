@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../get_bootstrap.dart';
 
@@ -22,16 +23,17 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: bodyPadding ?? const EdgeInsets.all(8.0),
-      width: double.infinity,
       decoration: BoxDecoration(
+        color: bodyBackground ??
+            (Get.isDarkMode ? BTColors.gray800 : BTColors.light),
         borderRadius: BorderRadius.only(
           topLeft: head == null ? const Radius.circular(6) : Radius.zero,
           topRight: head == null ? const Radius.circular(6) : Radius.zero,
           bottomLeft: footer == null ? const Radius.circular(6) : Radius.zero,
           bottomRight: footer == null ? const Radius.circular(6) : Radius.zero,
         ),
-        color: bodyBackground ?? BTColors.white,
       ),
+      width: double.infinity,
       child: body,
     );
   }

@@ -27,13 +27,15 @@ class BTCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        border: Border.fromBorderSide(BorderSide(color: BTColors.gray300)),
-        borderRadius: BorderRadius.all(Radius.circular(6)),
+      decoration: BoxDecoration(
+        border: Border.fromBorderSide(BorderSide(
+          color: (Get.isDarkMode ? BTColors.gray600 : BTColors.gray300),
+        )),
+        borderRadius: const BorderRadius.all(Radius.circular(6)),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (head != null)
             Head(
@@ -42,9 +44,9 @@ class BTCard extends StatelessWidget {
               head: head,
             ),
           if (head != null)
-            const Divider(
-              color: BTColors.gray300,
+            Divider(
               height: 1,
+              color: Get.isDarkMode ? BTColors.gray600 : BTColors.gray300,
             ),
           Body(
             bodyPadding: bodyPadding,
@@ -54,9 +56,9 @@ class BTCard extends StatelessWidget {
             body: body,
           ),
           if (footer != null)
-            const Divider(
-              color: BTColors.gray300,
+            Divider(
               height: 1,
+              color: Get.isDarkMode ? BTColors.gray600 : BTColors.gray300,
             ),
           if (footer != null)
             Footer(

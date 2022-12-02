@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../get_bootstrap.dart';
 
@@ -18,14 +19,15 @@ class Head extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: headPadding ?? const EdgeInsets.all(8.0),
-      width: double.infinity,
       decoration: BoxDecoration(
-        color: headBackground ?? BTColors.white,
+        color: headBackground ??
+            (Get.isDarkMode ? BTColors.gray800 : BTColors.light),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(6),
           topRight: Radius.circular(6),
         ),
       ),
+      width: double.infinity,
       child: head!,
     );
   }

@@ -49,6 +49,8 @@ dart_code_metrics:
     - lib/generated_plugin_registrant.dart
   rules:
     #Common code
+    - arguments-ordering:
+        child-last: true
     - avoid-banned-imports
     - avoid-border-all
     - avoid-cascade-after-if-null
@@ -58,7 +60,6 @@ dart_code_metrics:
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
-    - avoid-non-ascii-symbols
     - avoid-redundant-async 
     - avoid-returning-widgets
     - avoid-throw-in-catch-block
@@ -95,6 +96,7 @@ dart_code_metrics:
     - prefer-iterable-of
     - prefer-last
     - prefer-match-file-name
+    - prefer-static-class
     - prefer-trailing-comma
     #Flutter specific
     - always-remove-listener

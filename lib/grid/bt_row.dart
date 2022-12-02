@@ -1,5 +1,7 @@
 part of get_bootstrap;
 
+//
+// ignore_for_file: prefer-static-class
 List<String> _prefixes = ['xxl', 'xl', 'lg', 'md', 'sm', ''];
 List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
@@ -138,15 +140,15 @@ class BTRow extends StatelessWidget {
         );
 
         return Container(
+          decoration: decoration,
           constraints: BoxConstraints(
-            minHeight: height ?? 0.0,
             minWidth: constraints.maxWidth,
             maxWidth: constraints.maxWidth,
+            minHeight: height ?? 0.0,
           ),
-          decoration: decoration,
           child: Wrap(
-            alignment: WrapAlignment.start,
             direction: Axis.horizontal,
+            alignment: WrapAlignment.start,
             children: childrenTemp,
           ),
         );

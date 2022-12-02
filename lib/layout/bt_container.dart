@@ -48,8 +48,8 @@ class BTContainer extends StatelessWidget {
       builder: (buildContext, boxConstraints) {
         return Center(
           child: Container(
-            margin: margin,
             width: _currentWidth(buildContext),
+            margin: margin,
             child: child,
           ),
         );

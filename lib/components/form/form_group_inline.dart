@@ -77,30 +77,9 @@ class FormGroupInline extends StatelessWidget {
         BTCol(
           sizes: sizesField,
           child: TextFormField(
-            readOnly: readonly,
-            enabled: !disabled,
-            onEditingComplete: onEditingComplete,
-            onChanged: onChanged,
-            onFieldSubmitted: onFieldSubmitted,
             controller: controller,
-            maxLines: maxLines,
-            maxLength: maxLength,
-            obscureText: obscureText,
-            inputFormatters: inputFormatters,
-            validator: validator,
-            autovalidateMode: autovalidateMode,
-            style: TextStyle(
-              fontSize: lg
-                  ? 20
-                  : sm
-                      ? 14
-                      : 16,
-            ),
             decoration: InputDecoration(
-              filled: true,
-              fillColor: disabled ? BTColors.gray200 : null,
               hintText: placeholder,
-              isDense: true,
               hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
                   ?.copyWith(
                 color: readonly ? BTColors.gray900 : null,
@@ -110,6 +89,7 @@ class FormGroupInline extends StatelessWidget {
                         ? 14
                         : 16,
               ),
+              isDense: true,
               contentPadding: EdgeInsets.symmetric(
                 vertical: lg
                     ? 16
@@ -122,7 +102,27 @@ class FormGroupInline extends StatelessWidget {
                         ? 8
                         : 12,
               ),
+              filled: true,
+              fillColor: disabled ? BTColors.gray200 : null,
             ),
+            style: TextStyle(
+              fontSize: lg
+                  ? 20
+                  : sm
+                      ? 14
+                      : 16,
+            ),
+            readOnly: readonly,
+            obscureText: obscureText,
+            maxLines: maxLines,
+            maxLength: maxLength,
+            onChanged: onChanged,
+            onEditingComplete: onEditingComplete,
+            onFieldSubmitted: onFieldSubmitted,
+            validator: validator,
+            inputFormatters: inputFormatters,
+            enabled: !disabled,
+            autovalidateMode: autovalidateMode,
           ),
         ),
       ],

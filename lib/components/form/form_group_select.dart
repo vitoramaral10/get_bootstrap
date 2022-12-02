@@ -45,17 +45,19 @@ class FormGroupSelect<T> extends StatelessWidget {
           ),
         if (title != null) const SizedBox(height: 8),
         DropdownButtonFormField<T>(
-          isExpanded: true,
-          isDense: true,
-          autovalidateMode: autovalidateMode,
+          items: items,
+          value: value,
+          onChanged: onChanged,
           style: TextStyle(
-            fontWeight: FontWeight.normal,
             fontSize: lg
                 ? 19
                 : sm
                     ? 14
                     : 16,
+            fontWeight: FontWeight.normal,
           ),
+          isDense: true,
+          isExpanded: true,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
               vertical: lg
@@ -70,10 +72,8 @@ class FormGroupSelect<T> extends StatelessWidget {
                       : 12,
             ),
           ),
-          items: items,
-          value: value,
-          onChanged: onChanged,
           validator: validator,
+          autovalidateMode: autovalidateMode,
         ),
       ],
     );

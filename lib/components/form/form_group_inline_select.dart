@@ -58,15 +58,18 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
         BTCol(
           sizes: sizesField,
           child: DropdownButtonFormField<T>(
-            isDense: true,
+            items: items,
+            value: value,
+            onChanged: onChanged,
             style: TextStyle(
-              fontWeight: FontWeight.normal,
               fontSize: lg
                   ? 19
                   : sm
                       ? 14
                       : 16,
+              fontWeight: FontWeight.normal,
             ),
+            isDense: true,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
                 vertical: lg
@@ -81,9 +84,6 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
                         : 12,
               ),
             ),
-            items: items,
-            value: value,
-            onChanged: onChanged,
             validator: validator,
           ),
         ),

@@ -56,22 +56,15 @@ class FormGroupFile extends StatelessWidget {
             width: double.maxFinite,
             child: Row(children: [
               Container(
+                padding: const EdgeInsets.only(right: 1.0),
                 decoration: const BoxDecoration(
+                  color: BTColors.gray400,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(6.0),
                     bottomLeft: Radius.circular(6.0),
                   ),
-                  color: BTColors.gray400,
                 ),
-                padding: const EdgeInsets.only(right: 1.0),
                 child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(6.0),
-                      bottomLeft: Radius.circular(6.0),
-                    ),
-                    color: BTColors.gray200,
-                  ),
                   padding: EdgeInsets.symmetric(
                     vertical: lg
                         ? 9
@@ -83,6 +76,13 @@ class FormGroupFile extends StatelessWidget {
                         : sm
                             ? 8
                             : 12,
+                  ),
+                  decoration: const BoxDecoration(
+                    color: BTColors.gray200,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(6.0),
+                      bottomLeft: Radius.circular(6.0),
+                    ),
                   ),
                   child: Text(
                     'Enviar arquivo',

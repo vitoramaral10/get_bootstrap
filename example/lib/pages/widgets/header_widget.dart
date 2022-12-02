@@ -18,7 +18,6 @@ class _HeaderWidgetState extends State<HeaderWidget> {
     return SizedBox(
       height: 56,
       child: AppBar(
-        backgroundColor: const Color(0xFF712CF9),
         leading: widget.showSidebarButton ? Container() : null,
         title: BTContainer(
           xxl: true,
@@ -30,20 +29,15 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   ),
                 )
               : Row(children: [
-                  Image.asset(
-                    'assets/images/bootstrap_logo.webp',
-                    height: 42,
-                  ),
+                  Image.asset('assets/images/bootstrap_logo.webp', height: 42),
                   TextButton(
                     onPressed: () {
                       log('a');
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: BTColors.white,
-                      textStyle:
-                          GetBootstrap.themeData.textTheme.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                      ),
+                      textStyle: BootstrapThemeData.light.textTheme.labelLarge
+                          ?.copyWith(fontWeight: FontWeight.w700),
                     ),
                     child: const Text('Docs'),
                   ),
@@ -92,8 +86,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       },
                       child: Icon(
                         FontAwesomeIcons.github,
-                        color: Colors.white.withOpacity(0.85),
                         size: 16,
+                        color: Colors.white.withOpacity(0.85),
                       ),
                     ),
                   ),
@@ -105,8 +99,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       },
                       child: Icon(
                         FontAwesomeIcons.twitter,
-                        color: Colors.white.withOpacity(0.85),
                         size: 16,
+                        color: Colors.white.withOpacity(0.85),
                       ),
                     ),
                   ),
@@ -118,97 +112,92 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       },
                       child: Image.asset(
                         'assets/images/open.webp',
-                        color: Colors.white.withOpacity(0.85),
                         height: 16,
+                        color: Colors.white.withOpacity(0.85),
                       ),
                     ),
                   ),
                   Container(
-                    height: 34,
                     padding: const EdgeInsets.symmetric(horizontal: 8),
+                    height: 34,
                     child: VerticalDivider(
-                      color: Colors.white.withOpacity(0.25),
                       width: 1,
+                      color: Colors.white.withOpacity(0.25),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: PopupMenuButton(
-                      offset: const Offset(0, 32),
                       itemBuilder: (BuildContext context) => <PopupMenuEntry>[
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v5.2'),
                         ),
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v5.1.3'),
                         ),
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v5.0.2'),
                         ),
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v4.6.x'),
                         ),
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v3.4.1'),
                         ),
                         PopupMenuItem(
-                          height: 36,
                           onTap: () async {
                             log('a');
                           },
+                          height: 36,
                           child: const Text('v2.3.2'),
                         ),
                       ],
+                      offset: const Offset(0, 32),
                       child: Center(
-                        child: Row(
-                          children: [
-                            Text(
-                              'v5.2',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelLarge
-                                  ?.copyWith(
-                                    color: Colors.white.withOpacity(0.85),
-                                  ),
-                            ),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            Icon(
-                              FontAwesomeIcons.caretDown,
-                              size: 12,
-                              color: Colors.white.withOpacity(0.85),
-                            ),
-                          ],
-                        ),
+                        child: Row(children: [
+                          Text(
+                            'v5.2',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
+                                ?.copyWith(
+                                  color: Colors.white.withOpacity(0.85),
+                                ),
+                          ),
+                          const SizedBox(width: 8),
+                          Icon(
+                            FontAwesomeIcons.caretDown,
+                            size: 12,
+                            color: Colors.white.withOpacity(0.85),
+                          ),
+                        ]),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 12,
-                  ),
+                  const SizedBox(width: 12),
                 ]),
         ),
+        backgroundColor: const Color(0xFF712CF9),
       ),
     );
   }

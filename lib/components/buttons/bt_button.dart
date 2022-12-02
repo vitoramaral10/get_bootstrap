@@ -33,45 +33,45 @@ class BTButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const roundedRectangleBorder = RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(6)),
+    );
+
     return SizedBox(
-      height: heightButton,
       width: widthButton,
+      height: heightButton,
       child: ElevatedButton(
+        onPressed: onPressed,
         style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(6)),
-            ),
-          ),
-          padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
-          side: MaterialStateProperty.all(BorderSide(
-            color: (backgroundColor ?? Theme.of(context).primaryColor)
-                .withOpacity(onPressed != null ? 1 : 0.0),
-          )),
+          textStyle: MaterialStateProperty.resolveWith((states) {
+            return GetBootstrap.typography.button!.copyWith(
+              color: (backgroundColor ?? BTColors.primary)
+                  .withOpacity(onPressed != null ? 1 : 0.65),
+            );
+          }),
           backgroundColor: MaterialStateProperty.all(
-            (backgroundColor ?? Theme.of(context).primaryColor)
+            (backgroundColor ?? BTColors.primary)
                 .withOpacity(onPressed != null ? 1 : 0.65),
           ),
           foregroundColor: MaterialStateProperty.all(
-            (backgroundColor ?? Theme.of(context).primaryColor)
-                        .computeLuminance() >
-                    0.5
+            (backgroundColor ?? BTColors.primary).computeLuminance() > 0.5
                 ? BTColors.dark
                 : BTColors.light,
           ),
           overlayColor: MaterialStateProperty.all(
-            (backgroundColor ?? Theme.of(context).primaryColor)
+            (backgroundColor ?? BTColors.primary)
                 .withOpacity(onPressed != null ? 1 : 0.65),
           ),
-          textStyle: MaterialStateProperty.resolveWith((states) {
-            return GetBootstrap.typography.button!.copyWith(
-              color: (backgroundColor ?? Theme.of(context).primaryColor)
-                  .withOpacity(onPressed != null ? 1 : 0.65),
-            );
-          }),
           elevation: MaterialStateProperty.all(0),
+          padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
+          side: MaterialStateProperty.all(BorderSide(
+            color: (backgroundColor ?? BTColors.primary)
+                .withOpacity(onPressed != null ? 1 : 0.0),
+          )),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            roundedRectangleBorder,
+          ),
         ),
-        onPressed: onPressed,
         child: child,
       ),
     );
