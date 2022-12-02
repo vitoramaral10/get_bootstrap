@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.8.0...v0.9.0) (2022-12-02)
+
+
+### Features
+
+* dark mode no BTCard ([6a0c7e7](https://github.com/vitoramaral10/get_bootstrap/commit/6a0c7e758a7df7ff018ee25cfadb5a6c416316bd))
+* novos formatters `FirstLetterUpperCaseFormatter` e `UpperCaseTextFormatter` ([ecf7609](https://github.com/vitoramaral10/get_bootstrap/commit/ecf7609d7646cdb222cd49157da4a77c17a42e1f))
+
+
+### Bug Fixes
+
+* remoção da cor de background do `BTButtonOutline` ([ba0905b](https://github.com/vitoramaral10/get_bootstrap/commit/ba0905b54597d679febbd7ed090adc6ce4ef31f6))
+
 ## [0.8.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.7.0...v0.8.0) (2022-11-29)
 
 ## [0.7.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.6.0...v0.7.0) (2022-11-25)
