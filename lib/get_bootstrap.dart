@@ -9,6 +9,9 @@ import 'components/card/footer.dart';
 import 'components/card/head.dart';
 import 'core/bt_typography.dart';
 
+part 'formatters/bootstrap_formatter.dart';
+part 'formatters/upper_case_text_formatter.dart';
+part 'formatters/first_letter_upper_case_formatter.dart';
 part 'components/bootstrap_theme_data.dart';
 part 'components/card/bt_card.dart';
 part 'components/buttons/bt_button.dart';
