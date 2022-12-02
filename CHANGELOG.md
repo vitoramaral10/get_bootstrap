@@ -15,6 +15,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 * remoção da cor de background do `BTButtonOutline` ([ba0905b](https://github.com/vitoramaral10/get_bootstrap/commit/ba0905b54597d679febbd7ed090adc6ce4ef31f6))
 
+## [0.8.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.7.0...v0.8.0) (2022-11-29)
+
 ## [0.8.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.7.0...v0.8.0) (2022-11-29)
 
 ## [0.7.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.6.0...v0.7.0) (2022-11-25)
