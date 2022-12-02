@@ -10,6 +10,7 @@ class BTCard extends StatelessWidget {
   final EdgeInsetsGeometry? headPadding;
   final EdgeInsetsGeometry? bodyPadding;
   final EdgeInsetsGeometry? footerPadding;
+  final bool darkMode;
 
   const BTCard({
     super.key,
@@ -22,6 +23,7 @@ class BTCard extends StatelessWidget {
     this.headPadding,
     this.bodyPadding,
     this.footerPadding,
+    this.darkMode = false,
   });
 
   @override
@@ -29,7 +31,7 @@ class BTCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border.fromBorderSide(BorderSide(
-          color: (Get.isDarkMode ? BTColors.gray600 : BTColors.gray300),
+          color: (darkMode ? BTColors.gray600 : BTColors.gray300),
         )),
         borderRadius: const BorderRadius.all(Radius.circular(6)),
       ),
@@ -42,11 +44,12 @@ class BTCard extends StatelessWidget {
               headPadding: headPadding,
               headBackground: headBackground,
               head: head,
+              darkMode: darkMode,
             ),
           if (head != null)
             Divider(
               height: 1,
-              color: Get.isDarkMode ? BTColors.gray600 : BTColors.gray300,
+              color: darkMode ? BTColors.gray600 : BTColors.gray300,
             ),
           Body(
             bodyPadding: bodyPadding,
@@ -54,17 +57,19 @@ class BTCard extends StatelessWidget {
             footer: footer,
             bodyBackground: bodyBackground,
             body: body,
+            darkMode: darkMode,
           ),
           if (footer != null)
             Divider(
               height: 1,
-              color: Get.isDarkMode ? BTColors.gray600 : BTColors.gray300,
+              color: darkMode ? BTColors.gray600 : BTColors.gray300,
             ),
           if (footer != null)
             Footer(
               footerPadding: footerPadding,
               footerBackground: footerBackground,
               footer: footer,
+              darkMode: darkMode,
             ),
         ],
       ),
