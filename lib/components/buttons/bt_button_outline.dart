@@ -49,7 +49,7 @@ class BTButtonOutline extends StatelessWidget {
                   .withOpacity(onPressed != null ? 1 : 0.65),
             );
           }),
-          backgroundColor: MaterialStateProperty.all(Colors.white),
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
           foregroundColor: MaterialStateProperty.all(
             backgroundColor ?? BTColors.primary,
           ),
