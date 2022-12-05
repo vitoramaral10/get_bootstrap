@@ -9,6 +9,7 @@ class FormGroupSelect<T> extends StatelessWidget {
   final String? Function(T?)? validator;
   final bool lg;
   final bool sm;
+  final bool disabled;
   final AutovalidateMode? autovalidateMode;
 
   const FormGroupSelect({
@@ -21,6 +22,7 @@ class FormGroupSelect<T> extends StatelessWidget {
     this.validator,
     this.lg = false,
     this.sm = false,
+    this.disabled = false,
     this.autovalidateMode,
   });
 
@@ -47,7 +49,7 @@ class FormGroupSelect<T> extends StatelessWidget {
         DropdownButtonFormField<T>(
           items: items,
           value: value,
-          onChanged: onChanged,
+          onChanged: disabled ? null : onChanged,
           style: TextStyle(
             fontSize: lg
                 ? 19
