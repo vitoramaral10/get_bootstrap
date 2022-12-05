@@ -37,7 +37,7 @@ class FormGroupPlainText extends StatelessWidget {
             ],
           ),
         if (title != null) const SizedBox(height: 4),
-        Text(value),
+        SelectableText(value),
       ],
     );
   }

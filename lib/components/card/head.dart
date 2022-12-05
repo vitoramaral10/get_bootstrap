@@ -21,7 +21,7 @@ class Head extends StatelessWidget {
     return Container(
       padding: headPadding ?? const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-        color: headBackground ?? (darkMode ? BTColors.gray800 : BTColors.light),
+        color: headBackground ?? (darkMode ? BTColors.gray800 : BTColors.white),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(6),
           topRight: Radius.circular(6),
