@@ -9,7 +9,8 @@ void main() {
   runApp(MaterialApp(
     routes: Routes.list,
     initialRoute: Routes.initialRoute,
-    theme: BootstrapThemeData.light.copyWith(),
+    theme: BootstrapThemeData.light
+        .copyWith(scaffoldBackgroundColor: BTColors.white),
     debugShowCheckedModeBanner: false,
   ));
 }
