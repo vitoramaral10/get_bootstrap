@@ -23,50 +23,14 @@ class Sidebar extends StatelessWidget {
                 style: GetBootstrap.typography.small,
               ),
             ),
-            Text(
-              'Download',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Contents',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Browsers & devices',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'JavaScript',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Webpack',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Parcel',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Vite',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Accessibility',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'RFS',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'RTL',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Contribute',
-              style: GetBootstrap.typography.small,
-            ),
+            // Text(
+            //   'RTL',
+            //   style: GetBootstrap.typography.small,
+            // ),
+            // Text(
+            //   'Contribute',
+            //   style: GetBootstrap.typography.small,
+            // ),
           ],
         ),
         BTSidebarGroup(
@@ -79,7 +43,7 @@ class Sidebar extends StatelessWidget {
                 Navigator.pushNamed(context, '/customize/color');
               },
               child: Text(
-                'Color',
+                'Cores',
                 style: GetBootstrap.typography.small,
               ),
             ),
@@ -99,13 +63,14 @@ class Sidebar extends StatelessWidget {
                 style: GetBootstrap.typography.small,
               ),
             ),
-            Text(
-              'Containers',
-              style: GetBootstrap.typography.small,
-            ),
-            Text(
-              'Grid',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/layout/grid');
+              },
+              child: Text(
+                'Grid',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Columns',

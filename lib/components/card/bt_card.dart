@@ -1,9 +1,6 @@
 part of get_bootstrap;
 
 class BTCard extends StatelessWidget {
-  final Widget? head;
-  final Widget body;
-  final Widget? footer;
   final Color? headBackground;
   final Color? bodyBackground;
   final Color? footerBackground;
@@ -11,6 +8,9 @@ class BTCard extends StatelessWidget {
   final EdgeInsetsGeometry? bodyPadding;
   final EdgeInsetsGeometry? footerPadding;
   final bool darkMode;
+  final Widget? head;
+  final Widget body;
+  final Widget? footer;
 
   const BTCard({
     super.key,

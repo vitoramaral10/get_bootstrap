@@ -1,6 +1,10 @@
 import 'package:bootstrap_example/pages/widgets/footer_widget.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_highlight/flutter_highlight.dart';
+import 'package:flutter_highlight/themes/foundation.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -51,9 +55,107 @@ class IntroductionPage extends StatelessWidget {
                                 'Começo rápido',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              const Text(
-                                'Comece incluindo CSS e JavaScript prontos para produção do Bootstrap via CDN sem a necessidade de etapas de compilação. Veja na prática com esta demonstração do Bootstrap CodePen .',
+                              const SizedBox(height: 16),
+                              Text(
+                                'Inclua a dependência',
+                                style: GetBootstrap.typography.headline3,
                               ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Comece incluindo o pacote em seu projeto Flutter.',
+                              ),
+                              const SizedBox(height: 8),
+                              const Text('Usando o comando do flutter:'),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: HighlightView(
+                                      'flutter pub add get_bootstrap',
+                                      language: 'shell',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Isso adicionará uma linha como esta ao pubspec.yaml do seu pacote (e executará um flutter pub get implícito):',
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: HighlightView(
+                                      '''
+dependencies:
+    get_bootstrap: ^0.10.0''',
+                                      language: 'yaml',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Como alternativa, seu editor pode oferecer suporte ao flutter pub get. Verifique os documentos do seu editor para saber mais.',
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'Importe',
+                                style: GetBootstrap.typography.headline3,
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Agora em seu arquivo, você pode usar:',
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: HighlightView(
+                                      "import 'package:get_bootstrap/get_bootstrap.dart';",
+                                      language: 'dart',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'Comunidade',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Mantenha-se atualizado sobre o desenvolvimento do Bootstrap e alcance a comunidade com esses recursos úteis.',
+                              ),
+                              const SizedBox(height: 8),
+                              Column(children: [
+                                RichText(
+                                  text: TextSpan(
+                                    style: GetBootstrap.typography.bodyText2,
+                                    children: [
+                                      const TextSpan(
+                                        text: '• Pergunte e explore ',
+                                      ),
+                                      TextSpan(
+                                        text: 'nossas discussões no GitHub.',
+                                        style: GetBootstrap.typography.link,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            launchUrl(Uri.parse(
+                                              'https://github.com/vitoramaral10/get_bootstrap/discussions',
+                                            ));
+                                          },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ]),
                             ],
                           ),
                         ),

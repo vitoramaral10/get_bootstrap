@@ -41,6 +41,8 @@ class BTCol extends StatelessWidget {
   final List<String>? orders;
 
   final double? marginTop;
+  final double? marginLeft;
+  final double? marginRight;
 
   BTCol({
     super.key,
@@ -52,6 +54,8 @@ class BTCol extends StatelessWidget {
     this.orders,
     this.invisibleForSizes,
     this.marginTop = 4,
+    this.marginLeft,
+    this.marginRight,
   });
 
   ///
@@ -324,9 +328,9 @@ class BTCol extends StatelessWidget {
             padding: _gutterSize == 0.0
                 ? EdgeInsets.zero
                 : EdgeInsets.only(
-                    left: _gutterSize / 12,
+                    left: marginLeft ?? _gutterSize / 12,
                     top: marginTop ?? _gutterSize / 12,
-                    right: _gutterSize / 12,
+                    right: marginRight ?? _gutterSize / 12,
                     bottom: _gutterSize / 12,
                   ),
             child: child,

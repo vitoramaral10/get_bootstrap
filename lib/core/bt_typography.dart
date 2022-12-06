@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../get_bootstrap.dart';
 
@@ -46,92 +47,93 @@ class BTTypography {
     this.link,
     this.button,
   }) {
-    headline1 = const TextStyle(
-      fontSize: 40,
+    headline1 = GoogleFonts.openSans(
+      fontSize: 36,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline2 = const TextStyle(
+
+    headline2 = GoogleFonts.openSans(
       fontSize: 32,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline3 = const TextStyle(
+    headline3 = GoogleFonts.openSans(
       fontSize: 28,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline4 = const TextStyle(
+    headline4 = GoogleFonts.openSans(
       fontSize: 24,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline5 = const TextStyle(
+    headline5 = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline6 = const TextStyle(
+    headline6 = GoogleFonts.openSans(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    display1 = const TextStyle(
+    display1 = GoogleFonts.openSans(
       fontSize: 80,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display2 = const TextStyle(
+    display2 = GoogleFonts.openSans(
       fontSize: 72,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display3 = const TextStyle(
+    display3 = GoogleFonts.openSans(
       fontSize: 65,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display4 = const TextStyle(
+    display4 = GoogleFonts.openSans(
       fontSize: 56,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display5 = const TextStyle(
+    display5 = GoogleFonts.openSans(
       fontSize: 48,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display6 = const TextStyle(
+    display6 = GoogleFonts.openSans(
       fontSize: 40,
-      fontWeight: FontWeight.w100,
+      fontWeight: FontWeight.w300,
       height: 1.2,
     );
-    lead = const TextStyle(
+    lead = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
     );
-    bodyText1 = const TextStyle(
+    bodyText1 = GoogleFonts.openSans(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
     );
-    bodyText2 = const TextStyle(
+    bodyText2 = GoogleFonts.openSans(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       height: 1.5,
     );
-    button = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
-    highlight = const TextStyle(
+    button = GoogleFonts.openSans(fontSize: 14, fontWeight: FontWeight.w500);
+    highlight = GoogleFonts.courierPrime(
       fontSize: 14,
       fontWeight: FontWeight.w400,
     );
-    small = const TextStyle(
+    small = GoogleFonts.openSans(
       fontSize: 14,
       fontWeight: FontWeight.w400,
       height: 1.5,
     );
-    link = const TextStyle(
+    link = GoogleFonts.openSans(
       color: BTColors.blue,
       fontSize: 16,
       fontWeight: FontWeight.w400,
