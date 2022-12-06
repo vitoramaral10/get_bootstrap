@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.9.0...v0.10.0) (2022-12-05)
+
+
+### Features
+
+* **form_group_plain_text:** tornando o texto selecionável ([27eb2d0](https://github.com/vitoramaral10/get_bootstrap/commit/27eb2d049b933bd88bd3cfe78ee15a15812f0160))
+* **form_group_select:** opção de desabilitar o `FormGroupSelect` ([7381c99](https://github.com/vitoramaral10/get_bootstrap/commit/7381c99ce9e40750dfb36ba83e0986331789d46c))
+
 ## [0.9.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.8.0...v0.9.0) (2022-12-02)
 
 
