@@ -23,6 +23,7 @@ part 'components/form/form_group_file.dart';
 part 'components/form/form_group_inline.dart';
 part 'components/form/form_group_inline_plain_text.dart';
 part 'components/form/form_group_plain_text.dart';
+part 'components/form/form_switch.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
 part 'grid/bootstrap_visibility.dart';
