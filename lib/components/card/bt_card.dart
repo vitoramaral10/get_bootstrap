@@ -9,7 +9,7 @@ class BTCard extends StatelessWidget {
   final EdgeInsetsGeometry? footerPadding;
   final bool darkMode;
   final Widget? head;
-  final Widget body;
+  final Widget? body;
   final Widget? footer;
 
   const BTCard({
@@ -44,21 +44,24 @@ class BTCard extends StatelessWidget {
               headPadding: headPadding,
               headBackground: headBackground,
               head: head,
+              body: body,
+              footer: footer,
               darkMode: darkMode,
             ),
-          if (head != null)
+          if (head != null && (body != null || footer != null))
             Divider(
               height: 1,
               color: darkMode ? BTColors.gray600 : BTColors.gray300,
             ),
-          Body(
-            bodyPadding: bodyPadding,
-            head: head,
-            footer: footer,
-            bodyBackground: bodyBackground,
-            body: body,
-            darkMode: darkMode,
-          ),
+          if (body != null)
+            Body(
+              bodyPadding: bodyPadding,
+              head: head,
+              footer: footer,
+              bodyBackground: bodyBackground,
+              body: body!,
+              darkMode: darkMode,
+            ),
           if (footer != null)
             Divider(
               height: 1,
