@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.0...v0.11.1) (2022-12-15)
+
+
+### Features
+
+* **bt_card:** não é mais obrigatório passar o body no `BTCard` ([ef16159](https://github.com/vitoramaral10/get_bootstrap/commit/ef1615999782a75e2460c92db9e959ef1d72d477))
+
+
+### Bug Fixes
+
+* **form_group_inline:** ajustado o redimensionamento padrão do `FormGroupInline` ([ccc66f8](https://github.com/vitoramaral10/get_bootstrap/commit/ccc66f88e0420d6eaf4fcaa1fc7418c563161d4d))
+
 ## [0.11.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.10.1...v0.11.0) (2022-12-14)
 
 
