@@ -41,12 +41,16 @@ class FormGroupInline extends StatelessWidget {
     this.onChanged,
     this.onFieldSubmitted,
     this.sizesTitle = const [
-      'col-xl-2',
+      'col-xxl-3',
+      'col-xl-3',
+      'col-lg-3',
       'col-sm-12',
       'col-xs-12',
     ],
     this.sizesField = const [
-      'col-xl-2',
+      'col-xxl-9',
+      'col-xl-9',
+      'col-lg-9',
       'col-sm-12',
       'col-xs-12',
     ],
@@ -62,7 +66,9 @@ class FormGroupInline extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(title!),
+                Flexible(
+                  child: Text(title!),
+                ),
                 if (required)
                   const Padding(
                     padding: EdgeInsets.only(left: 4.0),
