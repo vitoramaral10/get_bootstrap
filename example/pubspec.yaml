@@ -31,3 +31,4 @@ flutter:
   assets:
     - assets/images/
     - fonts/
+    - fonts/Noto_Sans/

@@ -108,3 +108,4 @@ dart_code_metrics:
     - prefer-const-border-radius
     - prefer-correct-edge-insets-constructor
     - prefer-single-widget-per-file
+    - use-setstate-synchronously
