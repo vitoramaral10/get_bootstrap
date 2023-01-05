@@ -313,42 +313,22 @@ FormGroupInline(
                               BTCard(
                                 body: BTRow(children: [
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: const Padding(
                                       padding: EdgeInsets.only(top: 4.0),
                                       child: FormGroupInlinePlainText(
                                         value: 'email@example.com',
-                                        sizesField: ['col-12'],
                                       ),
                                     ),
                                   ),
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: const FormGroupInline(
                                       placeholder: 'Senha',
-                                      sizesField: ['col-12'],
                                     ),
                                   ),
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 4.0),
                                       child: BTButton(

@@ -1,224 +1,344 @@
 part of get_bootstrap;
 
 //
-// ignore_for_file: prefer-static-class
-List<String> _prefixes = ['xxl', 'xl', 'lg', 'md', 'sm', ''];
-List<String> _prefixesReversed = ['', 'sm', 'md', 'lg', 'xl', 'xxl'];
+// ignore: prefer-static-class
+double _refWidth = 375;
 
-double _oneColumnRatio = 0.083333;
 double _gutterSize = 48.0;
-int _numberOfColumns = 12;
+//
+// ignore: prefer-static-class
+double? _scalingFactor;
+//
+// ignore: prefer-static-class
+double? _width;
 
-///
-/// Customization of the grid
-///
-void bootstrapGridParameters({
-  int numberOfColumns = 12,
-  double gutterSize = 24,
-}) {
-  assert(() {
-    if (numberOfColumns < 10 || numberOfColumns > 24) {
-      throw FlutterError.fromParts(<DiagnosticsNode>[
-        ErrorSummary('Invalid number of columns: $numberOfColumns'),
-        ErrorHint('The number of columns must be inside the [10; 24] range.'),
-      ]);
-    }
+// ignore: prefer-static-class
+void initScaling(BuildContext context, {bool debug = false}) {
+  var mq = MediaQuery.of(context);
+  _width = mq.size.width < mq.size.height ? mq.size.width : mq.size.height;
+  _scalingFactor = _width! / _refWidth;
 
-    if (gutterSize < 0.0 || gutterSize > 96.0) {
-      throw FlutterError.fromParts(<DiagnosticsNode>[
-        ErrorSummary('Invalid gutter size: $gutterSize'),
-        ErrorHint('The gutterSize must be inside the [0.0; 96.0] range.'),
-      ]);
-    }
-
-    return true;
-  }());
-
-  //
-  // Memorize the parameters
-  //
-  _numberOfColumns = numberOfColumns;
-  _oneColumnRatio = 1.0 / numberOfColumns;
-  _gutterSize = gutterSize;
+  if (debug) {
+    // ignore: avoid_print
+    print("width => $_width");
+  }
 }
 
-///
-/// Returns the definition prefix, based on the available width
-///
-String bootstrapPrefixBasedOnWidth(double width) {
-  String pfx = "";
-
-  if (width >= 1400) {
-    return "xxl";
-  }
-  if (width >= 1200) {
-    return "xl";
+// ignore: prefer-static-class
+double scale(double dimension) {
+  if (_width == null) {
+    throw Exception("You must call initScaling() before any use of scale()");
   }
 
-  if (width >= 992) {
-    return "lg";
-  }
-
-  if (width >= 768) {
-    return "md";
-  }
-
-  if (width >= 576) {
-    return "sm";
-  }
-
-  return pfx;
+  return dimension * _scalingFactor!;
 }
 
-///
-/// Returns the max width for non-fluid containers
-/// based on a certain provided width
-///
-double bootstrapMaxWidthNonFluid(double width) {
-  ///
-  /// Otherwise, it depends on the available width
-  ///
-  if (width >= 1200) {
-    return 1140;
-  }
-  if (width >= 992) {
-    return 960;
-  }
-  if (width >= 768) {
-    return 720;
-  }
-  if (width >= 576) {
-    return 540;
-  }
+class ResponsiveGridBreakpoints {
+  final double xs;
+  final double sm;
+  final double md;
+  final double lg;
+  final double xl;
+  final double xxl;
+  static ResponsiveGridBreakpoints value = ResponsiveGridBreakpoints();
 
-  return width;
-}
-
-///
-/// Implementation of the Bootstrap .row
-///
-/// A [BootstrapRow] may only contain [BootstrapCol] children.
-///
-class BTRow extends StatelessWidget {
-  const BTRow({
-    super.key,
-    required this.children,
-    this.decoration,
-    this.height,
+  ResponsiveGridBreakpoints({
+    this.xs = 576,
+    this.sm = 768,
+    this.md = 992,
+    this.lg = 1200,
+    this.xl = 1400,
+    this.xxl = double.infinity,
   });
+}
 
-  ///
-  /// Min container height
-  ///
-  final double? height;
+enum _GridTier { xs, sm, md, lg, xl, xxl }
 
-  ///
-  /// Any potential BoxDecoration
-  ///
-  final BoxDecoration? decoration;
+// ignore: prefer-static-class
+_GridTier _currentSize(BuildContext context) {
+  final breakpoints = ResponsiveGridBreakpoints.value;
+  final mediaQueryData = MediaQuery.of(context);
+  final width = mediaQueryData.size.width;
 
-  ///
-  /// List of the children of type [BootstrapCol]
-  ///
+  if (width < breakpoints.xs) {
+    return _GridTier.xs;
+  } else if (width < breakpoints.sm) {
+    return _GridTier.sm;
+  } else if (width < breakpoints.md) {
+    return _GridTier.md;
+  } else if (width < breakpoints.lg) {
+    return _GridTier.lg;
+  } else if (width < breakpoints.xl) {
+    return _GridTier.xl;
+  } else {
+    return _GridTier.xxl;
+  }
+}
+
+class BTRow extends StatelessWidget {
   final List<BTCol> children;
+  final CrossAxisAlignment crossAxisAlignment;
+  final int rowSegments;
+
+  const BTRow({
+    required this.children,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.rowSegments = 12,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final rows = <Widget>[];
+
+    int accumulatedWidth = 0;
+    var cols = <Widget>[];
+
+    for (var col in children) {
+      var colWidth = col.currentConfig(context) ?? 1;
+      //
+      if (accumulatedWidth + colWidth > rowSegments) {
+        if (accumulatedWidth < rowSegments) {
+          cols.add(Spacer(
+            flex: rowSegments - accumulatedWidth,
+          ));
+        }
+        rows.add(Row(
+          crossAxisAlignment: crossAxisAlignment,
+          children: cols,
+        ));
+
+        cols = <Widget>[];
+        accumulatedWidth = 0;
+      }
+      //
+      cols.add(col);
+      accumulatedWidth += colWidth;
+    }
+
+    if (accumulatedWidth >= 0) {
+      if (accumulatedWidth < rowSegments) {
+        cols.add(Spacer(
+          flex: rowSegments - accumulatedWidth,
+        ));
+      }
+      rows.add(Row(
+        crossAxisAlignment: crossAxisAlignment,
+        children: cols,
+      ));
+    }
+
+    return Column(
+      children: rows,
+    );
+  }
+}
+
+// ignore: prefer-single-widget-per-file
+class BTCol extends StatelessWidget {
+  final _config = <int?>[]..length = 6;
+  final Widget child;
+  final double? marginTop;
+  final double? marginLeft;
+  final double? marginRight;
+
+  BTCol({
+    int xs = 12,
+    int? sm,
+    int? md,
+    int? lg,
+    int? xl,
+    int? xxl,
+    this.marginTop = 4,
+    this.marginLeft,
+    this.marginRight,
+    required this.child,
+    Key? key,
+  }) : super(key: key) {
+    _config[_GridTier.xs.index] = xs;
+    _config[_GridTier.sm.index] = sm ?? _config[_GridTier.xs.index];
+    _config[_GridTier.md.index] = md ?? _config[_GridTier.sm.index];
+    _config[_GridTier.lg.index] = lg ?? _config[_GridTier.md.index];
+    _config[_GridTier.xl.index] = xl ?? _config[_GridTier.lg.index];
+    _config[_GridTier.xxl.index] = xxl ?? _config[_GridTier.xl.index];
+  }
+
+  int? currentConfig(BuildContext context) {
+    return _config[_currentSize(context).index];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: currentConfig(context) ?? 1,
+      child: Padding(
+          padding: _gutterSize == 0.0
+              ? EdgeInsets.zero
+              : EdgeInsets.only(
+                  left: marginLeft ?? _gutterSize / 12,
+                  top: marginTop ?? _gutterSize / 12,
+                  right: marginRight ?? _gutterSize / 12,
+                  bottom: _gutterSize / 12,
+                ),
+          child: child),
+    );
+  }
+}
+
+/// Responsive grid list.
+
+// ignore: prefer-single-widget-per-file
+class ResponsiveGridList extends StatelessWidget {
+  final double desiredItemWidth, minSpacing;
+  final List<Widget> children;
+  final bool squareCells, scroll;
+  final MainAxisAlignment rowMainAxisAlignment;
+  final bool shrinkWrap;
+
+  const ResponsiveGridList({
+    required this.desiredItemWidth,
+    this.minSpacing = 1,
+    this.squareCells = false,
+    this.scroll = true,
+    required this.children,
+    this.rowMainAxisAlignment = MainAxisAlignment.start,
+    this.shrinkWrap = false,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        //
-        // Get the prefix for the definition, based on the available width
-        //
-        String pfx = bootstrapPrefixBasedOnWidth(constraints.maxWidth);
+      builder: (context, constraints) {
+        if (children.isEmpty) return Container();
 
-        //
-        // We need to iterate through all the children and consider any potential order
-        //
-        List<BTCol> childrenTemp = List.of(children);
-        childrenTemp.sort(
-          (a, b) => (a.orderPerSize[pfx] ?? 0) - (b.orderPerSize[pfx] ?? 0),
-        );
+        double width = constraints.maxWidth;
 
-        return Container(
-          decoration: decoration,
-          constraints: BoxConstraints(
-            minWidth: constraints.maxWidth,
-            maxWidth: constraints.maxWidth,
-            minHeight: height ?? 0.0,
-          ),
-          child: Wrap(
-            direction: Axis.horizontal,
-            alignment: WrapAlignment.start,
-            children: childrenTemp,
-          ),
-        );
+        double N = (width - minSpacing) / (desiredItemWidth + minSpacing);
+
+        int n;
+        double spacing, itemWidth;
+
+        if (N % 1 == 0) {
+          n = N.floor();
+          spacing = minSpacing;
+          itemWidth = desiredItemWidth;
+        } else {
+          n = N.floor();
+
+          double dw =
+              width - (n * (desiredItemWidth + minSpacing) + minSpacing);
+
+          itemWidth = desiredItemWidth +
+              (dw / n) * (desiredItemWidth / (desiredItemWidth + minSpacing));
+
+          spacing = (width - itemWidth * n) / (n + 1);
+        }
+
+        if (scroll) {
+          return ListView.builder(
+            shrinkWrap: shrinkWrap,
+            itemBuilder: (context, index) {
+              if (index % 2 == 1) {
+                return SizedBox(height: minSpacing);
+              }
+              final rowChildren = <Widget>[];
+              index = index ~/ 2;
+              for (int i = index * n; i < (index + 1) * n; i++) {
+                if (i >= children.length) break;
+                rowChildren.add(children[i]);
+              }
+
+              return _ResponsiveGridListItem(
+                itemWidth: itemWidth,
+                spacing: spacing,
+                squareCells: squareCells,
+                mainAxisAlignment: rowMainAxisAlignment,
+                children: rowChildren,
+              );
+            },
+            itemCount: (children.length / n).ceil() * 2 - 1,
+          );
+        } else {
+          final rows = <Widget>[];
+          rows.add(SizedBox(
+            height: minSpacing,
+          ));
+          //
+          for (int j = 0; j < (children.length / n).ceil(); j++) {
+            final rowChildren = <Widget>[];
+            //
+            for (int i = j * n; i < (j + 1) * n; i++) {
+              if (i >= children.length) break;
+              rowChildren.add(children[i]);
+            }
+            //
+            rows.add(_ResponsiveGridListItem(
+              itemWidth: itemWidth,
+              spacing: spacing,
+              squareCells: squareCells,
+              mainAxisAlignment: rowMainAxisAlignment,
+              children: rowChildren,
+            ));
+
+            rows.add(SizedBox(
+              height: minSpacing,
+            ));
+          }
+
+          return Column(
+            children: rows,
+          );
+        }
       },
     );
   }
 }
 
-///
-/// Returns "something" based on the current dimensions
-/// everything is related to browser window
-///
-/// Example:
-/// something = bootStrapValueBasedOnSize(
-///   {
-///    "xl": "value for xl",
-///    "lg": "value for lg",
-///    "md": "value for md",
-///    "sm": "value for sm",
-///    "": "value for xs",
-///   },
-///   context: context,
-/// )
-///
-/// If the sizes does not contain the corresponding browser prefix,
-/// returns the nearest (upper first)
-///
-bootStrapValueBasedOnSize({
-  required Map<String, dynamic> sizes,
-  required BuildContext context,
-}) {
-  //
-  // Get the prefix for the definition, based on the available width
-  //
-  String pfx = bootstrapPrefixBasedOnWidth(MediaQuery.of(context).size.width);
+//
+// ignore: prefer-single-widget-per-file
+class _ResponsiveGridListItem extends StatelessWidget {
+  final double spacing, itemWidth;
+  final List<Widget> children;
+  final bool squareCells;
+  final MainAxisAlignment mainAxisAlignment;
 
-  final int nbPrefixes = _prefixes.length;
-  var value = sizes[pfx];
+  const _ResponsiveGridListItem({
+    required this.itemWidth,
+    required this.spacing,
+    required this.squareCells,
+    required this.children,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    Key? key,
+  }) : super(key: key);
 
-  if (value == null) {
-    //
-    // No definition was found for this prefix
-    //
-    int i;
-    int idx = _prefixes.indexOf(pfx);
+  List<Widget> _buildChildren() {
+    final list = <Widget>[];
 
-    //
-    // Look for the nearest value in higher resolutions
-    //
-    for (i = idx + 1; i < nbPrefixes; i++) {
-      String pfx2 = _prefixesReversed[i];
-      if (sizes[pfx2] != null) {
-        value = sizes[pfx2];
-        break;
-      }
+    list.add(SizedBox(
+      width: spacing,
+    ));
+
+    for (var child in children) {
+      list.add(SizedBox(
+        width: itemWidth,
+        height: squareCells ? itemWidth : null,
+        child: child,
+      ));
+      list.add(SizedBox(
+        width: spacing,
+      ));
     }
 
-    if (value == null) {
-      //
-      // Look for the nearest value in lower resolutions
-      //
-      for (int j = i - 1; j > -1; j--) {
-        String pfx3 = _prefixesReversed[j];
-        if (sizes[pfx3] != null) {
-          value = sizes[pfx3];
-          break;
-        }
-      }
-    }
+    return list;
   }
 
-  return value;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: mainAxisAlignment,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: _buildChildren(),
+    );
+  }
 }

@@ -51,7 +51,6 @@ dart_code_metrics:
     #Common code
     - arguments-ordering:
         child-last: true
-    - avoid-banned-imports
     - avoid-border-all
     - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types

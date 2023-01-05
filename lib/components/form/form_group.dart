@@ -10,6 +10,8 @@ class FormGroup extends StatelessWidget {
   final bool sm;
   final String? title;
   final String? placeholder;
+  final String? labelText;
+  final Color? backgroundColor;
   final bool required;
   final int maxLines;
   final int? maxLength;
@@ -23,6 +25,7 @@ class FormGroup extends StatelessWidget {
   final void Function(String)? onFieldSubmitted;
   final FocusNode? focusNode;
   final Function()? onPressed;
+  final BorderRadius? borderRadius;
 
   const FormGroup({
     super.key,
@@ -33,6 +36,7 @@ class FormGroup extends StatelessWidget {
     this.readonly = false,
     this.title,
     this.placeholder,
+    this.labelText,
     this.required = false,
     this.maxLines = 1,
     this.maxLength,
@@ -40,6 +44,7 @@ class FormGroup extends StatelessWidget {
     this.sm = false,
     this.obscureText = false,
     this.inputFormatters,
+    this.backgroundColor,
     this.validator,
     this.autovalidateMode,
     this.controller,
@@ -48,6 +53,7 @@ class FormGroup extends StatelessWidget {
     this.onFieldSubmitted,
     this.focusNode,
     this.onPressed,
+    this.borderRadius,
   });
 
   @override
@@ -74,6 +80,7 @@ class FormGroup extends StatelessWidget {
           controller: controller,
           focusNode: focusNode,
           decoration: InputDecoration(
+            labelText: labelText,
             hintText: placeholder,
             hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
                 ?.copyWith(
@@ -98,7 +105,40 @@ class FormGroup extends StatelessWidget {
                       : 12,
             ),
             filled: true,
-            fillColor: disabled ? BTColors.gray200 : null,
+            fillColor: disabled ? BTColors.gray200 : backgroundColor,
+            errorBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: BTColors.danger),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: BTColors.blue500.withOpacity(0.3),
+                width: 4,
+              ),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: BTColors.danger),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
+            disabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: BTColors.gray400),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: BTColors.gray400),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
+            border: OutlineInputBorder(
+              borderSide: const BorderSide(color: BTColors.gray400),
+              borderRadius:
+                  borderRadius ?? const BorderRadius.all(Radius.circular(6)),
+            ),
           ),
           keyboardType: keyboardType,
           textCapitalization: textCapitalization,

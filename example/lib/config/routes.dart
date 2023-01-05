@@ -1,9 +1,10 @@
-import 'package:bootstrap_example/pages/content/typography_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../pages/about/license_page.dart';
 import '../pages/components/buttons_page.dart';
+import '../pages/content/typography_page.dart';
 import '../pages/customize/customize_color_page.dart';
+import '../pages/example/sign_in_page.dart';
 import '../pages/form/form_control_page.dart';
 import '../pages/getting-started/introduction_page.dart';
 import '../pages/layout/breakpoints_page.dart';
@@ -21,5 +22,6 @@ class Routes {
     '/components/buttons': (context) => const ButtonsPage(),
     '/forms/form_control': (context) => const FormControlPage(),
     '/about/license': (context) => const LicensePage(),
+    '/examples/sign_in': (context) => const SignInPage(),
   };
 }
