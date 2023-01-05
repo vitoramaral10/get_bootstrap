@@ -20,6 +20,7 @@ part 'components/form/form_group_inline_select.dart';
 part 'components/form/form_group_plain_text.dart';
 part 'components/form/form_group_select.dart';
 part 'components/form/form_switch.dart';
+part 'components/form/form_checkbox.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
 part 'grid/bt_row.dart';
