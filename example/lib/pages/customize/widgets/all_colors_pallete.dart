@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
-import 'package:get_bootstrap/grid/bt_row.dart';
 
 class AllColorsPallete extends StatelessWidget {
   const AllColorsPallete({

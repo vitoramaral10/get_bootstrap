@@ -7,7 +7,6 @@ import 'components/card/body.dart';
 import 'components/card/footer.dart';
 import 'components/card/head.dart';
 import 'core/bt_typography.dart';
-import 'grid/bt_row.dart';
 
 part 'components/bootstrap_theme_data.dart';
 part 'components/buttons/bt_button.dart';
@@ -23,6 +22,7 @@ part 'components/form/form_group_select.dart';
 part 'components/form/form_switch.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
+part 'grid/bt_row.dart';
 part 'formatters/bootstrap_formatter.dart';
 part 'formatters/first_letter_upper_case_formatter.dart';
 part 'formatters/upper_case_text_formatter.dart';
