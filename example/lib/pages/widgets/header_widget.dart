@@ -130,42 +130,42 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     child: PopupMenuButton(
                       itemBuilder: (BuildContext context) => <PopupMenuEntry>[
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,
                           child: const Text('v5.2'),
                         ),
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,
                           child: const Text('v5.1.3'),
                         ),
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,
                           child: const Text('v5.0.2'),
                         ),
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,
                           child: const Text('v4.6.x'),
                         ),
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,
                           child: const Text('v3.4.1'),
                         ),
                         PopupMenuItem(
-                          onTap: () async {
+                          onTap: () {
                             log('a');
                           },
                           height: 36,

@@ -1,8 +1,8 @@
-import 'package:bootstrap_example/pages/content/typography_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../pages/about/license_page.dart';
 import '../pages/components/buttons_page.dart';
+import '../pages/content/typography_page.dart';
 import '../pages/customize/customize_color_page.dart';
 import '../pages/form/form_control_page.dart';
 import '../pages/getting-started/introduction_page.dart';

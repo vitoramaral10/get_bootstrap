@@ -23,14 +23,6 @@ class Sidebar extends StatelessWidget {
                 style: GetBootstrap.typography.small,
               ),
             ),
-            // Text(
-            //   'RTL',
-            //   style: GetBootstrap.typography.small,
-            // ),
-            // Text(
-            //   'Contribute',
-            //   style: GetBootstrap.typography.small,
-            // ),
           ],
         ),
         BTSidebarGroup(

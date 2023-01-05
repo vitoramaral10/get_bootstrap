@@ -1,34 +1,31 @@
 library get_bootstrap;
 
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'components/card/body.dart';
 import 'components/card/footer.dart';
 import 'components/card/head.dart';
 import 'core/bt_typography.dart';
+import 'grid/bt_row.dart';
 
-part 'formatters/bootstrap_formatter.dart';
-part 'formatters/upper_case_text_formatter.dart';
-part 'formatters/first_letter_upper_case_formatter.dart';
 part 'components/bootstrap_theme_data.dart';
-part 'components/card/bt_card.dart';
 part 'components/buttons/bt_button.dart';
 part 'components/buttons/bt_button_outline.dart';
+part 'components/card/bt_card.dart';
 part 'components/form/form_group.dart';
-part 'components/form/form_group_select.dart';
-part 'components/form/form_group_inline_select.dart';
 part 'components/form/form_group_file.dart';
 part 'components/form/form_group_inline.dart';
 part 'components/form/form_group_inline_plain_text.dart';
+part 'components/form/form_group_inline_select.dart';
 part 'components/form/form_group_plain_text.dart';
+part 'components/form/form_group_select.dart';
 part 'components/form/form_switch.dart';
 part 'components/sidebar/bt_sidebar.dart';
 part 'components/sidebar/bt_sidebar_group.dart';
-part 'grid/bootstrap_visibility.dart';
-part 'grid/bt_col.dart';
-part 'grid/bt_row.dart';
+part 'formatters/bootstrap_formatter.dart';
+part 'formatters/first_letter_upper_case_formatter.dart';
+part 'formatters/upper_case_text_formatter.dart';
 part 'helpers/bt_colors.dart';
 part 'layout/bt_container.dart';
 

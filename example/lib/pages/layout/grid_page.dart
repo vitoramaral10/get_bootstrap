@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/foundation.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:get_bootstrap/grid/bt_row.dart';
 
 import '../widgets/footer_widget.dart';
 import '../widgets/header_widget.dart';
@@ -64,9 +65,7 @@ class GridPage extends StatelessWidget {
                                   padding: const EdgeInsets.all(16),
                                   child: BTRow(children: [
                                     BTCol(
-                                      sizes: const ['col-4'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs: 4,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -83,9 +82,7 @@ class GridPage extends StatelessWidget {
                                       ),
                                     ),
                                     BTCol(
-                                      sizes: const ['col-4'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs: 4,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -102,9 +99,7 @@ class GridPage extends StatelessWidget {
                                       ),
                                     ),
                                     BTCol(
-                                      sizes: const ['col-4'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs: 4,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -692,9 +687,7 @@ BTRow(
                                   padding: const EdgeInsets.all(16),
                                   child: BTRow(children: [
                                     BTCol(
-                                      sizes: const ['col-3'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs:3,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -711,9 +704,7 @@ BTRow(
                                       ),
                                     ),
                                     BTCol(
-                                      sizes: const ['col-6'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs:6,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -730,9 +721,7 @@ BTRow(
                                       ),
                                     ),
                                     BTCol(
-                                      sizes: const ['col-3'],
-                                      marginLeft: 0,
-                                      marginRight: 0,
+                                      xs:3,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(

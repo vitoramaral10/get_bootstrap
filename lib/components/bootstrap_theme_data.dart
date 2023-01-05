@@ -4,7 +4,7 @@ part of get_bootstrap;
 /// para utilizar basta colocar no seu MaterialApp
 /// `theme: BootstrapThemeData.light`
 /// para fazer outras customizações utitilize com o copyWith
-/// theme: BootstrapThemeData.light.copyWith()
+/// theme: BootstrapThemeData.light.copyWith().
 class BootstrapThemeData {
   /// Theme data padrão do bootstrap em light mode.
   static final ThemeData light = ThemeData(

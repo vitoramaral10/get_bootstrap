@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:get_bootstrap/grid/bt_row.dart';
 
 class AllColorsPallete extends StatelessWidget {
   const AllColorsPallete({
@@ -11,7 +12,7 @@ class AllColorsPallete extends StatelessWidget {
     return BTRow(
       children: [
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+          lg: 4,
           child: Column(
             children: [
               Container(
@@ -159,7 +160,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+          lg: 4,
           child: Column(
             children: [
               Container(
@@ -310,7 +311,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+          lg: 4,
           child: Column(
             children: [
               Container(
@@ -458,7 +459,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+          lg: 4,
           child: Column(
             children: [
               Container(
@@ -606,7 +607,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+     lg: 4,
           child: Column(
             children: [
               Container(
@@ -754,7 +755,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -893,7 +894,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -1029,7 +1030,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -1177,7 +1178,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -1316,7 +1317,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -1455,7 +1456,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(
@@ -1597,7 +1598,7 @@ class AllColorsPallete extends StatelessWidget {
           ),
         ),
         BTCol(
-          sizes: const ['col-lg-4', 'col-xl-4', 'col-xxl-4'],
+           lg: 4,
           child: Column(
             children: [
               Container(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/foundation.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
+import 'package:get_bootstrap/grid/bt_row.dart';
 
 import '../widgets/header_widget.dart';
 import '../widgets/sidebar.dart';
@@ -313,42 +314,22 @@ FormGroupInline(
                               BTCard(
                                 body: BTRow(children: [
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: const Padding(
                                       padding: EdgeInsets.only(top: 4.0),
                                       child: FormGroupInlinePlainText(
                                         value: 'email@example.com',
-                                        sizesField: ['col-12'],
                                       ),
                                     ),
                                   ),
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: const FormGroupInline(
                                       placeholder: 'Senha',
-                                      sizesField: ['col-12'],
                                     ),
                                   ),
                                   BTCol(
-                                    sizes: const [
-                                      'col-xl-3',
-                                      'col-lg-3',
-                                      'col-md-3',
-                                      'col-sm-12',
-                                      'col-xs-12',
-                                    ],
+                                    md: 3,
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 4.0),
                                       child: BTButton(
