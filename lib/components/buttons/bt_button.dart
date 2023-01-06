@@ -9,17 +9,17 @@ class BTButton extends StatelessWidget {
   final Color? backgroundColor;
 
   double get heightButton => lg == true
-      ? 54
+      ? 58
       : sm == true
-          ? 29
-          : 40;
+          ? 38
+          : 48;
   double? get widthButton => !square
       ? null
       : lg == true
-          ? 48
+          ? 58
           : sm == true
-              ? 31
-              : 38;
+              ? 38
+              : 48;
 
   const BTButton({
     super.key,
@@ -33,11 +33,8 @@ class BTButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const roundedRectangleBorder = RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(6)),
-    );
-
-    return SizedBox(
+    return Container(
+      padding: const EdgeInsets.all(4),
       width: widthButton,
       height: heightButton,
       child: ElevatedButton(
@@ -69,7 +66,9 @@ class BTButton extends StatelessWidget {
                 .withOpacity(onPressed != null ? 1 : 0.0),
           )),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            roundedRectangleBorder,
+            const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(6)),
+            ),
           ),
         ),
         child: child,

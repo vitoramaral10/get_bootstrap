@@ -8,6 +8,8 @@ import 'components/card/footer.dart';
 import 'components/card/head.dart';
 import 'core/bt_typography.dart';
 
+part 'enums/size.dart';
+part 'components/modals/bt_modal.dart';
 part 'components/bootstrap_theme_data.dart';
 part 'components/buttons/bt_button.dart';
 part 'components/buttons/bt_button_outline.dart';
