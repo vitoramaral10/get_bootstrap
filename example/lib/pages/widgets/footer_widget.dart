@@ -54,23 +54,33 @@ class FooterWidget extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: Text('Links', style: GetBootstrap.typography.headline5),),
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Text('Links', style: GetBootstrap.typography.headline5),
+            ),
             const Padding(
-                padding: EdgeInsets.only(bottom: 8.0), child: Text('Casa'),),
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Casa'),
+            ),
             const Padding(
-                padding: EdgeInsets.only(bottom: 8.0),
-                child: Text('Documentos'),),
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Documentos'),
+            ),
             const Padding(
               padding: EdgeInsets.only(bottom: 8.0),
               child: Text('Exemplos'),
             ),
             const Padding(
-                padding: EdgeInsets.only(bottom: 8.0), child: Text('Ícones'),),
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Ícones'),
+            ),
             const Padding(
-                padding: EdgeInsets.only(bottom: 8.0), child: Text('Temas'),),
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Temas'),
+            ),
             const Padding(
-                padding: EdgeInsets.only(bottom: 8.0), child: Text('Blog'),),
+              padding: EdgeInsets.only(bottom: 8.0),
+              child: Text('Blog'),
+            ),
             const Padding(
               padding: EdgeInsets.only(bottom: 8.0),
               child: Text('Loja de brindes'),

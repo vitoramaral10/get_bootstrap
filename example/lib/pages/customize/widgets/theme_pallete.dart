@@ -11,7 +11,7 @@ class ThemePallete extends StatelessWidget {
     return BTRow(
       children: [
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.primary,
             width: double.infinity,
@@ -29,7 +29,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.secondary,
             width: double.infinity,
@@ -47,7 +47,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.success,
             width: double.infinity,
@@ -65,7 +65,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.danger,
             width: double.infinity,
@@ -83,7 +83,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.warning,
             width: double.infinity,
@@ -98,7 +98,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.info,
             width: double.infinity,
@@ -113,7 +113,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.light,
             width: double.infinity,
@@ -128,7 +128,7 @@ class ThemePallete extends StatelessWidget {
           ),
         ),
         BTCol(
-           lg: 4,
+          lg: 4,
           child: Container(
             color: BTColors.dark,
             width: double.infinity,

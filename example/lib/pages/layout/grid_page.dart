@@ -686,7 +686,7 @@ BTRow(
                                   padding: const EdgeInsets.all(16),
                                   child: BTRow(children: [
                                     BTCol(
-                                      xs:3,
+                                      xs: 3,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -703,7 +703,7 @@ BTRow(
                                       ),
                                     ),
                                     BTCol(
-                                      xs:6,
+                                      xs: 6,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
@@ -720,7 +720,7 @@ BTRow(
                                       ),
                                     ),
                                     BTCol(
-                                      xs:3,
+                                      xs: 3,
                                       child: Container(
                                         padding: const EdgeInsets.all(12),
                                         decoration: const BoxDecoration(
