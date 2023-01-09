@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.3](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.1...v0.11.3) (2023-01-09)
+
+
+### Features
+
+* **form_checkbox:** novo componente `FormCheckbox` ([5b104af](https://github.com/vitoramaral10/get_bootstrap/commit/5b104af3b8485cc9e77a9b0deb7f4015a605e1b0))
+* novo componente `BTModal` ([17ccdcd](https://github.com/vitoramaral10/get_bootstrap/commit/17ccdcdacde293d7c69fac8443497d16442564c7))
+* novo motor do grid system ([b50f4ad](https://github.com/vitoramaral10/get_bootstrap/commit/b50f4ada9bd52de4a983570342efbd30d04989dc))
+* **typography:** nova fonte Noto Sans ([79e19d2](https://github.com/vitoramaral10/get_bootstrap/commit/79e19d2bb65bf89ab211532d8c52d1312fd21895))
+
+
+### Bug Fixes
+
+* **grid_system:** implementação do import dentro do pacote ([77c9781](https://github.com/vitoramaral10/get_bootstrap/commit/77c9781f384777fcea2c36aa1a0d0707cd57b417))
+
 ### [0.11.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.1...v0.11.2) (2023-01-05)
 
 
