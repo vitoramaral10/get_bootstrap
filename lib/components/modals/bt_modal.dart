@@ -1,6 +1,14 @@
 part of get_bootstrap;
 
 class BTModal extends StatelessWidget {
+  static bool checkSizes(Size? size) {
+    if (size != null && ![Size.sm, Size.lg, Size.xl, Size.xxl].contains(size)) {
+      throw 'O parâmetro "size" somente pode ser utilizado com os tamanhos: sm, lg, xl, xxl';
+    }
+
+    return true;
+  }
+
   final Alignment? alignment;
   final Size? size;
   final bool fullScreen;
@@ -32,7 +40,7 @@ class BTModal extends StatelessWidget {
     this.bodyPadding,
     this.footerPadding,
     this.darkMode = false,
-  }) : assert(_checkSizes(size));
+  }) : assert(BTModal.checkSizes(size));
 
   @override
   Widget build(BuildContext context) {
@@ -231,12 +239,4 @@ class BTModal extends StatelessWidget {
       ),
     );
   }
-}
-
-bool _checkSizes(Size? size) {
-  if (size != null && ![Size.sm, Size.lg, Size.xl, Size.xxl].contains(size)) {
-    throw 'O parâmetro "size" somente pode ser utilizado com os tamanhos: sm, lg, xl, xxl';
-  }
-
-  return true;
 }

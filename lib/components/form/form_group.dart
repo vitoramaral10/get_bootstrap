@@ -26,6 +26,7 @@ class FormGroup extends StatelessWidget {
   final FocusNode? focusNode;
   final Function()? onPressed;
   final BorderRadius? borderRadius;
+  final Widget? suffixIcon;
 
   const FormGroup({
     super.key,
@@ -54,6 +55,7 @@ class FormGroup extends StatelessWidget {
     this.focusNode,
     this.onPressed,
     this.borderRadius,
+    this.suffixIcon,
   });
 
   @override
@@ -104,6 +106,7 @@ class FormGroup extends StatelessWidget {
                       ? 8
                       : 12,
             ),
+            suffixIcon: suffixIcon,
             filled: true,
             fillColor: disabled ? BTColors.gray200 : backgroundColor,
             errorBorder: OutlineInputBorder(
