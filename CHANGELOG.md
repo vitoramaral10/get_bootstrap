@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.4](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.3...v0.11.4) (2023-01-18)
+
+
+### Features
+
+* **form_group:** adicionado o parâmetro `suffixIcon` no `FormGroup` para uso de icones no campo ([4e8c692](https://github.com/vitoramaral10/get_bootstrap/commit/4e8c69255646ce1554e256b347e5761796971d19))
+
 ### [0.11.3](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.1...v0.11.3) (2023-01-09)
 
 
