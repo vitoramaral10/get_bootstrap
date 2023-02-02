@@ -7,6 +7,7 @@ import 'components/card/body.dart';
 import 'components/card/footer.dart';
 import 'components/card/head.dart';
 import 'core/bt_typography.dart';
+import 'grid/responsive_grid_breakpoints.dart';
 
 part 'enums/size.dart';
 part 'components/modals/bt_modal.dart';

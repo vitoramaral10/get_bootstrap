@@ -55,6 +55,8 @@ class BTColors {
   static const Color pink800 = Color(0xFF561435);
   static const Color pink900 = Color(0xFF2B0A1A);
 
+  //
+  // ignore: prefer-correct-identifier-length
   static const Color red = Color(0xFFdc3545);
   static const Color red100 = Color(0xFFF8D7DA);
   static const Color red200 = Color(0xFFF1AEB5);

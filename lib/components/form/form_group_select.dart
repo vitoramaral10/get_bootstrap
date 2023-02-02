@@ -7,8 +7,7 @@ class FormGroupSelect<T> extends StatelessWidget {
   final T value;
   final void Function(T?)? onChanged;
   final String? Function(T?)? validator;
-  final bool lg;
-  final bool sm;
+  final Size? size;
   final bool disabled;
   final AutovalidateMode? autovalidateMode;
 
@@ -20,8 +19,7 @@ class FormGroupSelect<T> extends StatelessWidget {
     required this.value,
     this.onChanged,
     this.validator,
-    this.lg = false,
-    this.sm = false,
+    this.size,
     this.disabled = false,
     this.autovalidateMode,
   });
@@ -51,9 +49,9 @@ class FormGroupSelect<T> extends StatelessWidget {
           value: value,
           onChanged: disabled ? null : onChanged,
           style: TextStyle(
-            fontSize: lg
+            fontSize: size == Size.lg
                 ? 19
-                : sm
+                :  size == Size.sm
                     ? 14
                     : 16,
             fontWeight: FontWeight.normal,
@@ -62,14 +60,14 @@ class FormGroupSelect<T> extends StatelessWidget {
           isExpanded: true,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
-              vertical: lg
+              vertical:  size == Size.lg
                   ? 19
-                  : sm
+                  : size == Size.sm
                       ? 6.5
                       : 12,
-              horizontal: lg
+              horizontal:  size == Size.lg
                   ? 16
-                  : sm
+                  : size == Size.sm
                       ? 8
                       : 12,
             ),

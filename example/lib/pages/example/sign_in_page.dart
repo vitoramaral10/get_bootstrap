@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get_bootstrap/get_bootstrap.dart';
 
@@ -34,20 +36,21 @@ class SignInPage extends StatelessWidget {
                   offset: const Offset(0, 1),
                   child: const FormGroup(
                     labelText: 'Email address',
-                    lg: true,
+                    size: Size.lg,
                     backgroundColor: BTColors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(6),
-                        topRight: Radius.circular(6),
-                        bottomLeft: Radius.zero,
-                        bottomRight: Radius.zero),
+                      topLeft: Radius.circular(6),
+                      topRight: Radius.circular(6),
+                      bottomLeft: Radius.zero,
+                      bottomRight: Radius.zero,
+                    ),
                   ),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 10),
                   child: FormGroup(
                     labelText: 'Password',
-                    lg: true,
+                    size: Size.lg,
                     backgroundColor: BTColors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.zero,
@@ -62,13 +65,15 @@ class SignInPage extends StatelessWidget {
                   child: FormCheckbox(
                     value: false,
                     label: const Text('Remember me'),
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      log(value.toString());
+                    },
                   ),
                 ),
                 Row(children: [
                   Expanded(
                     child: BTButton(
-                      lg: true,
+                      size: Size.lg,
                       child: Text(
                         'Sign in',
                         style: GetBootstrap.typography.bodyText1!

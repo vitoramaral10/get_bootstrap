@@ -7,8 +7,7 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
   final T value;
   final void Function(T?)? onChanged;
   final String? Function(T?)? validator;
-  final bool lg;
-  final bool sm;
+  final Size? size;
   final int xsTitle;
   final int smTitle;
   final int mdTitle;
@@ -30,8 +29,7 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
     required this.value,
     this.onChanged,
     this.validator,
-    this.lg = false,
-    this.sm = false,
+    this.size,
     this.xsTitle = 12,
     this.smTitle = 12,
     this.mdTitle = 12,
@@ -84,9 +82,9 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
             value: value,
             onChanged: onChanged,
             style: TextStyle(
-              fontSize: lg
+              fontSize: size == Size.lg
                   ? 19
-                  : sm
+                  : size == Size.sm
                       ? 14
                       : 16,
               fontWeight: FontWeight.normal,
@@ -94,14 +92,14 @@ class FormGroupInlineSelect<T> extends StatelessWidget {
             isDense: true,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
-                vertical: lg
+                vertical: size == Size.lg
                     ? 19
-                    : sm
+                    : size == Size.sm
                         ? 6.5
                         : 12,
-                horizontal: lg
+                horizontal: size == Size.lg
                     ? 16
-                    : sm
+                    : size == Size.sm
                         ? 8
                         : 12,
               ),

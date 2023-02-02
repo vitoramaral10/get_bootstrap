@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bootstrap_example/pages/widgets/footer_widget.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -128,14 +130,20 @@ Padding(
                               ),
                               BTCard(
                                 body: Column(children: const [
-                                  FormGroup(placeholder: 'lg: true', lg: true),
+                                  FormGroup(
+                                    placeholder: 'lg: true',
+                                    size: Size.lg,
+                                  ),
                                   Padding(
                                     padding: EdgeInsets.symmetric(vertical: 8),
                                     child: FormGroup(
                                       placeholder: 'Entrada padrão',
                                     ),
                                   ),
-                                  FormGroup(placeholder: 'sm: true', sm: true),
+                                  FormGroup(
+                                    placeholder: 'sm: true',
+                                    size: Size.sm,
+                                  ),
                                 ]),
                                 footer: HighlightView(
                                   '''
@@ -332,7 +340,9 @@ FormGroupInline(
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 4.0),
                                       child: BTButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          log('');
+                                        },
                                         child: const Text(
                                           'Confirm identity',
                                         ),

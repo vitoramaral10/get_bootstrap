@@ -6,8 +6,7 @@ class FormGroup extends StatelessWidget {
   final TextCapitalization textCapitalization;
   final Iterable<String>? autofillHints;
   final bool readonly;
-  final bool lg;
-  final bool sm;
+  final Size? size;
   final String? title;
   final String? placeholder;
   final String? labelText;
@@ -41,8 +40,7 @@ class FormGroup extends StatelessWidget {
     this.required = false,
     this.maxLines = 1,
     this.maxLength,
-    this.lg = false,
-    this.sm = false,
+    this.size,
     this.obscureText = false,
     this.inputFormatters,
     this.backgroundColor,
@@ -87,22 +85,22 @@ class FormGroup extends StatelessWidget {
             hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
                 ?.copyWith(
               color: readonly ? BTColors.gray900 : null,
-              fontSize: lg
+              fontSize: size == Size.lg
                   ? 20
-                  : sm
+                  : size == Size.sm
                       ? 14
                       : 16,
             ),
             isDense: true,
             contentPadding: EdgeInsets.symmetric(
-              vertical: lg
+              vertical: size == Size.lg
                   ? 16
-                  : sm
+                  : size == Size.sm
                       ? 8
                       : 12,
-              horizontal: lg
+              horizontal: size == Size.lg
                   ? 16
-                  : sm
+                  : size == Size.sm
                       ? 8
                       : 12,
             ),
@@ -146,9 +144,9 @@ class FormGroup extends StatelessWidget {
           keyboardType: keyboardType,
           textCapitalization: textCapitalization,
           style: TextStyle(
-            fontSize: lg
+            fontSize: size == Size.lg
                 ? 20
-                : sm
+                : size == Size.sm
                     ? 14
                     : 16,
           ),

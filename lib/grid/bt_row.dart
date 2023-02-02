@@ -4,7 +4,6 @@ part of get_bootstrap;
 // ignore: prefer-static-class
 double _refWidth = 375;
 
-double _gutterSize = 48.0;
 //
 // ignore: prefer-static-class
 double? _scalingFactor;
@@ -12,18 +11,23 @@ double? _scalingFactor;
 // ignore: prefer-static-class
 double? _width;
 
+//
 // ignore: prefer-static-class
 void initScaling(BuildContext context, {bool debug = false}) {
-  var mq = MediaQuery.of(context);
-  _width = mq.size.width < mq.size.height ? mq.size.width : mq.size.height;
+  var mediaQuery = MediaQuery.of(context);
+  _width = mediaQuery.size.width < mediaQuery.size.height
+      ? mediaQuery.size.width
+      : mediaQuery.size.height;
   _scalingFactor = _width! / _refWidth;
 
   if (debug) {
+    //
     // ignore: avoid_print
     print("width => $_width");
   }
 }
 
+//
 // ignore: prefer-static-class
 double scale(double dimension) {
   if (_width == null) {
@@ -33,27 +37,11 @@ double scale(double dimension) {
   return dimension * _scalingFactor!;
 }
 
-class ResponsiveGridBreakpoints {
-  final double xs;
-  final double sm;
-  final double md;
-  final double lg;
-  final double xl;
-  final double xxl;
-  static ResponsiveGridBreakpoints value = ResponsiveGridBreakpoints();
-
-  ResponsiveGridBreakpoints({
-    this.xs = 576,
-    this.sm = 768,
-    this.md = 992,
-    this.lg = 1200,
-    this.xl = 1400,
-    this.xxl = double.infinity,
-  });
-}
-
+//
+// ignore: prefer-correct-identifier-length
 enum _GridTier { xs, sm, md, lg, xl, xxl }
 
+//
 // ignore: prefer-static-class
 _GridTier _currentSize(BuildContext context) {
   final breakpoints = ResponsiveGridBreakpoints.value;
@@ -134,6 +122,7 @@ class BTRow extends StatelessWidget {
   }
 }
 
+//
 // ignore: prefer-single-widget-per-file
 class BTCol extends StatelessWidget {
   final _config = <int?>[]..length = 6;
@@ -172,21 +161,22 @@ class BTCol extends StatelessWidget {
     return Expanded(
       flex: currentConfig(context) ?? 1,
       child: Padding(
-          padding: _gutterSize == 0.0
-              ? EdgeInsets.zero
-              : EdgeInsets.only(
-                  left: marginLeft ?? _gutterSize / 12,
-                  top: marginTop ?? _gutterSize / 12,
-                  right: marginRight ?? _gutterSize / 12,
-                  bottom: _gutterSize / 12,
-                ),
-          child: child),
+        padding: 48.0 == 0.0
+            ? EdgeInsets.zero
+            : EdgeInsets.only(
+                left: marginLeft ?? 48.0 / 12,
+                top: marginTop ?? 48.0 / 12,
+                right: marginRight ?? 48.0 / 12,
+                bottom: 48.0 / 12,
+              ),
+        child: child,
+      ),
     );
   }
 }
 
 /// Responsive grid list.
-
+//
 // ignore: prefer-single-widget-per-file
 class ResponsiveGridList extends StatelessWidget {
   final double desiredItemWidth, minSpacing;
@@ -312,7 +302,8 @@ class _ResponsiveGridListItem extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  List<Widget> _buildChildren() {
+  @override
+  Widget build(BuildContext context) {
     final list = <Widget>[];
 
     list.add(SizedBox(
@@ -330,15 +321,10 @@ class _ResponsiveGridListItem extends StatelessWidget {
       ));
     }
 
-    return list;
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: _buildChildren(),
+      children: list,
     );
   }
 }

@@ -59,7 +59,7 @@ dart_code_metrics:
     - avoid-global-state
     - avoid-missing-enum-constant-in-map
     - avoid-nested-conditional-expressions:
-      acceptable-level: 2
+        acceptable-level: 2
     - avoid-redundant-async 
     - avoid-returning-widgets
     - avoid-throw-in-catch-block
@@ -73,7 +73,7 @@ dart_code_metrics:
     - double-literal-format
     - format-comment
     - member-ordering:
-      alphabetize: true
+        alphabetize: true
     - member-ordering
     - newline-before-return
     - no-boolean-literal-compare
@@ -85,9 +85,9 @@ dart_code_metrics:
     - prefer-conditional-expressions
     - prefer-correct-edge-insets-constructor
     - prefer-correct-identifier-length:
-      exceptions: [ 'z' ]
-      max-identifier-length: 30
-      min-identifier-length: 4
+        exceptions: [ 'z' ]
+        max-identifier-length: 30
+        min-identifier-length: 4
     - prefer-correct-test-file-name
     - prefer-correct-type-name
     - prefer-enums-by-name

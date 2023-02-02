@@ -279,14 +279,14 @@ BTButtonOutline(
                               BTCard(
                                 body: Row(children: [
                                   BTButton(
-                                    lg: true,
+                                    size: Size.lg,
                                     onPressed: () => log('primary'),
                                     backgroundColor: BTColors.primary,
                                     child: const Text('Botão grande'),
                                   ),
                                   const SizedBox(width: 8),
                                   BTButton(
-                                    lg: true,
+                                    size: Size.lg,
                                     onPressed: () => log('secondary'),
                                     backgroundColor: BTColors.secondary,
                                     child: const Text('Botão grande'),
@@ -312,14 +312,14 @@ BTButton(
                               BTCard(
                                 body: Row(children: [
                                   BTButton(
-                                    sm: true,
+                                    size: Size.sm,
                                     onPressed: () => log('primary'),
                                     backgroundColor: BTColors.primary,
                                     child: const Text('Botão pequeno'),
                                   ),
                                   const SizedBox(width: 8),
                                   BTButton(
-                                    sm: true,
+                                    size: Size.sm,
                                     onPressed: () => log('secondary'),
                                     backgroundColor: BTColors.secondary,
                                     child: const Text('Botão pequeno'),

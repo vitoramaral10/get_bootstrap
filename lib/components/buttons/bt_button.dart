@@ -2,30 +2,28 @@ part of get_bootstrap;
 
 class BTButton extends StatelessWidget {
   final Widget child;
-  final bool? lg;
-  final bool? sm;
+  final Size? size;
   final bool square;
   final VoidCallback? onPressed;
   final Color? backgroundColor;
 
-  double get heightButton => lg == true
+  double get heightButton => size == Size.lg
       ? 58
-      : sm == true
+      : size == Size.sm
           ? 38
           : 48;
   double? get widthButton => !square
       ? null
-      : lg == true
+      : size == Size.lg
           ? 58
-          : sm == true
+          : size == Size.sm
               ? 38
               : 48;
 
   const BTButton({
     super.key,
     required this.child,
-    this.lg,
-    this.sm,
+    this.size,
     this.square = false,
     this.onPressed,
     this.backgroundColor,

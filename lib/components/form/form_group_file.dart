@@ -3,8 +3,7 @@ part of get_bootstrap;
 class FormGroupFile extends StatelessWidget {
   final bool disabled;
   final bool readonly;
-  final bool lg;
-  final bool sm;
+  final Size? size;
   final String? title;
   final String fileName;
   final bool required;
@@ -17,8 +16,7 @@ class FormGroupFile extends StatelessWidget {
     this.title,
     this.fileName = 'Nenhum arquivo encontrado',
     this.required = false,
-    this.lg = false,
-    this.sm = false,
+    this.size,
     required this.onPressed,
   });
 
@@ -66,14 +64,14 @@ class FormGroupFile extends StatelessWidget {
                 ),
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    vertical: lg
+                    vertical: size == Size.lg
                         ? 9
-                        : sm
+                        : size == Size.sm
                             ? 2
                             : 6,
-                    horizontal: lg
+                    horizontal: size == Size.lg
                         ? 16
-                        : sm
+                        : size == Size.sm
                             ? 8
                             : 12,
                   ),
@@ -87,9 +85,9 @@ class FormGroupFile extends StatelessWidget {
                   child: Text(
                     'Enviar arquivo',
                     style: TextStyle(
-                      fontSize: lg
+                      fontSize: size == Size.lg
                           ? 18
-                          : sm
+                          : size == Size.sm
                               ? 12
                               : 16,
                     ),
@@ -97,18 +95,18 @@ class FormGroupFile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: lg
+                width: size == Size.lg
                     ? 12
-                    : sm
+                    : size == Size.sm
                         ? 4
                         : 8,
               ),
               Text(
                 fileName,
                 style: TextStyle(
-                  fontSize: lg
+                  fontSize: size == Size.lg
                       ? 18
-                      : sm
+                      : size == Size.sm
                           ? 12
                           : 16,
                 ),
