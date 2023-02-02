@@ -19,6 +19,7 @@ class AlertsPage extends StatefulWidget {
 
 class _AlertsPageState extends State<AlertsPage> {
   bool _showAlert = false;
+  bool _showAlert2 = true;
 
   @override
   Widget build(BuildContext context) {
@@ -858,6 +859,149 @@ BTAlert(
     ],
   ),
 ),
+                                        ''',
+                                  language: 'dart',
+                                  theme: foundationTheme,
+                                  padding: const EdgeInsets.all(16),
+                                  textStyle: GetBootstrap.typography.highlight,
+                                ),
+                                footerBackground: BTColors.gray100,
+                                bodyPadding: const EdgeInsets.all(24),
+                                footerPadding: const EdgeInsets.all(0),
+                              ),
+                              const SizedBox(height: 32),
+                              Text(
+                                'Ícones',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                                child: Text(
+                                  'Da mesma forma, você pode usar utilitários flexbox e ícones Bootstrap para criar alertas com ícones. Dependendo de seus ícones e conteúdo, você pode querer adicionar mais utilitários ou estilos personalizados.',
+                                ),
+                              ),
+                              const SizedBox(height: 32),
+                              BTCard(
+                                body: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    BTAlert(
+                                      alertStyle: AlertStyle.primary,
+                                      child: Row(
+                                        children: const [
+                                          Icon(
+                                            Icons.warning,
+                                            color: BTColors.primary,
+                                          ),
+                                          SizedBox(
+                                            width: 8,
+                                          ),
+                                          Text(
+                                            'Um exemplo de alerta com um ícone',
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                footer: HighlightView(
+                                  '''
+BTAlert(
+  alertStyle: AlertStyle.primary,
+  child: Row(
+    children: const [
+      Icon(
+        Icons.warning,
+        color: BTColors.primary,
+      ),
+      SizedBox(
+        width: 8,
+      ),
+      Text(
+        'Um exemplo de alerta com um ícone',
+      ),
+    ],
+  ),
+),
+                                        ''',
+                                  language: 'dart',
+                                  theme: foundationTheme,
+                                  padding: const EdgeInsets.all(16),
+                                  textStyle: GetBootstrap.typography.highlight,
+                                ),
+                                footerBackground: BTColors.gray100,
+                                bodyPadding: const EdgeInsets.all(24),
+                                footerPadding: const EdgeInsets.all(0),
+                              ),
+                              const SizedBox(height: 32),
+                              Text(
+                                'Dispensando',
+                                style: GetBootstrap.typography.headline2,
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                                child: Text(
+                                  'Para dispensar um alerta pode configurar o parâmetro dismissPressed, ele colocará o icone automaticamente.',
+                                ),
+                              ),
+                              const SizedBox(height: 32),
+                              BTCard(
+                                body: Column(
+                                  children: [
+                                    if (_showAlert2)
+                                      BTAlert(
+                                        alertStyle: AlertStyle.warning,
+                                        dismissPressed: () {
+                                          if (mounted) {
+                                            setState(() {
+                                              _showAlert2 = false;
+                                            });
+                                          }
+                                        },
+                                        child: const Text.rich(
+                                          TextSpan(children: [
+                                            TextSpan(
+                                              text: 'Santo guacamole!',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  ' Você deve verificar alguns desses campos abaixo.',
+                                            ),
+                                          ]),
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                                footer: HighlightView(
+                                  '''
+if (_showAlert2)
+  BTAlert(
+    alertStyle: AlertStyle.warning,
+    dismissPressed: () {
+      if (mounted) {
+        setState(() {
+          _showAlert2 = false;
+        });
+      }
+    },
+    child: const Text.rich(
+      TextSpan(children: [
+        TextSpan(
+          text: 'Santo guacamole!',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        TextSpan(
+          text:
+              ' Você deve verificar alguns desses campos abaixo.',
+        ),
+      ]),
+    ),
+  ),
                                         ''',
                                   language: 'dart',
                                   theme: foundationTheme,
