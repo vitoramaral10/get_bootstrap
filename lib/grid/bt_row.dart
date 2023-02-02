@@ -216,11 +216,12 @@ class ResponsiveGridList extends StatelessWidget {
         } else {
           intNumber = number.floor();
 
-          double dw =
-              width - (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
+          double dw = width -
+              (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
 
           itemWidth = desiredItemWidth +
-              (dw / intNumber) * (desiredItemWidth / (desiredItemWidth + minSpacing));
+              (dw / intNumber) *
+                  (desiredItemWidth / (desiredItemWidth + minSpacing));
 
           spacing = (width - itemWidth * intNumber) / (intNumber + 1);
         }
@@ -234,7 +235,9 @@ class ResponsiveGridList extends StatelessWidget {
               }
               final rowChildren = <Widget>[];
               index = index ~/ 2;
-              for (int i = index * intNumber; i < (index + 1) * intNumber; i++) {
+              for (int i = index * intNumber;
+                  i < (index + 1) * intNumber;
+                  i++) {
                 if (i >= children.length) break;
                 rowChildren.add(children[i]);
               }
