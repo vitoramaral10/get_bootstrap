@@ -75,6 +75,8 @@ class IntroductionPage extends StatelessWidget {
                                       language: 'shell',
                                       theme: foundationTheme,
                                       padding: const EdgeInsets.all(16),
+                                      textStyle:
+                                          GetBootstrap.typography.highlight,
                                     ),
                                   ),
                                 ],
@@ -94,6 +96,8 @@ dependencies:
                                       language: 'yaml',
                                       theme: foundationTheme,
                                       padding: const EdgeInsets.all(16),
+                                      textStyle:
+                                          GetBootstrap.typography.highlight,
                                     ),
                                   ),
                                 ],
@@ -103,6 +107,140 @@ dependencies:
                                 'Como alternativa, seu editor pode oferecer suporte ao flutter pub get. Verifique os documentos do seu editor para saber mais.',
                               ),
                               const SizedBox(height: 16),
+                              Text(
+                                'Inclua as fontes em seu pubspec.yaml',
+                                style: GetBootstrap.typography.headline3,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
+                                child: RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                      text:
+                                          'Comece copiando a pasta fonts existente dentro do repositório do get_bootstrap no ',
+                                      style: GetBootstrap.typography.bodyText2,
+                                    ),
+                                    TextSpan(
+                                      text: 'link',
+                                      style: GetBootstrap.typography.link,
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () {
+                                          launchUrl(Uri.parse(
+                                            'https://github.com/vitoramaral10/get_bootstrap',
+                                          ));
+                                        },
+                                    ),
+                                    TextSpan(
+                                      text: ' para a raiz do seu projeto.',
+                                      style: GetBootstrap.typography.bodyText2,
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                              const Text(
+                                'Adicione esses arquivos ao seu arquivo pubspec.yaml igual ao exemplo abaixo.',
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: HighlightView(
+                                      """
+fonts:
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 100
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 200
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 300
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 100
+          style: italic
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 300
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: fonts/OpenSans/OpenSans-Italic.ttf
+          weight: 400
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Medium.ttf
+          weight: 500
+        - asset: fonts/OpenSans/OpenSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/OpenSans/OpenSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: fonts/OpenSans/OpenSans-BoldItalic.ttf
+          weight: 700
+        
+        - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf
+          weight: 800
+        - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 900
+        - asset: fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf
+          weight: 900
+       
+    - family: CourierPrime
+      fonts:
+        - asset: fonts/CourierPrime/CourierPrime-Regular.ttf
+        - asset: fonts/CourierPrime/CourierPrime-Italic.ttf
+          style: italic
+        - asset: fonts/CourierPrime/CourierPrime-Bold.ttf
+          weight: 700
+        - asset: fonts/CourierPrime/CourierPrime-BoldItalic.ttf
+          weight: 700
+          style: italic
+""",
+                                      language: 'shell',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
+                                      textStyle:
+                                          GetBootstrap.typography.highlight,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'E chame a classe de estilo em seu MaterialApp',
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: HighlightView(
+                                      """
+theme: BootstrapThemeData.light,
+darkTheme: BootstrapThemeData.dark,
+""",
+                                      language: 'dart',
+                                      theme: foundationTheme,
+                                      padding: const EdgeInsets.all(16),
+                                      textStyle:
+                                          GetBootstrap.typography.highlight,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
                               Text(
                                 'Importe',
                                 style: GetBootstrap.typography.headline3,
@@ -120,6 +258,8 @@ dependencies:
                                       language: 'dart',
                                       theme: foundationTheme,
                                       padding: const EdgeInsets.all(16),
+                                      textStyle:
+                                          GetBootstrap.typography.highlight,
                                     ),
                                   ),
                                 ],

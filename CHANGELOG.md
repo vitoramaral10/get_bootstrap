@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.6](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.5...v0.11.6) (2023-02-02)
+
+
+### Features
+
+* **typography:** refeito todo o mecanismo de tipografia e atualizado o novo método de utilização ([fba15c8](https://github.com/vitoramaral10/get_bootstrap/commit/fba15c84b806cca1331d83441d2247a1bfa2ecd9))
+
 ### [0.11.5](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.4...v0.11.5) (2023-02-02)
 
 

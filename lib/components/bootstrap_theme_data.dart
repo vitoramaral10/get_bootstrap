@@ -21,8 +21,10 @@ class BootstrapThemeData {
         borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide:
-            BorderSide(color: BTColors.blue500.withOpacity(0.3), width: 4),
+        borderSide: BorderSide(
+          color: BTColors.blue500.withOpacity(0.3),
+          width: 4,
+        ),
         borderRadius: const BorderRadius.all(Radius.circular(6)),
       ),
       focusedErrorBorder: const OutlineInputBorder(
@@ -44,6 +46,7 @@ class BootstrapThemeData {
     ),
     brightness: Brightness.light,
     scaffoldBackgroundColor: const Color(0xFFf5f8fa),
+    fontFamily: 'OpenSans',
     textTheme: TextTheme(
       displayLarge: GetBootstrap.typography.headline1,
       displayMedium: GetBootstrap.typography.headline2,

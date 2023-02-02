@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../get_bootstrap.dart';
 
@@ -47,93 +46,94 @@ class BTTypography {
     this.link,
     this.button,
   }) {
-    headline1 = GoogleFonts.notoSans(
+    headline1 = const TextStyle(
       fontSize: 36,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
 
-    headline2 = GoogleFonts.notoSans(
+    headline2 = const TextStyle(
       fontSize: 32,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline3 = GoogleFonts.notoSans(
+    headline3 = const TextStyle(
       fontSize: 28,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline4 = GoogleFonts.notoSans(
+    headline4 = const TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline5 = GoogleFonts.notoSans(
+    headline5 = const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    headline6 = GoogleFonts.notoSans(
+    headline6 = const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       height: 1.2,
     );
-    display1 = GoogleFonts.notoSans(
+    display1 = const TextStyle(
       fontSize: 80,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display2 = GoogleFonts.notoSans(
+    display2 = const TextStyle(
       fontSize: 72,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display3 = GoogleFonts.notoSans(
+    display3 = const TextStyle(
       fontSize: 65,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display4 = GoogleFonts.notoSans(
+    display4 = const TextStyle(
       fontSize: 56,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display5 = GoogleFonts.notoSans(
+    display5 = const TextStyle(
       fontSize: 48,
       fontWeight: FontWeight.w100,
       height: 1.2,
     );
-    display6 = GoogleFonts.notoSans(
+    display6 = const TextStyle(
       fontSize: 40,
       fontWeight: FontWeight.w300,
       height: 1.2,
     );
-    lead = GoogleFonts.notoSans(
+    lead = const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
     );
-    bodyText1 = GoogleFonts.notoSans(
+    bodyText1 = const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w300,
       height: 1.5,
     );
-    bodyText2 = GoogleFonts.notoSans(
+    bodyText2 = const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
       height: 1.5,
     );
-    button = GoogleFonts.notoSans(fontSize: 14, fontWeight: FontWeight.w500);
-    highlight = GoogleFonts.courierPrime(
+    button = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+    highlight = const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w400,
+      fontFamily: 'CourierPrime',
     );
-    small = GoogleFonts.notoSans(
+    small = const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w400,
       height: 1.5,
     );
-    link = GoogleFonts.notoSans(
+    link = const TextStyle(
       color: BTColors.blue,
       fontSize: 16,
       fontWeight: FontWeight.w400,

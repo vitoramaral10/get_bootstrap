@@ -51,7 +51,7 @@ class FormGroupSelect<T> extends StatelessWidget {
           style: TextStyle(
             fontSize: size == Size.lg
                 ? 19
-                :  size == Size.sm
+                : size == Size.sm
                     ? 14
                     : 16,
             fontWeight: FontWeight.normal,
@@ -60,12 +60,12 @@ class FormGroupSelect<T> extends StatelessWidget {
           isExpanded: true,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
-              vertical:  size == Size.lg
+              vertical: size == Size.lg
                   ? 19
                   : size == Size.sm
                       ? 6.5
                       : 12,
-              horizontal:  size == Size.lg
+              horizontal: size == Size.lg
                   ? 16
                   : size == Size.sm
                       ? 8
