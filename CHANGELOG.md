@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.5](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.4...v0.11.5) (2023-02-02)
+
+
+### Features
+
+* melhorias gerais no código ([76a21ba](https://github.com/vitoramaral10/get_bootstrap/commit/76a21bac752cfc8cbfbe04799f177000ad3694db))
+
 ### [0.11.4](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.3...v0.11.4) (2023-01-18)
 
 
