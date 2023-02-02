@@ -16,7 +16,6 @@ dependencies:
   font_awesome_flutter: ^10.3.0
   get_bootstrap:
     path: ../
-  google_fonts: ^4.0.0
   url_launcher: ^6.1.8
 
 dev_dependencies:
@@ -30,5 +29,65 @@ flutter:
 
   assets:
     - assets/images/
-    - fonts/
-    - fonts/Noto_Sans/
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 100
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 200
+        - asset: fonts/OpenSans/OpenSans-Light.ttf
+          weight: 300
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 100
+          style: italic
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: fonts/OpenSans/OpenSans-LightItalic.ttf
+          weight: 300
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: fonts/OpenSans/OpenSans-Italic.ttf
+          weight: 400
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Medium.ttf
+          weight: 500
+        - asset: fonts/OpenSans/OpenSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/OpenSans/OpenSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+
+        - asset: fonts/OpenSans/OpenSans-Bold.ttf
+          weight: 700
+        - asset: fonts/OpenSans/OpenSans-BoldItalic.ttf
+          weight: 700
+        
+        - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf
+          weight: 800
+        - asset: fonts/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 900
+        - asset: fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf
+          weight: 900
+       
+    - family: CourierPrime
+      fonts:
+        - asset: fonts/CourierPrime/CourierPrime-Regular.ttf
+        - asset: fonts/CourierPrime/CourierPrime-Italic.ttf
+          style: italic
+        - asset: fonts/CourierPrime/CourierPrime-Bold.ttf
+          weight: 700
+        - asset: fonts/CourierPrime/CourierPrime-BoldItalic.ttf
+          weight: 700
+          style: italic

@@ -204,25 +204,25 @@ class ResponsiveGridList extends StatelessWidget {
 
         double width = constraints.maxWidth;
 
-        double N = (width - minSpacing) / (desiredItemWidth + minSpacing);
+        double number = (width - minSpacing) / (desiredItemWidth + minSpacing);
 
-        int n;
+        int intNumber;
         double spacing, itemWidth;
 
-        if (N % 1 == 0) {
-          n = N.floor();
+        if (number % 1 == 0) {
+          intNumber = number.floor();
           spacing = minSpacing;
           itemWidth = desiredItemWidth;
         } else {
-          n = N.floor();
+          intNumber = number.floor();
 
           double dw =
-              width - (n * (desiredItemWidth + minSpacing) + minSpacing);
+              width - (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
 
           itemWidth = desiredItemWidth +
-              (dw / n) * (desiredItemWidth / (desiredItemWidth + minSpacing));
+              (dw / intNumber) * (desiredItemWidth / (desiredItemWidth + minSpacing));
 
-          spacing = (width - itemWidth * n) / (n + 1);
+          spacing = (width - itemWidth * intNumber) / (intNumber + 1);
         }
 
         if (scroll) {
@@ -234,7 +234,7 @@ class ResponsiveGridList extends StatelessWidget {
               }
               final rowChildren = <Widget>[];
               index = index ~/ 2;
-              for (int i = index * n; i < (index + 1) * n; i++) {
+              for (int i = index * intNumber; i < (index + 1) * intNumber; i++) {
                 if (i >= children.length) break;
                 rowChildren.add(children[i]);
               }
@@ -247,7 +247,7 @@ class ResponsiveGridList extends StatelessWidget {
                 children: rowChildren,
               );
             },
-            itemCount: (children.length / n).ceil() * 2 - 1,
+            itemCount: (children.length / intNumber).ceil() * 2 - 1,
           );
         } else {
           final rows = <Widget>[];
@@ -255,10 +255,10 @@ class ResponsiveGridList extends StatelessWidget {
             height: minSpacing,
           ));
           //
-          for (int j = 0; j < (children.length / n).ceil(); j++) {
+          for (int j = 0; j < (children.length / intNumber).ceil(); j++) {
             final rowChildren = <Widget>[];
             //
-            for (int i = j * n; i < (j + 1) * n; i++) {
+            for (int i = j * intNumber; i < (j + 1) * intNumber; i++) {
               if (i >= children.length) break;
               rowChildren.add(children[i]);
             }
