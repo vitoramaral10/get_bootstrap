@@ -824,34 +824,38 @@ BTAlert(
                                 ),
                                 footer: HighlightView(
                                   '''
-if (_showAlert)
-  Padding(
-    padding:
-        const EdgeInsets.only(bottom: 16),
-    child: BTAlert(
-      alertStyle: AlertStyle.success,
-      dismissPressed: () {
-        if (mounted) {
-          setState(() {
-            _showAlert = false;
-          });
-        }
-      },
-      child: const Text(
-        'Legal, você acionou esta mensagem de alerta!',
+BTAlert(
+  alertStyle: AlertStyle.success,
+  child: Column(
+    crossAxisAlignment:
+        CrossAxisAlignment.start,
+    children: [
+      Padding(
+        padding: const EdgeInsets.only(
+          bottom: 8,
+        ),
+        child: Text(
+          'Bom trabalho!',
+          style: GetBootstrap
+              .typography.headline4,
+        ),
       ),
-    ),
-  ),
-BTButton(
-  onPressed: () {
-    if (mounted) {
-      setState(() {
-        _showAlert = true;
-      });
-    }
-  },
-  child: const Text(
-    'Mostrar alerta ao vivo',
+      const Text(
+        'Aww sim, você leu com sucesso esta importante mensagem de alerta. Este texto de exemplo será executado um pouco mais para que você possa ver como o espaçamento dentro de um alerta funciona com esse tipo de conteúdo.',
+      ),
+      const Padding(
+        padding: EdgeInsets.symmetric(
+          vertical: 16,
+        ),
+        child: Divider(
+          height: 1,
+          color: BTColors.success,
+        ),
+      ),
+      const Text(
+        'Sempre que precisar, certifique-se de usar utilitários de margem para manter as coisas limpas e organizadas.',
+      ),
+    ],
   ),
 ),
                                         ''',
