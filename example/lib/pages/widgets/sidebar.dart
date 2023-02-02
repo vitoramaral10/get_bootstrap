@@ -175,9 +175,14 @@ class Sidebar extends StatelessWidget {
               'Accordion',
               style: GetBootstrap.typography.small,
             ),
-            Text(
-              'Alerts',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/components/alerts');
+              },
+              child: Text(
+                'Alerts',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Badge',
