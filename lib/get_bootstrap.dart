@@ -10,6 +10,8 @@ import 'core/bt_typography.dart';
 import 'grid/responsive_grid_breakpoints.dart';
 
 part 'enums/size.dart';
+part 'enums/alert_style.dart';
+part 'components/bt_alert.dart';
 part 'components/modals/bt_modal.dart';
 part 'components/bootstrap_theme_data.dart';
 part 'components/buttons/bt_button.dart';

@@ -119,7 +119,6 @@ class BTTypography {
     );
     bodyText2 = const TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.w400,
       height: 1.5,
     );
     button = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
