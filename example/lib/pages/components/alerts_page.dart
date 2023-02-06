@@ -890,7 +890,7 @@ BTAlert(
                                       child: Row(
                                         children: const [
                                           Icon(
-                                            Icons.warning,
+                                            Icons.info_rounded,
                                             color: BTColors.primary,
                                           ),
                                           SizedBox(
@@ -898,6 +898,60 @@ BTAlert(
                                           ),
                                           Text(
                                             'Um exemplo de alerta com um ícone',
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    BTAlert(
+                                      alertStyle: AlertStyle.success,
+                                      child: Row(
+                                        children: const [
+                                          Icon(
+                                            Icons.check_circle,
+                                            color: BTColors.success,
+                                          ),
+                                          SizedBox(
+                                            width: 8,
+                                          ),
+                                          Text(
+                                            'Um exemplo de alerta de sucesso com um ícone',
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    BTAlert(
+                                      alertStyle: AlertStyle.warning,
+                                      child: Row(
+                                        children: const [
+                                          Icon(
+                                            Icons.warning,
+                                            color: BTColors.warning,
+                                          ),
+                                          SizedBox(
+                                            width: 8,
+                                          ),
+                                          Text(
+                                            'Um exemplo de alerta de aviso com um ícone',
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    BTAlert(
+                                      alertStyle: AlertStyle.danger,
+                                      child: Row(
+                                        children: const [
+                                          Icon(
+                                            Icons.warning,
+                                            color: BTColors.danger,
+                                          ),
+                                          SizedBox(
+                                            width: 8,
+                                          ),
+                                          Text(
+                                            'Um exemplo de alerta de perigo com um ícone',
                                           ),
                                         ],
                                       ),
