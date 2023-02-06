@@ -12,13 +12,21 @@ class BTButtonOutline extends StatelessWidget {
       : size == Size.sm
           ? 29
           : 40;
-  double? get widthButton => !square
-      ? null
-      : size == Size.lg
-          ? 48
-          : size == Size.sm
-              ? 31
-              : 38;
+
+  double? widthButton() {
+    if (!square) {
+      return null;
+    } else {
+      switch (size) {
+        case Size.sm:
+          return 31;
+        case Size.lg:
+          return 48;
+        default:
+          return 38;
+      }
+    }
+  }
 
   const BTButtonOutline({
     super.key,
@@ -36,7 +44,7 @@ class BTButtonOutline extends StatelessWidget {
     );
 
     return SizedBox(
-      width: widthButton,
+      width: widthButton(),
       height: heightButton,
       child: OutlinedButton(
         onPressed: onPressed,
