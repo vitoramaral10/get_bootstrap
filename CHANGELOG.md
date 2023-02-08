@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.6...v0.12.0) (2023-02-08)
+
+
+### Features
+
+* **alerts:** exemplos de como usar com icones e como dispensar um alerta ([f78c332](https://github.com/vitoramaral10/get_bootstrap/commit/f78c33258169a1840a5323caf36bd9a84fb3776a))
+* **alerts:** novo widget de alertas ([834227e](https://github.com/vitoramaral10/get_bootstrap/commit/834227e844026b92b503e66cd5e288280a533d1a))
+* implemetação de mais exemplos ([b99a707](https://github.com/vitoramaral10/get_bootstrap/commit/b99a707f66f4d3caa5f626211cf85b4c2fbffa03))
+
+
+### Bug Fixes
+
+* **alerts:** correção de texto de exemplo do alerta com conteúdo adicional ([dd11021](https://github.com/vitoramaral10/get_bootstrap/commit/dd11021268493d53419172e4233eac64973b4157))
+
 ### [0.11.6](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.5...v0.11.6) (2023-02-02)
 
 
