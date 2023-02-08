@@ -1,3 +1,4 @@
+import 'package:bootstrap_example/pages/components/modal_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../pages/about/license_page.dart';
@@ -18,6 +19,7 @@ class Routes {
     '/about/license': (context) => const LicensePage(),
     '/components/alerts': (context) => const AlertsPage(),
     '/components/buttons': (context) => const ButtonsPage(),
+    '/components/modal': (context) => const ModalPage(),
     '/content/typography': (context) => const TypographyPage(),
     '/customize/color': (context) => const CustomizeColorPage(),
     '/examples/sign_in': (context) => const SignInPage(),

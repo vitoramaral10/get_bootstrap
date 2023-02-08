@@ -12,6 +12,7 @@ class BTModal extends StatelessWidget {
   final Alignment? alignment;
   final Size? size;
   final bool fullScreen;
+  final double elevation;
   final Size? fullScreenSize;
   final Color? headBackground;
   final Color? bodyBackground;
@@ -24,12 +25,59 @@ class BTModal extends StatelessWidget {
   final Widget? body;
   final Widget? footer;
 
+  double _getMaxWidth(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isXxl = fullScreenSize == Size.xxl && screenWidth < 1400;
+    final isXl = fullScreenSize == Size.xl && screenWidth < 1200;
+    final isLg = fullScreenSize == Size.lg && screenWidth < 992;
+    final isMd = fullScreenSize == Size.md && screenWidth < 768;
+    final isSm = fullScreenSize == Size.sm && screenWidth < 576;
+
+    if (fullScreen && (isXxl || isXl || isLg || isMd || isSm)) {
+      return screenWidth;
+    }
+
+    if (screenWidth >= 1200) {
+      switch (size) {
+        case Size.sm:
+          return 300;
+        case Size.lg:
+          return 800;
+        case Size.xl:
+          return 1140;
+        default:
+          return 500;
+      }
+    } else if (screenWidth >= 992) {
+      switch (size) {
+        case Size.sm:
+          return 300;
+        case Size.lg:
+          return 800;
+        case Size.xl:
+          return 800;
+        default:
+          return 500;
+      }
+    } else if (screenWidth >= 576) {
+      switch (size) {
+        case Size.sm:
+          return 300;
+        default:
+          return 500;
+      }
+    } else {
+      return screenWidth;
+    }
+  }
+
   BTModal({
     super.key,
     this.alignment = Alignment.topCenter,
     this.size,
     this.fullScreen = false,
     this.fullScreenSize,
+    this.elevation = 6.0,
     this.head,
     required this.body,
     this.footer,
@@ -45,6 +93,7 @@ class BTModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      elevation: elevation,
       insetPadding: (fullScreen && fullScreenSize == null) ||
               (fullScreen &&
                   fullScreenSize == Size.xxl &&
@@ -77,44 +126,7 @@ class BTModal extends StatelessWidget {
       alignment: alignment,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: (fullScreen && fullScreenSize == null) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xxl &&
-                      MediaQuery.of(context).size.width < 1400) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xl &&
-                      MediaQuery.of(context).size.width < 1200) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.lg &&
-                      MediaQuery.of(context).size.width < 992) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.md &&
-                      MediaQuery.of(context).size.width < 768) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.sm &&
-                      MediaQuery.of(context).size.width < 576)
-              ? MediaQuery.of(context).size.width
-              : MediaQuery.of(context).size.width >= 1200
-                  ? size == Size.sm
-                      ? 300
-                      : size == Size.lg
-                          ? 800
-                          : size == Size.xl
-                              ? 1140
-                              : 500
-                  : MediaQuery.of(context).size.width >= 992
-                      ? size == Size.sm
-                          ? 300
-                          : size == Size.lg
-                              ? 800
-                              : size == Size.xl
-                                  ? 800
-                                  : 500
-                      : MediaQuery.of(context).size.width >= 576
-                          ? size == Size.sm
-                              ? 300
-                              : 500
-                          : MediaQuery.of(context).size.width,
+          maxWidth: _getMaxWidth(context),
           minHeight: (fullScreen && fullScreenSize == null) ||
                   (fullScreen &&
                       fullScreenSize == Size.xxl &&
@@ -156,7 +168,11 @@ class BTModal extends StatelessWidget {
                   ),
                 ),
                 width: double.infinity,
-                child: head!,
+                child: Material(
+                  color: Colors.transparent,
+                  textStyle: BTTypography().headline5,
+                  child: head!,
+                ),
               ),
             if (head != null && (body != null || footer != null))
               Divider(

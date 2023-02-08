@@ -229,9 +229,14 @@ class Sidebar extends StatelessWidget {
               'List group',
               style: GetBootstrap.typography.small,
             ),
-            Text(
-              'Modal',
-              style: GetBootstrap.typography.small,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/components/modal');
+              },
+              child: Text(
+                'Modal',
+                style: GetBootstrap.typography.small,
+              ),
             ),
             Text(
               'Navbar',
