@@ -12,13 +12,21 @@ class BTButton extends StatelessWidget {
       : size == Size.sm
           ? 38
           : 48;
-  double? get widthButton => !square
-      ? null
-      : size == Size.lg
-          ? 58
-          : size == Size.sm
-              ? 38
-              : 48;
+
+  double? widthButton() {
+    if (!square) {
+      return null;
+    } else {
+      switch (size) {
+        case Size.sm:
+          return 38;
+        case Size.lg:
+          return 58;
+        default:
+          return 48;
+      }
+    }
+  }
 
   const BTButton({
     super.key,
@@ -33,7 +41,7 @@ class BTButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(4),
-      width: widthButton,
+      width: widthButton(),
       height: heightButton,
       child: ElevatedButton(
         onPressed: onPressed,

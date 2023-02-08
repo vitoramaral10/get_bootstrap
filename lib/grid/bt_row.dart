@@ -216,11 +216,11 @@ class ResponsiveGridList extends StatelessWidget {
         } else {
           intNumber = number.floor();
 
-          double dw = width -
+          double doubleWidth = width -
               (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
 
           itemWidth = desiredItemWidth +
-              (dw / intNumber) *
+              (doubleWidth / intNumber) *
                   (desiredItemWidth / (desiredItemWidth + minSpacing));
 
           spacing = (width - itemWidth * intNumber) / (intNumber + 1);
@@ -235,11 +235,11 @@ class ResponsiveGridList extends StatelessWidget {
               }
               final rowChildren = <Widget>[];
               index = index ~/ 2;
-              for (int i = index * intNumber;
-                  i < (index + 1) * intNumber;
-                  i++) {
-                if (i >= children.length) break;
-                rowChildren.add(children[i]);
+              for (int index3 = index * intNumber;
+                  index3 < (index + 1) * intNumber;
+                  index3++) {
+                if (index3 >= children.length) break;
+                rowChildren.add(children[index3]);
               }
 
               return _ResponsiveGridListItem(
@@ -258,12 +258,16 @@ class ResponsiveGridList extends StatelessWidget {
             height: minSpacing,
           ));
           //
-          for (int j = 0; j < (children.length / intNumber).ceil(); j++) {
+          for (int index2 = 0;
+              index2 < (children.length / intNumber).ceil();
+              index2++) {
             final rowChildren = <Widget>[];
             //
-            for (int i = j * intNumber; i < (j + 1) * intNumber; i++) {
-              if (i >= children.length) break;
-              rowChildren.add(children[i]);
+            for (int index1 = index2 * intNumber;
+                index1 < (index2 + 1) * intNumber;
+                index1++) {
+              if (index1 >= children.length) break;
+              rowChildren.add(children[index1]);
             }
             //
             rows.add(_ResponsiveGridListItem(
