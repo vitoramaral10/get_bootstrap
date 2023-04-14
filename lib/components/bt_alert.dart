@@ -106,7 +106,7 @@ class BTAlert extends StatelessWidget {
             ),
             if (dismissPressed != null)
               InkWell(
-                onTap : dismissPressed,
+                onTap: dismissPressed,
                 child: Icon(
                   Icons.close,
                   color: _getTextColor(),

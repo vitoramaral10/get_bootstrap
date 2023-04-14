@@ -1,6 +1,14 @@
 part of get_bootstrap;
 
 class BTButton extends StatelessWidget {
+  static bool checkSizes(Size? size) {
+    if (size != null && ![Size.sm, Size.lg, Size.md].contains(size)) {
+      throw 'O parâmetro "size" somente pode ser utilizado com os tamanhos: sm, md, lg';
+    }
+
+    return true;
+  }
+
   final Widget child;
   final Size? size;
   final bool square;
@@ -28,14 +36,14 @@ class BTButton extends StatelessWidget {
     }
   }
 
-  const BTButton({
+  BTButton({
     super.key,
     required this.child,
     this.size,
     this.square = false,
     this.onPressed,
     this.backgroundColor,
-  });
+  }) : assert(BTButton.checkSizes(size));
 
   @override
   Widget build(BuildContext context) {
