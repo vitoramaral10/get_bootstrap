@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.12.0...v0.12.1) (2023-04-14)
+
+
+### Bug Fixes
+
+* **btbutton:** limitação de tamanhos disponíveis para os botões ([de9f7a5](https://github.com/vitoramaral10/get_bootstrap/commit/de9f7a5d4092385f58fe31ee6885f11ab9c3253d))
+
 ## [0.12.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.11.6...v0.12.0) (2023-02-08)
 
 
