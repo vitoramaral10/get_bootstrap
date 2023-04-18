@@ -355,25 +355,25 @@ BTButton(
                               ),
                               const SizedBox(height: 16),
                               BTCard(
-                                body: Row(children: const [
+                                body: Row(children: [
                                   BTButton(
                                     backgroundColor: BTColors.primary,
-                                    child: Text('Botão principal'),
+                                    child: const Text('Botão principal'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButton(
                                     backgroundColor: BTColors.secondary,
-                                    child: Text('Botão'),
+                                    child: const Text('Botão'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButtonOutline(
                                     backgroundColor: BTColors.primary,
-                                    child: Text('Botão principal'),
+                                    child: const Text('Botão principal'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButtonOutline(
                                     backgroundColor: BTColors.secondary,
-                                    child: Text('Botão'),
+                                    child: const Text('Botão'),
                                   ),
                                 ]),
                                 footer: HighlightView(
@@ -403,25 +403,25 @@ BTButton(
                               ),
                               const SizedBox(height: 16),
                               BTCard(
-                                body: Row(children: const [
+                                body: Row(children: [
                                   BTButton(
                                     backgroundColor: BTColors.primary,
-                                    child: Text('Botão principal'),
+                                    child: const Text('Botão principal'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButton(
                                     backgroundColor: BTColors.secondary,
-                                    child: Text('Botão'),
+                                    child: const Text('Botão'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButtonOutline(
                                     backgroundColor: BTColors.primary,
-                                    child: Text('Botão principal'),
+                                    child: const Text('Botão principal'),
                                   ),
-                                  SizedBox(width: 8),
+                                  const SizedBox(width: 8),
                                   BTButtonOutline(
                                     backgroundColor: BTColors.secondary,
-                                    child: Text('Botão'),
+                                    child: const Text('Botão'),
                                   ),
                                 ]),
                                 footer: HighlightView(
