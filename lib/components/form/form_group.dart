@@ -8,6 +8,7 @@ class FormGroup extends StatelessWidget {
   final bool readonly;
   final Size? size;
   final String? title;
+  final String? initialValue;
   final String? placeholder;
   final String? labelText;
   final Color? backgroundColor;
@@ -37,6 +38,7 @@ class FormGroup extends StatelessWidget {
     this.title,
     this.placeholder,
     this.labelText,
+    this.initialValue,
     this.required = false,
     this.maxLines = 1,
     this.maxLength,
@@ -78,6 +80,7 @@ class FormGroup extends StatelessWidget {
         if (title != null) const SizedBox(height: 8),
         TextFormField(
           controller: controller,
+          initialValue: initialValue,
           focusNode: focusNode,
           decoration: InputDecoration(
             labelText: labelText,
