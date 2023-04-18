@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.2](https://github.com/vitoramaral10/get_bootstrap/compare/v0.12.1...v0.12.2) (2023-04-18)
+
+
+### Bug Fixes
+
+* **form_group:** added `initialValue` in `FormGroup` ([008201e](https://github.com/vitoramaral10/get_bootstrap/commit/008201ef696d29117b62e5307422fa7a174c5e2e))
+
 ### [0.12.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.12.0...v0.12.1) (2023-04-14)
 
 
