@@ -42,6 +42,34 @@ class BTModal extends StatelessWidget {
     this.darkMode = false,
   }) : assert(BTModal.checkSizes(size));
 
+  _getWidth(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
+    if (width >= 1200) {
+      if (size == Size.sm) {
+        return 300;
+      } else if (size == Size.lg) {
+        return 800;
+      } else if (size == Size.xl) {
+        return 1140;
+      } else {
+        return 500;
+      }
+    } else if (width >= 992) {
+      if (size == Size.sm) {
+        return 300;
+      } else if (size == Size.lg || size == Size.xl) {
+        return 800;
+      } else {
+        return 500;
+      }
+    } else if (width >= 576) {
+      return size == Size.sm ? 300 : 500;
+    } else {
+      return width;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -94,27 +122,7 @@ class BTModal extends StatelessWidget {
                       fullScreenSize == Size.sm &&
                       MediaQuery.of(context).size.width < 576)
               ? MediaQuery.of(context).size.width
-              : MediaQuery.of(context).size.width >= 1200
-                  ? size == Size.sm
-                      ? 300
-                      : size == Size.lg
-                          ? 800
-                          : size == Size.xl
-                              ? 1140
-                              : 500
-                  : MediaQuery.of(context).size.width >= 992
-                      ? size == Size.sm
-                          ? 300
-                          : size == Size.lg
-                              ? 800
-                              : size == Size.xl
-                                  ? 800
-                                  : 500
-                      : MediaQuery.of(context).size.width >= 576
-                          ? size == Size.sm
-                              ? 300
-                              : 500
-                          : MediaQuery.of(context).size.width,
+              : _getWidth(context),
           minHeight: (fullScreen && fullScreenSize == null) ||
                   (fullScreen &&
                       fullScreenSize == Size.xxl &&
