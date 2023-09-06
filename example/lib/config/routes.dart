@@ -15,15 +15,16 @@ class Routes {
   static const String initialRoute = '/getting-started/introduction';
 
   static final Map<String, Widget Function(BuildContext)> list = {
-    '/about/license': (context) => const LicensePage(),
-    '/components/alerts': (context) => const AlertsPage(),
-    '/components/buttons': (context) => const ButtonsPage(),
-    '/content/typography': (context) => const TypographyPage(),
-    '/customize/color': (context) => const CustomizeColorPage(),
-    '/examples/sign_in': (context) => const SignInPage(),
-    '/forms/form_control': (context) => const FormControlPage(),
-    '/getting-started/introduction': (context) => const IntroductionPage(),
-    '/layout/breakpoints': (context) => const BreakpointsPage(),
-    '/layout/grid': (context) => const GridPage(),
+    '/about/license': (final context) => const LicensePage(),
+    '/components/alerts': (final context) => const AlertsPage(),
+    '/components/buttons': (final context) => const ButtonsPage(),
+    '/content/typography': (final context) => const TypographyPage(),
+    '/customize/color': (final context) => const CustomizeColorPage(),
+    '/examples/sign_in': (final context) => const SignInPage(),
+    '/forms/form_control': (final context) => const FormControlPage(),
+    '/getting-started/introduction': (final context) =>
+        const IntroductionPage(),
+    '/layout/breakpoints': (final context) => const BreakpointsPage(),
+    '/layout/grid': (final context) => const GridPage(),
   };
 }
