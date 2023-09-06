@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.13.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.0...v0.13.1) - 6 September 2023
+
+### Fixes
+
+*  fix duplicated body in modals ([`6046ca1`](https://github.com/vitoramaral10/get_bootstrap/commit/6046ca133986d10a825b0ddb28a684035efd78ee))
+
 ## [v0.13.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.12.2...v0.13.0) - 6 September 2023
 
 ### Features
