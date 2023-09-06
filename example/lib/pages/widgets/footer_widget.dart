@@ -25,8 +25,10 @@ class FooterWidget extends StatelessWidget {
                         height: 42,
                         color: BTColors.black,
                       ),
-                      Text('Bootstrap',
-                          style: GetBootstrap.typography.headline5,),
+                      Text(
+                        'Bootstrap',
+                        style: GetBootstrap.typography.headline5,
+                      ),
                     ],
                   ),
                   Padding(

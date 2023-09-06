@@ -12,6 +12,7 @@ class BTModal extends StatelessWidget {
   final Alignment? alignment;
   final Size? size;
   final bool fullScreen;
+  final double elevation;
   final Size? fullScreenSize;
   final Color? headBackground;
   final Color? bodyBackground;
@@ -24,6 +25,49 @@ class BTModal extends StatelessWidget {
   final Widget? body;
   final Widget? footer;
 
+  double _getMaxWidth(final BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isXxl = fullScreenSize == Size.xxl && screenWidth < 1400;
+    final isXl = fullScreenSize == Size.xl && screenWidth < 1200;
+    final isLg = fullScreenSize == Size.lg && screenWidth < 992;
+    final isMd = fullScreenSize == Size.md && screenWidth < 768;
+    final isSm = fullScreenSize == Size.sm && screenWidth < 576;
+
+    if (fullScreen && (isXxl || isXl || isLg || isMd || isSm)) {
+      return screenWidth;
+    }
+
+    if (screenWidth >= 1200) {
+      if (size case Size.sm) {
+        return 300;
+      } else if (size case Size.lg) {
+        return 800;
+      } else if (size case Size.xl) {
+        return 1140;
+      } else {
+        return 500;
+      }
+    } else if (screenWidth >= 992) {
+      if (size case Size.sm) {
+        return 300;
+      } else if (size case Size.lg) {
+        return 800;
+      } else if (size case Size.xl) {
+        return 800;
+      } else {
+        return 500;
+      }
+    } else if (screenWidth >= 576) {
+      if (size == Size.sm) {
+        return 300;
+      } else {
+        return 500;
+      }
+    } else {
+      return screenWidth;
+    }
+  }
+
   BTModal({
     required this.body,
     super.key,
@@ -31,6 +75,7 @@ class BTModal extends StatelessWidget {
     this.size,
     this.fullScreen = false,
     this.fullScreenSize,
+    this.elevation = 6.0,
     this.head,
     this.footer,
     this.headBackground,
@@ -45,36 +90,9 @@ class BTModal extends StatelessWidget {
             'O parâmetro "size" somente pode ser utilizado com os '
             'tamanhos: sm, lg, xl, xxl');
 
-  double _getWidth(final BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-
-    if (width >= 1200) {
-      if (size == Size.sm) {
-        return 300;
-      } else if (size == Size.lg) {
-        return 800;
-      } else if (size == Size.xl) {
-        return 1140;
-      } else {
-        return 500;
-      }
-    } else if (width >= 992) {
-      if (size == Size.sm) {
-        return 300;
-      } else if (size == Size.lg || size == Size.xl) {
-        return 800;
-      } else {
-        return 500;
-      }
-    } else if (width >= 576) {
-      return size == Size.sm ? 300 : 500;
-    } else {
-      return width;
-    }
-  }
-
   @override
   Widget build(final BuildContext context) => Dialog(
+        elevation: elevation,
         insetPadding: (fullScreen && fullScreenSize == null) ||
                 (fullScreen &&
                     fullScreenSize == Size.xxl &&
@@ -107,24 +125,7 @@ class BTModal extends StatelessWidget {
         alignment: alignment,
         child: Container(
           constraints: BoxConstraints(
-            maxWidth: (fullScreen && fullScreenSize == null) ||
-                    (fullScreen &&
-                        fullScreenSize == Size.xxl &&
-                        MediaQuery.of(context).size.width < 1400) ||
-                    (fullScreen &&
-                        fullScreenSize == Size.xl &&
-                        MediaQuery.of(context).size.width < 1200) ||
-                    (fullScreen &&
-                        fullScreenSize == Size.lg &&
-                        MediaQuery.of(context).size.width < 992) ||
-                    (fullScreen &&
-                        fullScreenSize == Size.md &&
-                        MediaQuery.of(context).size.width < 768) ||
-                    (fullScreen &&
-                        fullScreenSize == Size.sm &&
-                        MediaQuery.of(context).size.width < 576)
-                ? MediaQuery.of(context).size.width
-                : _getWidth(context),
+            maxWidth: _getMaxWidth(context),
             minHeight: (fullScreen && fullScreenSize == null) ||
                     (fullScreen &&
                         fullScreenSize == Size.xxl &&
@@ -166,8 +167,71 @@ class BTModal extends StatelessWidget {
                     ),
                   ),
                   width: double.infinity,
-                  child: head,
+                  child: Material(
+                    color: Colors.transparent,
+                    textStyle: BTTypography().headline5,
+                    child: head,
+                  ),
                 ),
+              if (head != null && (body != null || footer != null))
+                Divider(
+                  height: 1,
+                  color: darkMode ? BTColors.gray600 : BTColors.gray300,
+                ),
+              if (body != null)
+                (fullScreen && size == null) || (fullScreen && size == Size.xxl)
+                    ? Expanded(
+                        child: SingleChildScrollView(
+                          child: Container(
+                            padding: bodyPadding ?? const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: bodyBackground ??
+                                  (darkMode
+                                      ? BTColors.gray800
+                                      : BTColors.white),
+                              borderRadius: BorderRadius.only(
+                                topLeft: head == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                topRight: head == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                bottomLeft: footer == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                bottomRight: footer == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                              ),
+                            ),
+                            width: double.infinity,
+                            child: body,
+                          ),
+                        ),
+                      )
+                    : Container(
+                        padding: bodyPadding ?? const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: bodyBackground ??
+                              (darkMode ? BTColors.gray800 : BTColors.white),
+                          borderRadius: BorderRadius.only(
+                            topLeft: head == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            topRight: head == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            bottomLeft: footer == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            bottomRight: footer == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                          ),
+                        ),
+                        width: double.infinity,
+                        child: body,
+                      ),
               if (head != null && (body != null || footer != null))
                 Divider(
                   height: 1,
