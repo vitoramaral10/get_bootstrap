@@ -237,65 +237,6 @@ class BTModal extends StatelessWidget {
                   height: 1,
                   color: darkMode ? BTColors.gray600 : BTColors.gray300,
                 ),
-              if (body != null)
-                (fullScreen && size == null) || (fullScreen && size == Size.xxl)
-                    ? Expanded(
-                        child: SingleChildScrollView(
-                          child: Container(
-                            padding: bodyPadding ?? const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: bodyBackground ??
-                                  (darkMode
-                                      ? BTColors.gray800
-                                      : BTColors.white),
-                              borderRadius: BorderRadius.only(
-                                topLeft: head == null
-                                    ? const Radius.circular(8)
-                                    : Radius.zero,
-                                topRight: head == null
-                                    ? const Radius.circular(8)
-                                    : Radius.zero,
-                                bottomLeft: footer == null
-                                    ? const Radius.circular(8)
-                                    : Radius.zero,
-                                bottomRight: footer == null
-                                    ? const Radius.circular(8)
-                                    : Radius.zero,
-                              ),
-                            ),
-                            width: double.infinity,
-                            child: body,
-                          ),
-                        ),
-                      )
-                    : Container(
-                        padding: bodyPadding ?? const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: bodyBackground ??
-                              (darkMode ? BTColors.gray800 : BTColors.white),
-                          borderRadius: BorderRadius.only(
-                            topLeft: head == null
-                                ? const Radius.circular(8)
-                                : Radius.zero,
-                            topRight: head == null
-                                ? const Radius.circular(8)
-                                : Radius.zero,
-                            bottomLeft: footer == null
-                                ? const Radius.circular(8)
-                                : Radius.zero,
-                            bottomRight: footer == null
-                                ? const Radius.circular(8)
-                                : Radius.zero,
-                          ),
-                        ),
-                        width: double.infinity,
-                        child: body,
-                      ),
-              if (footer != null)
-                Divider(
-                  height: 1,
-                  color: darkMode ? BTColors.gray600 : BTColors.gray300,
-                ),
               if (footer != null)
                 Container(
                   padding: footerPadding ?? const EdgeInsets.all(12),
