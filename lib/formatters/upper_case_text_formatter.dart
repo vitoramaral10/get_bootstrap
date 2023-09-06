@@ -1,14 +1,13 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 class UpperCaseTextFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
-    TextEditingValue oldValue,
-    TextEditingValue newValue,
-  ) {
-    return TextEditingValue(
-      text: newValue.text.toUpperCase(),
-      selection: newValue.selection,
-    );
-  }
+    final TextEditingValue oldValue,
+    final TextEditingValue newValue,
+  ) =>
+      TextEditingValue(
+        text: newValue.text.toUpperCase(),
+        selection: newValue.selection,
+      );
 }

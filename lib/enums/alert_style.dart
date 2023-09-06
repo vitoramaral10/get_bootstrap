@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 enum AlertStyle {
   primary,

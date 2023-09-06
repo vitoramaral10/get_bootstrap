@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 /// Paleta de cores utilizadas no bootstrap.
 class BTColors {

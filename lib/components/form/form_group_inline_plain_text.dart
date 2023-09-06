@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class FormGroupInlinePlainText extends StatelessWidget {
   final String? title;
@@ -18,9 +18,9 @@ class FormGroupInlinePlainText extends StatelessWidget {
   final int xxlField;
 
   const FormGroupInlinePlainText({
+    required this.value,
     super.key,
     this.title,
-    required this.value,
     this.required = false,
     this.xsTitle = 12,
     this.smTitle = 12,
@@ -37,42 +37,39 @@ class FormGroupInlinePlainText extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return BTRow(
-      children: [
-        if (title != null)
-          BTCol(
-            xs: xsTitle,
-            sm: smTitle,
-            md: mdTitle,
-            lg: lgTitle,
-            xl: xlTitle,
-            xxl: xxlTitle,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(title!),
-                if (required)
-                  const Padding(
-                    padding: EdgeInsets.only(left: 4.0),
-                    child: Text(
-                      '*',
-                      style: TextStyle(color: BTColors.red),
+  Widget build(final BuildContext context) => BTRow(
+        children: [
+          if (title != null)
+            BTCol(
+              xs: xsTitle,
+              sm: smTitle,
+              md: mdTitle,
+              lg: lgTitle,
+              xl: xlTitle,
+              xxl: xxlTitle,
+              child: Row(
+                children: [
+                  Text(title!),
+                  if (required)
+                    const Padding(
+                      padding: EdgeInsets.only(left: 4),
+                      child: Text(
+                        '*',
+                        style: TextStyle(color: BTColors.red),
+                      ),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
+          BTCol(
+            xs: xsField,
+            sm: smField,
+            md: mdField,
+            lg: lgField,
+            xl: xlField,
+            xxl: xxlField,
+            child: Text(value),
           ),
-        BTCol(
-          xs: xsField,
-          sm: smField,
-          md: mdField,
-          lg: lgField,
-          xl: xlField,
-          xxl: xxlField,
-          child: Text(value),
-        ),
-      ],
-    );
-  }
+        ],
+      );
 }

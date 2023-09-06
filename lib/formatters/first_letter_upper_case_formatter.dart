@@ -1,19 +1,18 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 class FirstLetterUpperCaseFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
-    TextEditingValue oldValue,
-    TextEditingValue newValue,
-  ) {
-    return TextEditingValue(
-      text: newValue.text.toLowerCase().split(' ').map((word) {
-        String leftText =
-            (word.length > 1) ? word.substring(1, word.length) : '';
+    final TextEditingValue oldValue,
+    final TextEditingValue newValue,
+  ) =>
+      TextEditingValue(
+        text: newValue.text.toLowerCase().split(' ').map((final word) {
+          final String leftText =
+              (word.length > 1) ? word.substring(1, word.length) : '';
 
-        return word[0].toUpperCase() + leftText;
-      }).join(' '),
-      selection: newValue.selection,
-    );
-  }
+          return word[0].toUpperCase() + leftText;
+        }).join(' '),
+        selection: newValue.selection,
+      );
 }

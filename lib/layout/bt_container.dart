@@ -1,8 +1,9 @@
-//
-// ignore_for_file: prefer-correct-identifier-length
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
-/// Os contêineres são um bloco de construção fundamental do Bootstrap que contém, preenche e alinha seu conteúdo em um determinado dispositivo ou viewport.
+// ignore: use_late_for_private_fields_and_variables
+/// Os contêineres são um bloco de construção fundamental do Bootstrap
+/// que contém, preenche e alinha seu conteúdo em um determinado
+/// dispositivo ou viewport.
 class BTContainer extends StatelessWidget {
   final Widget child;
 
@@ -15,8 +16,8 @@ class BTContainer extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
 
   const BTContainer({
-    super.key,
     required this.child,
+    super.key,
     this.sm = false,
     this.md = false,
     this.lg = false,
@@ -26,8 +27,8 @@ class BTContainer extends StatelessWidget {
     this.margin,
   });
 
-  double _currentWidth(buildContext) {
-    double width = MediaQuery.of(buildContext).size.width;
+  double _currentWidth(final buildContext) {
+    final double width = MediaQuery.of(buildContext).size.width;
 
     if ((sm || md || lg || xl || xxl) && width >= 1400) {
       return 1320;
@@ -37,7 +38,7 @@ class BTContainer extends StatelessWidget {
       return 960;
     } else if ((sm || md) && width >= 768) {
       return 720;
-    } else if ((sm) && width >= 576) {
+    } else if (sm && width >= 576) {
       return 540;
     } else {
       return width;
@@ -45,17 +46,13 @@ class BTContainer extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (buildContext, boxConstraints) {
-        return Center(
+  Widget build(final BuildContext context) => LayoutBuilder(
+        builder: (final buildContext, final boxConstraints) => Center(
           child: Container(
             width: _currentWidth(buildContext),
             margin: margin,
             child: child,
           ),
-        );
-      },
-    );
-  }
+        ),
+      );
 }

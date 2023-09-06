@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class BTSidebar extends StatelessWidget {
   final List<Widget> children;
@@ -7,28 +7,26 @@ class BTSidebar extends StatelessWidget {
   final double? width;
 
   const BTSidebar({
-    Key? key,
     required this.children,
+    super.key,
     this.elevation,
     this.backgroundColor,
     this.width,
-  }) : super(key: key);
+  });
 
   @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: backgroundColor ?? Colors.white,
-      elevation: elevation ?? 2,
-      width: width ?? 220,
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: children,
+  Widget build(final BuildContext context) => Drawer(
+        backgroundColor: backgroundColor ?? Colors.white,
+        elevation: elevation ?? 2,
+        width: width ?? 220,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: children,
+            ),
           ),
         ),
-      ),
-    );
-  }
+      );
 }

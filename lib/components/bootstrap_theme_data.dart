@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 /// Theme data padrão do bootstrap
 /// para utilizar basta colocar no seu MaterialApp
@@ -67,7 +67,7 @@ class BootstrapThemeData {
     drawerTheme: const DrawerThemeData(width: 258),
     popupMenuTheme: const PopupMenuThemeData(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(6.0)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
     ),
     textSelectionTheme:
@@ -131,7 +131,7 @@ class BootstrapThemeData {
     drawerTheme: const DrawerThemeData(width: 258),
     popupMenuTheme: const PopupMenuThemeData(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(6.0)),
+        borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
     ),
     textSelectionTheme:

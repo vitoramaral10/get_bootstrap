@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class BTCard extends StatelessWidget {
   final Color? headBackground;
@@ -13,9 +13,9 @@ class BTCard extends StatelessWidget {
   final Widget? footer;
 
   const BTCard({
+    required this.body,
     super.key,
     this.head,
-    required this.body,
     this.footer,
     this.headBackground,
     this.bodyBackground,
@@ -27,55 +27,55 @@ class BTCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.fromBorderSide(BorderSide(
-          color: (darkMode ? BTColors.gray600 : BTColors.gray300),
-        )),
-        borderRadius: const BorderRadius.all(Radius.circular(6)),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (head != null)
-            Head(
-              headPadding: headPadding,
-              headBackground: headBackground,
-              head: head,
-              body: body,
-              footer: footer,
-              darkMode: darkMode,
+  Widget build(final BuildContext context) => DecoratedBox(
+        decoration: BoxDecoration(
+          border: Border.fromBorderSide(
+            BorderSide(
+              color: (darkMode ? BTColors.gray600 : BTColors.gray300),
             ),
-          if (head != null && (body != null || footer != null))
-            Divider(
-              height: 1,
-              color: darkMode ? BTColors.gray600 : BTColors.gray300,
-            ),
-          if (body != null)
-            Body(
-              bodyPadding: bodyPadding,
-              head: head,
-              footer: footer,
-              bodyBackground: bodyBackground,
-              body: body!,
-              darkMode: darkMode,
-            ),
-          if (footer != null)
-            Divider(
-              height: 1,
-              color: darkMode ? BTColors.gray600 : BTColors.gray300,
-            ),
-          if (footer != null)
-            Footer(
-              footerPadding: footerPadding,
-              footerBackground: footerBackground,
-              footer: footer,
-              darkMode: darkMode,
-            ),
-        ],
-      ),
-    );
-  }
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(6)),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (head != null)
+              Head(
+                headPadding: headPadding,
+                headBackground: headBackground,
+                head: head,
+                body: body,
+                footer: footer,
+                darkMode: darkMode,
+              ),
+            if (head != null && (body != null || footer != null))
+              Divider(
+                height: 1,
+                color: darkMode ? BTColors.gray600 : BTColors.gray300,
+              ),
+            if (body != null)
+              Body(
+                bodyPadding: bodyPadding,
+                head: head,
+                footer: footer,
+                bodyBackground: bodyBackground,
+                body: body!,
+                darkMode: darkMode,
+              ),
+            if (footer != null)
+              Divider(
+                height: 1,
+                color: darkMode ? BTColors.gray600 : BTColors.gray300,
+              ),
+            if (footer != null)
+              Footer(
+                footerPadding: footerPadding,
+                footerBackground: footerBackground,
+                footer: footer,
+                darkMode: darkMode,
+              ),
+          ],
+        ),
+      );
 }

@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class FormGroupFile extends StatelessWidget {
   final bool disabled;
@@ -10,6 +10,7 @@ class FormGroupFile extends StatelessWidget {
   final void Function()? onPressed;
 
   const FormGroupFile({
+    required this.onPressed,
     super.key,
     this.disabled = false,
     this.readonly = false,
@@ -17,73 +18,91 @@ class FormGroupFile extends StatelessWidget {
     this.fileName = 'Nenhum arquivo encontrado',
     this.required = false,
     this.size,
-    required this.onPressed,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (title != null)
-            Row(
-              children: [
-                Text(title!),
-                if (required)
-                  const Padding(
-                    padding: EdgeInsets.only(left: 4.0),
-                    child: Text(
-                      '*',
-                      style: TextStyle(color: BTColors.red),
+  Widget build(final BuildContext context) => InkWell(
+        onTap: onPressed,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (title != null)
+              Row(
+                children: [
+                  Text(title!),
+                  if (required)
+                    const Padding(
+                      padding: EdgeInsets.only(left: 4),
+                      child: Text(
+                        '*',
+                        style: TextStyle(color: BTColors.red),
+                      ),
                     ),
-                  ),
-              ],
-            ),
-          if (title != null) const SizedBox(height: 4),
-          Container(
-            decoration: const BoxDecoration(
-              border: Border.fromBorderSide(
-                BorderSide(color: BTColors.gray400, width: 1.0),
+                ],
               ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(6.0),
-              ),
-            ),
-            width: double.maxFinite,
-            child: Row(children: [
-              Container(
-                padding: const EdgeInsets.only(right: 1.0),
-                decoration: const BoxDecoration(
-                  color: BTColors.gray400,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(6.0),
-                    bottomLeft: Radius.circular(6.0),
-                  ),
+            if (title != null) const SizedBox(height: 4),
+            Container(
+              decoration: const BoxDecoration(
+                border: Border.fromBorderSide(
+                  BorderSide(color: BTColors.gray400),
                 ),
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: size == Size.lg
-                        ? 9
-                        : size == Size.sm
-                            ? 2
-                            : 6,
-                    horizontal: size == Size.lg
-                        ? 16
-                        : size == Size.sm
-                            ? 8
-                            : 12,
-                  ),
-                  decoration: const BoxDecoration(
-                    color: BTColors.gray200,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(6.0),
-                      bottomLeft: Radius.circular(6.0),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(6),
+                ),
+              ),
+              width: double.maxFinite,
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(right: 1),
+                    decoration: const BoxDecoration(
+                      color: BTColors.gray400,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(6),
+                        bottomLeft: Radius.circular(6),
+                      ),
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        vertical: size == Size.lg
+                            ? 9
+                            : size == Size.sm
+                                ? 2
+                                : 6,
+                        horizontal: size == Size.lg
+                            ? 16
+                            : size == Size.sm
+                                ? 8
+                                : 12,
+                      ),
+                      decoration: const BoxDecoration(
+                        color: BTColors.gray200,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(6),
+                          bottomLeft: Radius.circular(6),
+                        ),
+                      ),
+                      child: Text(
+                        'Enviar arquivo',
+                        style: TextStyle(
+                          fontSize: size == Size.lg
+                              ? 18
+                              : size == Size.sm
+                                  ? 12
+                                  : 16,
+                        ),
+                      ),
                     ),
                   ),
-                  child: Text(
-                    'Enviar arquivo',
+                  SizedBox(
+                    width: size == Size.lg
+                        ? 12
+                        : size == Size.sm
+                            ? 4
+                            : 8,
+                  ),
+                  Text(
+                    fileName,
                     style: TextStyle(
                       fontSize: size == Size.lg
                           ? 18
@@ -92,29 +111,10 @@ class FormGroupFile extends StatelessWidget {
                               : 16,
                     ),
                   ),
-                ),
+                ],
               ),
-              SizedBox(
-                width: size == Size.lg
-                    ? 12
-                    : size == Size.sm
-                        ? 4
-                        : 8,
-              ),
-              Text(
-                fileName,
-                style: TextStyle(
-                  fontSize: size == Size.lg
-                      ? 18
-                      : size == Size.sm
-                          ? 12
-                          : 16,
-                ),
-              ),
-            ]),
-          ),
-        ],
-      ),
-    );
-  }
+            ),
+          ],
+        ),
+      );
 }

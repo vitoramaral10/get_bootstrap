@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 //
 // ignore: prefer-correct-identifier-length
