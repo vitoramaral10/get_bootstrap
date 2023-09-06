@@ -115,7 +115,84 @@ class Sidebar extends StatelessWidget {
                 style: GetBootstrap.typography.small,
               ),
               Text(
-                'Figures',
+                'Button group',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Card',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Carousel',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Close button',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Collapse',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Dropdowns',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'List group',
+                style: GetBootstrap.typography.small,
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.pushNamed(context, '/components/modal');
+                },
+                child: Text(
+                  'Modal',
+                  style: GetBootstrap.typography.small,
+                ),
+              ),
+              Text(
+                'Navbar',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Navs & tabs',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Offcanvas',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Pagination',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Placeholders',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Popovers',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Progress',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Scrollspy',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Spinners',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Toasts',
+                style: GetBootstrap.typography.small,
+              ),
+              Text(
+                'Tooltips',
                 style: GetBootstrap.typography.small,
               ),
             ],
