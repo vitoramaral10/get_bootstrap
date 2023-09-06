@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 class BTAlert extends StatelessWidget {
   final AlertStyle alertStyle;
@@ -6,9 +6,9 @@ class BTAlert extends StatelessWidget {
   final VoidCallback? dismissPressed;
 
   const BTAlert({
+    required this.child,
     super.key,
     this.alertStyle = AlertStyle.primary,
-    required this.child,
     this.dismissPressed,
   });
 
@@ -30,8 +30,6 @@ class BTAlert extends StatelessWidget {
         return BTColors.gray600;
       case AlertStyle.dark:
         return BTColors.gray700;
-      default:
-        return BTColors.blue600;
     }
   }
 
@@ -53,8 +51,6 @@ class BTAlert extends StatelessWidget {
         return BTColors.gray100;
       case AlertStyle.dark:
         return BTColors.gray400;
-      default:
-        return BTColors.blue100;
     }
   }
 
@@ -76,45 +72,40 @@ class BTAlert extends StatelessWidget {
         return BTColors.gray200;
       case AlertStyle.dark:
         return BTColors.gray500;
-      default:
-        return BTColors.blue200;
     }
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Material(
-      textStyle: BTTypography().bodyText2?.copyWith(
-            color: _getTextColor(),
-          ),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: _getBackgroundColor(),
-          border: Border.fromBorderSide(
-            BorderSide(
-              color: _getBorderColor(),
-              width: 1,
+  Widget build(final BuildContext context) => Material(
+        textStyle: BTTypography().bodyText2?.copyWith(
+              color: _getTextColor(),
             ),
-          ),
-          borderRadius: const BorderRadius.all(Radius.circular(6)),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: child,
-            ),
-            if (dismissPressed != null)
-              InkWell(
-                onTap: dismissPressed,
-                child: Icon(
-                  Icons.close,
-                  color: _getTextColor(),
-                ),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: _getBackgroundColor(),
+            border: Border.fromBorderSide(
+              BorderSide(
+                color: _getBorderColor(),
               ),
-          ],
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(6)),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: child,
+              ),
+              if (dismissPressed != null)
+                InkWell(
+                  onTap: dismissPressed,
+                  child: Icon(
+                    Icons.close,
+                    color: _getTextColor(),
+                  ),
+                ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

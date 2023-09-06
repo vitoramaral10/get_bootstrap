@@ -1,16 +1,17 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class BTButtonOutline extends StatelessWidget {
-  static bool checkSizes(Size? size) {
+  static bool checkSizes(final Size? size) {
     if (size != null && ![Size.sm, Size.lg, Size.md].contains(size)) {
-      throw 'O parâmetro "size" somente pode ser utilizado com os tamanhos: sm, md, lg';
+      throw Exception('O parâmetro "size" somente pode ser '
+          'utilizado com os tamanhos: sm, md, lg');
     }
 
     return true;
   }
 
   final Widget child;
-  final Size? size;
+  final Size size;
   final bool square;
   final VoidCallback? onPressed;
   final Color? backgroundColor;
@@ -25,28 +26,30 @@ class BTButtonOutline extends StatelessWidget {
     if (!square) {
       return null;
     } else {
-      switch (size) {
-        case Size.sm:
-          return 31;
-        case Size.lg:
-          return 48;
-        default:
-          return 38;
+      if (size case Size.sm) {
+        return 31;
+      } else if (size case Size.lg) {
+        return 48;
+      } else {
+        return 38;
       }
     }
   }
 
   BTButtonOutline({
-    super.key,
     required this.child,
-    this.size,
+    super.key,
+    this.size = Size.md,
     this.square = false,
     this.onPressed,
     this.backgroundColor,
-  }) : assert(BTButton.checkSizes(size));
+  }) : assert(
+            BTButton.checkSizes(size),
+            'O parâmetro "size" somente pode ser utilizado '
+            'com os tamanhos: sm, md, lg');
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     const roundedRectangleBorder = RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(6)),
     );
@@ -57,12 +60,12 @@ class BTButtonOutline extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          textStyle: MaterialStateProperty.resolveWith((states) {
-            return GetBootstrap.typography.button!.copyWith(
+          textStyle: MaterialStateProperty.resolveWith(
+            (final states) => GetBootstrap.typography.button!.copyWith(
               color: (backgroundColor ?? BTColors.primary)
                   .withOpacity(onPressed != null ? 1 : 0.65),
-            );
-          }),
+            ),
+          ),
           backgroundColor: MaterialStateProperty.all(Colors.transparent),
           foregroundColor: MaterialStateProperty.all(
             backgroundColor ?? BTColors.primary,
@@ -73,10 +76,12 @@ class BTButtonOutline extends StatelessWidget {
           ),
           elevation: MaterialStateProperty.all(0),
           padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
-          side: MaterialStateProperty.all(BorderSide(
-            color: (backgroundColor ?? BTColors.primary)
-                .withOpacity(onPressed != null ? 1 : 0.0),
-          )),
+          side: MaterialStateProperty.all(
+            BorderSide(
+              color: (backgroundColor ?? BTColors.primary)
+                  .withOpacity(onPressed != null ? 1 : 0.0),
+            ),
+          ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             roundedRectangleBorder,
           ),

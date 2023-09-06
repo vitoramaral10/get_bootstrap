@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class BTSidebarGroup extends StatelessWidget {
   final String title;
@@ -7,23 +7,23 @@ class BTSidebarGroup extends StatelessWidget {
   final List<Widget>? children;
 
   const BTSidebarGroup({
-    super.key,
     required this.title,
+    super.key,
     this.icon,
     this.iconColor,
     this.children,
   });
 
   @override
-  Widget build(BuildContext context) {
-    List<Widget> items = [
+  Widget build(final BuildContext context) {
+    final List<Widget> items = [
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         child: Row(
           children: [
             if (icon != null)
               Padding(
-                padding: const EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 8),
                 child: Icon(
                   icon,
                   size: 16,
@@ -39,17 +39,18 @@ class BTSidebarGroup extends StatelessWidget {
       ),
     ];
 
-    for (var element in children!) {
-      items.add(Padding(
-        padding: const EdgeInsets.only(left: 24.0, top: 4, bottom: 4),
-        child: element,
-      ));
+    for (final element in children!) {
+      items.add(
+        Padding(
+          padding: const EdgeInsets.only(left: 24, top: 4, bottom: 4),
+          child: element,
+        ),
+      );
     }
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: items,
       ),

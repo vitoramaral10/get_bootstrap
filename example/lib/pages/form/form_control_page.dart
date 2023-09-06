@@ -71,7 +71,7 @@ class _FormControlPageState extends State<FormControlPage> {
                                 height: 8,
                               ),
                               BTCard(
-                                body: Column(children: const [
+                                body: const Column(children: [
                                   Padding(
                                     padding: EdgeInsets.only(bottom: 16),
                                     child: FormGroup(
@@ -130,7 +130,7 @@ Padding(
                                 height: 8,
                               ),
                               BTCard(
-                                body: Column(children: const [
+                                body: const Column(children: [
                                   FormGroup(
                                     placeholder: 'lg: true',
                                     size: Size.lg,
@@ -190,7 +190,7 @@ FormGroup(
                                 height: 8,
                               ),
                               BTCard(
-                                body: Column(children: const [
+                                body: const Column(children: [
                                   Padding(
                                     padding: EdgeInsets.only(bottom: 8.0),
                                     child: FormGroup(
@@ -246,7 +246,7 @@ FormGroup(
                                 height: 8,
                               ),
                               BTCard(
-                                body: Column(children: const [
+                                body: const Column(children: [
                                   FormGroup(
                                     readonly: true,
                                     placeholder: 'Readonly input here...',
@@ -284,12 +284,12 @@ FormGroup(
                                 height: 8,
                               ),
                               BTCard(
-                                body: Column(children: const [
+                                body: const Column(children: [
                                   Padding(
                                     padding: EdgeInsets.only(bottom: 8.0),
                                     child: FormGroupInlinePlainText(
-                                      title: 'E-mail',
                                       value: 'email@example.com',
+                                      title: 'E-mail',
                                     ),
                                   ),
                                   FormGroupInline(
@@ -390,8 +390,6 @@ FormGroupInline(
                               ),
                               BTCard(
                                 body: FormGroupFile(
-                                  title: 'Default file input example',
-                                  fileName: fileName,
                                   onPressed: () async {
                                     FilePickerResult? result =
                                         await FilePicker.platform.pickFiles();
@@ -399,6 +397,8 @@ FormGroupInline(
                                       fileName = result!.files.first.name;
                                     });
                                   },
+                                  title: 'Default file input example',
+                                  fileName: fileName,
                                 ),
                                 footer: HighlightView(
                                   '''

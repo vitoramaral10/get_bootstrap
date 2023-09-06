@@ -495,7 +495,7 @@ BTRow(
                                           ),
                                         ),
                                       ],
-                                      dataRowHeight: 48,
+                                      dataRowMaxHeight: 48,
                                       dataTextStyle:
                                           GetBootstrap.typography.small,
                                       headingRowHeight: 48,

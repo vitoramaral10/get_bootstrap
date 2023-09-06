@@ -1,9 +1,9 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class BTModal extends StatelessWidget {
-  static bool checkSizes(Size? size) {
+  static bool checkSizes(final Size? size) {
     if (size != null && ![Size.sm, Size.lg, Size.xl, Size.xxl].contains(size)) {
-      throw 'O parâmetro "size" somente pode ser utilizado com os tamanhos: sm, lg, xl, xxl';
+      throw Exception();
     }
 
     return true;
@@ -25,13 +25,13 @@ class BTModal extends StatelessWidget {
   final Widget? footer;
 
   BTModal({
+    required this.body,
     super.key,
     this.alignment = Alignment.topCenter,
     this.size,
     this.fullScreen = false,
     this.fullScreenSize,
     this.head,
-    required this.body,
     this.footer,
     this.headBackground,
     this.bodyBackground,
@@ -40,10 +40,13 @@ class BTModal extends StatelessWidget {
     this.bodyPadding,
     this.footerPadding,
     this.darkMode = false,
-  }) : assert(BTModal.checkSizes(size));
+  }) : assert(
+            BTModal.checkSizes(size),
+            'O parâmetro "size" somente pode ser utilizado com os '
+            'tamanhos: sm, lg, xl, xxl');
 
-  _getWidth(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+  double _getWidth(final BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
 
     if (width >= 1200) {
       if (size == Size.sm) {
@@ -71,180 +74,180 @@ class BTModal extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      insetPadding: (fullScreen && fullScreenSize == null) ||
-              (fullScreen &&
-                  fullScreenSize == Size.xxl &&
-                  MediaQuery.of(context).size.width < 1400) ||
-              (fullScreen &&
-                  fullScreenSize == Size.xl &&
-                  MediaQuery.of(context).size.width < 1200) ||
-              (fullScreen &&
-                  fullScreenSize == Size.lg &&
-                  MediaQuery.of(context).size.width < 992) ||
-              (fullScreen &&
-                  fullScreenSize == Size.md &&
-                  MediaQuery.of(context).size.width < 768) ||
-              (fullScreen &&
-                  fullScreenSize == Size.sm &&
-                  MediaQuery.of(context).size.width < 576)
-          ? EdgeInsets.zero
-          : MediaQuery.of(context).size.width <= 576
-              ? const EdgeInsets.all(8)
-              : const EdgeInsets.symmetric(
-                  vertical: 24.0,
-                  horizontal: 40.0,
-                ),
-      shape: RoundedRectangleBorder(
-        side: BorderSide(
-          color: (darkMode ? BTColors.gray600 : BTColors.gray300),
-        ),
-        borderRadius: const BorderRadius.all(Radius.circular(8)),
-      ),
-      alignment: alignment,
-      child: Container(
-        constraints: BoxConstraints(
-          maxWidth: (fullScreen && fullScreenSize == null) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xxl &&
-                      MediaQuery.of(context).size.width < 1400) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xl &&
-                      MediaQuery.of(context).size.width < 1200) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.lg &&
-                      MediaQuery.of(context).size.width < 992) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.md &&
-                      MediaQuery.of(context).size.width < 768) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.sm &&
-                      MediaQuery.of(context).size.width < 576)
-              ? MediaQuery.of(context).size.width
-              : _getWidth(context),
-          minHeight: (fullScreen && fullScreenSize == null) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xxl &&
-                      MediaQuery.of(context).size.width < 1400) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.xl &&
-                      MediaQuery.of(context).size.width < 1200) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.lg &&
-                      MediaQuery.of(context).size.width < 992) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.md &&
-                      MediaQuery.of(context).size.width < 768) ||
-                  (fullScreen &&
-                      fullScreenSize == Size.sm &&
-                      MediaQuery.of(context).size.width < 576)
-              ? MediaQuery.of(context).size.height
-              : 0,
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (head != null)
-              Container(
-                padding: headPadding ?? const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: headBackground ??
-                      (darkMode ? BTColors.gray800 : BTColors.white),
-                  borderRadius: BorderRadius.only(
-                    topLeft: const Radius.circular(8),
-                    topRight: const Radius.circular(8),
-                    bottomLeft: (body == null || footer == null)
-                        ? const Radius.circular(8)
-                        : Radius.zero,
-                    bottomRight: (body == null || footer == null)
-                        ? const Radius.circular(8)
-                        : Radius.zero,
+  Widget build(final BuildContext context) => Dialog(
+        insetPadding: (fullScreen && fullScreenSize == null) ||
+                (fullScreen &&
+                    fullScreenSize == Size.xxl &&
+                    MediaQuery.of(context).size.width < 1400) ||
+                (fullScreen &&
+                    fullScreenSize == Size.xl &&
+                    MediaQuery.of(context).size.width < 1200) ||
+                (fullScreen &&
+                    fullScreenSize == Size.lg &&
+                    MediaQuery.of(context).size.width < 992) ||
+                (fullScreen &&
+                    fullScreenSize == Size.md &&
+                    MediaQuery.of(context).size.width < 768) ||
+                (fullScreen &&
+                    fullScreenSize == Size.sm &&
+                    MediaQuery.of(context).size.width < 576)
+            ? EdgeInsets.zero
+            : MediaQuery.of(context).size.width <= 576
+                ? const EdgeInsets.all(8)
+                : const EdgeInsets.symmetric(
+                    vertical: 24,
+                    horizontal: 40,
                   ),
-                ),
-                width: double.infinity,
-                child: head!,
-              ),
-            if (head != null && (body != null || footer != null))
-              Divider(
-                height: 1,
-                color: darkMode ? BTColors.gray600 : BTColors.gray300,
-              ),
-            if (body != null)
-              (fullScreen && size == null) || (fullScreen && size == Size.xxl)
-                  ? Expanded(
-                      child: SingleChildScrollView(
-                        child: Container(
-                          padding: bodyPadding ?? const EdgeInsets.all(16.0),
-                          decoration: BoxDecoration(
-                            color: bodyBackground ??
-                                (darkMode ? BTColors.gray800 : BTColors.white),
-                            borderRadius: BorderRadius.only(
-                              topLeft: head == null
-                                  ? const Radius.circular(8)
-                                  : Radius.zero,
-                              topRight: head == null
-                                  ? const Radius.circular(8)
-                                  : Radius.zero,
-                              bottomLeft: footer == null
-                                  ? const Radius.circular(8)
-                                  : Radius.zero,
-                              bottomRight: footer == null
-                                  ? const Radius.circular(8)
-                                  : Radius.zero,
-                            ),
-                          ),
-                          width: double.infinity,
-                          child: body,
-                        ),
-                      ),
-                    )
-                  : Container(
-                      padding: bodyPadding ?? const EdgeInsets.all(16.0),
-                      decoration: BoxDecoration(
-                        color: bodyBackground ??
-                            (darkMode ? BTColors.gray800 : BTColors.white),
-                        borderRadius: BorderRadius.only(
-                          topLeft: head == null
-                              ? const Radius.circular(8)
-                              : Radius.zero,
-                          topRight: head == null
-                              ? const Radius.circular(8)
-                              : Radius.zero,
-                          bottomLeft: footer == null
-                              ? const Radius.circular(8)
-                              : Radius.zero,
-                          bottomRight: footer == null
-                              ? const Radius.circular(8)
-                              : Radius.zero,
-                        ),
-                      ),
-                      width: double.infinity,
-                      child: body,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color: (darkMode ? BTColors.gray600 : BTColors.gray300),
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
+        ),
+        alignment: alignment,
+        child: Container(
+          constraints: BoxConstraints(
+            maxWidth: (fullScreen && fullScreenSize == null) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.xxl &&
+                        MediaQuery.of(context).size.width < 1400) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.xl &&
+                        MediaQuery.of(context).size.width < 1200) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.lg &&
+                        MediaQuery.of(context).size.width < 992) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.md &&
+                        MediaQuery.of(context).size.width < 768) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.sm &&
+                        MediaQuery.of(context).size.width < 576)
+                ? MediaQuery.of(context).size.width
+                : _getWidth(context),
+            minHeight: (fullScreen && fullScreenSize == null) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.xxl &&
+                        MediaQuery.of(context).size.width < 1400) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.xl &&
+                        MediaQuery.of(context).size.width < 1200) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.lg &&
+                        MediaQuery.of(context).size.width < 992) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.md &&
+                        MediaQuery.of(context).size.width < 768) ||
+                    (fullScreen &&
+                        fullScreenSize == Size.sm &&
+                        MediaQuery.of(context).size.width < 576)
+                ? MediaQuery.of(context).size.height
+                : 0,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (head != null)
+                Container(
+                  padding: headPadding ?? const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: headBackground ??
+                        (darkMode ? BTColors.gray800 : BTColors.white),
+                    borderRadius: BorderRadius.only(
+                      topLeft: const Radius.circular(8),
+                      topRight: const Radius.circular(8),
+                      bottomLeft: (body == null || footer == null)
+                          ? const Radius.circular(8)
+                          : Radius.zero,
+                      bottomRight: (body == null || footer == null)
+                          ? const Radius.circular(8)
+                          : Radius.zero,
                     ),
-            if (footer != null)
-              Divider(
-                height: 1,
-                color: darkMode ? BTColors.gray600 : BTColors.gray300,
-              ),
-            if (footer != null)
-              Container(
-                padding: footerPadding ?? const EdgeInsets.all(12.0),
-                decoration: BoxDecoration(
-                  color: footerBackground ??
-                      (darkMode ? BTColors.gray800 : BTColors.white),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(8),
-                    bottomRight: Radius.circular(8),
                   ),
+                  width: double.infinity,
+                  child: head,
                 ),
-                width: double.infinity,
-                child: footer!,
-              ),
-          ],
+              if (head != null && (body != null || footer != null))
+                Divider(
+                  height: 1,
+                  color: darkMode ? BTColors.gray600 : BTColors.gray300,
+                ),
+              if (body != null)
+                (fullScreen && size == null) || (fullScreen && size == Size.xxl)
+                    ? Expanded(
+                        child: SingleChildScrollView(
+                          child: Container(
+                            padding: bodyPadding ?? const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: bodyBackground ??
+                                  (darkMode
+                                      ? BTColors.gray800
+                                      : BTColors.white),
+                              borderRadius: BorderRadius.only(
+                                topLeft: head == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                topRight: head == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                bottomLeft: footer == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                                bottomRight: footer == null
+                                    ? const Radius.circular(8)
+                                    : Radius.zero,
+                              ),
+                            ),
+                            width: double.infinity,
+                            child: body,
+                          ),
+                        ),
+                      )
+                    : Container(
+                        padding: bodyPadding ?? const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: bodyBackground ??
+                              (darkMode ? BTColors.gray800 : BTColors.white),
+                          borderRadius: BorderRadius.only(
+                            topLeft: head == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            topRight: head == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            bottomLeft: footer == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                            bottomRight: footer == null
+                                ? const Radius.circular(8)
+                                : Radius.zero,
+                          ),
+                        ),
+                        width: double.infinity,
+                        child: body,
+                      ),
+              if (footer != null)
+                Divider(
+                  height: 1,
+                  color: darkMode ? BTColors.gray600 : BTColors.gray300,
+                ),
+              if (footer != null)
+                Container(
+                  padding: footerPadding ?? const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: footerBackground ??
+                        (darkMode ? BTColors.gray800 : BTColors.white),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(8),
+                      bottomRight: Radius.circular(8),
+                    ),
+                  ),
+                  width: double.infinity,
+                  child: footer,
+                ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }

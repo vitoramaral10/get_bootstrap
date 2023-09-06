@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class FormGroupInline extends StatelessWidget {
   final bool disabled;
@@ -63,91 +63,89 @@ class FormGroupInline extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return BTRow(
-      children: [
-        if (title != null)
-          BTCol(
-            xs: xsTitle,
-            sm: smTitle,
-            md: mdTitle,
-            lg: lgTitle,
-            xl: xlTitle,
-            xxl: xxlTitle,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Flexible(
-                  child: Text(title!),
-                ),
-                if (required)
-                  const Padding(
-                    padding: EdgeInsets.only(left: 4.0),
-                    child: Text(
-                      '*',
-                      style: TextStyle(color: BTColors.red),
-                    ),
+  Widget build(final BuildContext context) => BTRow(
+        children: [
+          if (title != null)
+            BTCol(
+              xs: xsTitle,
+              sm: smTitle,
+              md: mdTitle,
+              lg: lgTitle,
+              xl: xlTitle,
+              xxl: xxlTitle,
+              child: Row(
+                children: [
+                  Flexible(
+                    child: Text(title!),
                   ),
-              ],
+                  if (required)
+                    const Padding(
+                      padding: EdgeInsets.only(left: 4),
+                      child: Text(
+                        '*',
+                        style: TextStyle(color: BTColors.red),
+                      ),
+                    ),
+                ],
+              ),
             ),
-          ),
-        BTCol(
-          xs: xsField,
-          sm: smField,
-          md: mdField,
-          lg: lgField,
-          xl: xlField,
-          xxl: xxlField,
-          child: TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              hintText: placeholder,
-              hintStyle: BootstrapThemeData.light.inputDecorationTheme.hintStyle
-                  ?.copyWith(
-                color: readonly ? BTColors.gray900 : null,
+          BTCol(
+            xs: xsField,
+            sm: smField,
+            md: mdField,
+            lg: lgField,
+            xl: xlField,
+            xxl: xxlField,
+            child: TextFormField(
+              controller: controller,
+              decoration: InputDecoration(
+                hintText: placeholder,
+                hintStyle: BootstrapThemeData
+                    .light.inputDecorationTheme.hintStyle
+                    ?.copyWith(
+                  color: readonly ? BTColors.gray900 : null,
+                  fontSize: size == Size.lg
+                      ? 20
+                      : size == Size.sm
+                          ? 14
+                          : 16,
+                ),
+                isDense: true,
+                contentPadding: EdgeInsets.symmetric(
+                  vertical: size == Size.lg
+                      ? 16
+                      : size == Size.sm
+                          ? 8
+                          : 12,
+                  horizontal: size == Size.lg
+                      ? 16
+                      : size == Size.sm
+                          ? 8
+                          : 12,
+                ),
+                filled: true,
+                fillColor: disabled ? BTColors.gray200 : null,
+              ),
+              style: TextStyle(
                 fontSize: size == Size.lg
                     ? 20
                     : size == Size.sm
                         ? 14
                         : 16,
               ),
-              isDense: true,
-              contentPadding: EdgeInsets.symmetric(
-                vertical: size == Size.lg
-                    ? 16
-                    : size == Size.sm
-                        ? 8
-                        : 12,
-                horizontal: size == Size.lg
-                    ? 16
-                    : size == Size.sm
-                        ? 8
-                        : 12,
-              ),
-              filled: true,
-              fillColor: disabled ? BTColors.gray200 : null,
+              readOnly: readonly,
+              obscureText: obscureText,
+              maxLines: maxLines,
+              maxLength: maxLength,
+              onChanged: onChanged,
+              onEditingComplete: onEditingComplete,
+              onFieldSubmitted: onFieldSubmitted,
+              validator: validator,
+              inputFormatters: inputFormatters,
+              enabled: !disabled,
+              autovalidateMode: autovalidateMode,
             ),
-            style: TextStyle(
-              fontSize: size == Size.lg
-                  ? 20
-                  : size == Size.sm
-                      ? 14
-                      : 16,
-            ),
-            readOnly: readonly,
-            obscureText: obscureText,
-            maxLines: maxLines,
-            maxLength: maxLength,
-            onChanged: onChanged,
-            onEditingComplete: onEditingComplete,
-            onFieldSubmitted: onFieldSubmitted,
-            validator: validator,
-            inputFormatters: inputFormatters,
-            enabled: !disabled,
-            autovalidateMode: autovalidateMode,
           ),
-        ),
-      ],
-    );
-  }
+        ],
+      );
 }

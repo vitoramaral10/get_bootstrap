@@ -119,7 +119,7 @@ class BreakpointsPage extends StatelessWidget {
                                           label: Text('Dimensões'),
                                         ),
                                       ],
-                                      dataRowHeight: 32,
+                                      dataRowMaxHeight: 32,
                                       dataTextStyle:
                                           GetBootstrap.typography.small,
                                       headingRowHeight: 32,

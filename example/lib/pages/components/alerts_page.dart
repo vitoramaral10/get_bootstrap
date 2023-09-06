@@ -86,8 +86,8 @@ class _AlertsPageState extends State<AlertsPage> {
                               ),
                               const SizedBox(height: 32),
                               BTCard(
-                                body: Column(
-                                  children: const [
+                                body: const Column(
+                                  children: [
                                     BTAlert(
                                       child: Text(
                                         'Um alerta primário simples - confira!',
@@ -882,13 +882,13 @@ BTAlert(
                               ),
                               const SizedBox(height: 32),
                               BTCard(
-                                body: Column(
+                                body: const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     BTAlert(
                                       alertStyle: AlertStyle.primary,
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.info_rounded,
                                             color: BTColors.primary,
@@ -902,11 +902,11 @@ BTAlert(
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 8),
+                                    SizedBox(height: 8),
                                     BTAlert(
                                       alertStyle: AlertStyle.success,
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.check_circle,
                                             color: BTColors.success,
@@ -920,11 +920,11 @@ BTAlert(
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 8),
+                                    SizedBox(height: 8),
                                     BTAlert(
                                       alertStyle: AlertStyle.warning,
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.warning,
                                             color: BTColors.warning,
@@ -938,11 +938,11 @@ BTAlert(
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 8),
+                                    SizedBox(height: 8),
                                     BTAlert(
                                       alertStyle: AlertStyle.danger,
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons.warning,
                                             color: BTColors.danger,

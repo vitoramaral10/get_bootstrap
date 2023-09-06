@@ -75,11 +75,11 @@ class TypographyPage extends StatelessWidget {
                                   ),
                                 ]),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• Para uma escala de tipo mais inclusiva e acessível, usamos a raiz padrão font-size (16px) para que os visitantes possam personalizar os padrões do navegador conforme necessário.',
                                     ),
@@ -308,11 +308,11 @@ class TypographyPage extends StatelessWidget {
                                   'Esteja ciente de que esses estilos devem ser usados para fins semânticos:',
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• {small} representa comentários laterais e letras pequenas, como direitos autorais e texto legal.',
                                     ),

@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../get_bootstrap.dart';
 
 //
 // ignore: prefer-static-class
@@ -13,8 +13,8 @@ double? _width;
 
 //
 // ignore: prefer-static-class
-void initScaling(BuildContext context, {bool debug = false}) {
-  var mediaQuery = MediaQuery.of(context);
+void initScaling(final BuildContext context, {final bool debug = false}) {
+  final mediaQuery = MediaQuery.of(context);
   _width = mediaQuery.size.width < mediaQuery.size.height
       ? mediaQuery.size.width
       : mediaQuery.size.height;
@@ -23,15 +23,15 @@ void initScaling(BuildContext context, {bool debug = false}) {
   if (debug) {
     //
     // ignore: avoid_print
-    print("width => $_width");
+    print('width => $_width');
   }
 }
 
 //
 // ignore: prefer-static-class
-double scale(double dimension) {
+double scale(final double dimension) {
   if (_width == null) {
-    throw Exception("You must call initScaling() before any use of scale()");
+    throw Exception('You must call initScaling() before any use of scale()');
   }
 
   return dimension * _scalingFactor!;
@@ -43,7 +43,7 @@ enum _GridTier { xs, sm, md, lg, xl, xxl }
 
 //
 // ignore: prefer-static-class
-_GridTier _currentSize(BuildContext context) {
+_GridTier _currentSize(final BuildContext context) {
   final breakpoints = ResponsiveGridBreakpoints.value;
   final mediaQueryData = MediaQuery.of(context);
   final width = mediaQueryData.size.width;
@@ -72,29 +72,33 @@ class BTRow extends StatelessWidget {
     required this.children,
     this.crossAxisAlignment = CrossAxisAlignment.start,
     this.rowSegments = 12,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(final BuildContext context) {
     final rows = <Widget>[];
 
     int accumulatedWidth = 0;
     var cols = <Widget>[];
 
-    for (var col in children) {
-      var colWidth = col.currentConfig(context) ?? 1;
+    for (final col in children) {
+      final colWidth = col.currentConfig(context) ?? 1;
       //
       if (accumulatedWidth + colWidth > rowSegments) {
         if (accumulatedWidth < rowSegments) {
-          cols.add(Spacer(
-            flex: rowSegments - accumulatedWidth,
-          ));
+          cols.add(
+            Spacer(
+              flex: rowSegments - accumulatedWidth,
+            ),
+          );
         }
-        rows.add(Row(
-          crossAxisAlignment: crossAxisAlignment,
-          children: cols,
-        ));
+        rows.add(
+          Row(
+            crossAxisAlignment: crossAxisAlignment,
+            children: cols,
+          ),
+        );
 
         cols = <Widget>[];
         accumulatedWidth = 0;
@@ -106,14 +110,18 @@ class BTRow extends StatelessWidget {
 
     if (accumulatedWidth >= 0) {
       if (accumulatedWidth < rowSegments) {
-        cols.add(Spacer(
-          flex: rowSegments - accumulatedWidth,
-        ));
+        cols.add(
+          Spacer(
+            flex: rowSegments - accumulatedWidth,
+          ),
+        );
       }
-      rows.add(Row(
-        crossAxisAlignment: crossAxisAlignment,
-        children: cols,
-      ));
+      rows.add(
+        Row(
+          crossAxisAlignment: crossAxisAlignment,
+          children: cols,
+        ),
+      );
     }
 
     return Column(
@@ -132,18 +140,18 @@ class BTCol extends StatelessWidget {
   final double? marginRight;
 
   BTCol({
-    int xs = 12,
-    int? sm,
-    int? md,
-    int? lg,
-    int? xl,
-    int? xxl,
+    required this.child,
+    final int xs = 12,
+    final int? sm,
+    final int? md,
+    final int? lg,
+    final int? xl,
+    final int? xxl,
     this.marginTop = 4,
     this.marginLeft,
     this.marginRight,
-    required this.child,
-    Key? key,
-  }) : super(key: key) {
+    super.key,
+  }) {
     _config[_GridTier.xs.index] = xs;
     _config[_GridTier.sm.index] = sm ?? _config[_GridTier.xs.index];
     _config[_GridTier.md.index] = md ?? _config[_GridTier.sm.index];
@@ -152,27 +160,24 @@ class BTCol extends StatelessWidget {
     _config[_GridTier.xxl.index] = xxl ?? _config[_GridTier.xl.index];
   }
 
-  int? currentConfig(BuildContext context) {
-    return _config[_currentSize(context).index];
-  }
+  int? currentConfig(final BuildContext context) =>
+      _config[_currentSize(context).index];
 
   @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      flex: currentConfig(context) ?? 1,
-      child: Padding(
-        padding: 48.0 == 0.0
-            ? EdgeInsets.zero
-            : EdgeInsets.only(
-                left: marginLeft ?? 48.0 / 12,
-                top: marginTop ?? 48.0 / 12,
-                right: marginRight ?? 48.0 / 12,
-                bottom: 48.0 / 12,
-              ),
-        child: child,
-      ),
-    );
-  }
+  Widget build(final BuildContext context) => Expanded(
+        flex: currentConfig(context) ?? 1,
+        child: Padding(
+          padding: 48.0 == 0.0
+              ? EdgeInsets.zero
+              : EdgeInsets.only(
+                  left: marginLeft ?? 48.0 / 12,
+                  top: marginTop ?? 48.0 / 12,
+                  right: marginRight ?? 48.0 / 12,
+                  bottom: 48.0 / 12,
+                ),
+          child: child,
+        ),
+      );
 }
 
 /// Responsive grid list.
@@ -187,109 +192,119 @@ class ResponsiveGridList extends StatelessWidget {
 
   const ResponsiveGridList({
     required this.desiredItemWidth,
+    required this.children,
     this.minSpacing = 1,
     this.squareCells = false,
     this.scroll = true,
-    required this.children,
     this.rowMainAxisAlignment = MainAxisAlignment.start,
     this.shrinkWrap = false,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (children.isEmpty) return Container();
-
-        double width = constraints.maxWidth;
-
-        double number = (width - minSpacing) / (desiredItemWidth + minSpacing);
-
-        int intNumber;
-        double spacing, itemWidth;
-
-        if (number % 1 == 0) {
-          intNumber = number.floor();
-          spacing = minSpacing;
-          itemWidth = desiredItemWidth;
-        } else {
-          intNumber = number.floor();
-
-          double doubleWidth = width -
-              (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
-
-          itemWidth = desiredItemWidth +
-              (doubleWidth / intNumber) *
-                  (desiredItemWidth / (desiredItemWidth + minSpacing));
-
-          spacing = (width - itemWidth * intNumber) / (intNumber + 1);
-        }
-
-        if (scroll) {
-          return ListView.builder(
-            shrinkWrap: shrinkWrap,
-            itemBuilder: (context, index) {
-              if (index % 2 == 1) {
-                return SizedBox(height: minSpacing);
-              }
-              final rowChildren = <Widget>[];
-              index = index ~/ 2;
-              for (int index3 = index * intNumber;
-                  index3 < (index + 1) * intNumber;
-                  index3++) {
-                if (index3 >= children.length) break;
-                rowChildren.add(children[index3]);
-              }
-
-              return _ResponsiveGridListItem(
-                itemWidth: itemWidth,
-                spacing: spacing,
-                squareCells: squareCells,
-                mainAxisAlignment: rowMainAxisAlignment,
-                children: rowChildren,
-              );
-            },
-            itemCount: (children.length / intNumber).ceil() * 2 - 1,
-          );
-        } else {
-          final rows = <Widget>[];
-          rows.add(SizedBox(
-            height: minSpacing,
-          ));
-          //
-          for (int index2 = 0;
-              index2 < (children.length / intNumber).ceil();
-              index2++) {
-            final rowChildren = <Widget>[];
-            //
-            for (int index1 = index2 * intNumber;
-                index1 < (index2 + 1) * intNumber;
-                index1++) {
-              if (index1 >= children.length) break;
-              rowChildren.add(children[index1]);
-            }
-            //
-            rows.add(_ResponsiveGridListItem(
-              itemWidth: itemWidth,
-              spacing: spacing,
-              squareCells: squareCells,
-              mainAxisAlignment: rowMainAxisAlignment,
-              children: rowChildren,
-            ));
-
-            rows.add(SizedBox(
-              height: minSpacing,
-            ));
+  Widget build(final BuildContext context) => LayoutBuilder(
+        builder: (final context, final constraints) {
+          if (children.isEmpty) {
+            return Container();
           }
 
-          return Column(
-            children: rows,
-          );
-        }
-      },
-    );
-  }
+          final double width = constraints.maxWidth;
+
+          final double number =
+              (width - minSpacing) / (desiredItemWidth + minSpacing);
+
+          int intNumber;
+          double spacing, itemWidth;
+
+          if (number % 1 == 0) {
+            intNumber = number.floor();
+            spacing = minSpacing;
+            itemWidth = desiredItemWidth;
+          } else {
+            intNumber = number.floor();
+
+            final double doubleWidth = width -
+                (intNumber * (desiredItemWidth + minSpacing) + minSpacing);
+
+            itemWidth = desiredItemWidth +
+                (doubleWidth / intNumber) *
+                    (desiredItemWidth / (desiredItemWidth + minSpacing));
+
+            spacing = (width - itemWidth * intNumber) / (intNumber + 1);
+          }
+
+          if (scroll) {
+            return ListView.builder(
+              shrinkWrap: shrinkWrap,
+              itemBuilder: (final context, index) {
+                if (index.isOdd) {
+                  return SizedBox(height: minSpacing);
+                }
+                final rowChildren = <Widget>[];
+                index = index ~/ 2;
+                for (int index3 = index * intNumber;
+                    index3 < (index + 1) * intNumber;
+                    index3++) {
+                  if (index3 >= children.length) {
+                    break;
+                  }
+                  rowChildren.add(children[index3]);
+                }
+
+                return _ResponsiveGridListItem(
+                  itemWidth: itemWidth,
+                  spacing: spacing,
+                  squareCells: squareCells,
+                  mainAxisAlignment: rowMainAxisAlignment,
+                  children: rowChildren,
+                );
+              },
+              itemCount: (children.length / intNumber).ceil() * 2 - 1,
+            );
+          } else {
+            final rows = <Widget>[
+              SizedBox(
+                height: minSpacing,
+              ),
+            ];
+            //
+            for (int index2 = 0;
+                index2 < (children.length / intNumber).ceil();
+                index2++) {
+              final rowChildren = <Widget>[];
+              //
+              for (int index1 = index2 * intNumber;
+                  index1 < (index2 + 1) * intNumber;
+                  index1++) {
+                if (index1 >= children.length) {
+                  break;
+                }
+                rowChildren.add(children[index1]);
+              }
+              //
+              rows
+                ..add(
+                  _ResponsiveGridListItem(
+                    itemWidth: itemWidth,
+                    spacing: spacing,
+                    squareCells: squareCells,
+                    mainAxisAlignment: rowMainAxisAlignment,
+                    children: rowChildren,
+                  ),
+                )
+                ..add(
+                  SizedBox(
+                    height: minSpacing,
+                  ),
+                );
+            }
+
+            return Column(
+              children: rows,
+            );
+          }
+        },
+      );
 }
 
 //
@@ -306,26 +321,30 @@ class _ResponsiveGridListItem extends StatelessWidget {
     required this.squareCells,
     required this.children,
     this.mainAxisAlignment = MainAxisAlignment.start,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
-  Widget build(BuildContext context) {
-    final list = <Widget>[];
-
-    list.add(SizedBox(
-      width: spacing,
-    ));
-
-    for (var child in children) {
-      list.add(SizedBox(
-        width: itemWidth,
-        height: squareCells ? itemWidth : null,
-        child: child,
-      ));
-      list.add(SizedBox(
+  Widget build(final BuildContext context) {
+    final list = <Widget>[
+      SizedBox(
         width: spacing,
-      ));
+      ),
+    ];
+
+    for (final child in children) {
+      list
+        ..add(
+          SizedBox(
+            width: itemWidth,
+            height: squareCells ? itemWidth : null,
+            child: child,
+          ),
+        )
+        ..add(
+          SizedBox(
+            width: spacing,
+          ),
+        );
     }
 
     return Row(

@@ -57,11 +57,11 @@ class LicensePage extends StatelessWidget {
                                 'Ele exige que você:',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• Mantenha a licença e o aviso de direitos autorais incluídos nos arquivos CSS e JavaScript do Bootstrap ao usá-los em seus trabalhos',
                                     ),
@@ -73,11 +73,11 @@ class LicensePage extends StatelessWidget {
                                 'Ele permite que você:',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• Baixe e use o Bootstrap gratuitamente, no todo ou em parte, para fins pessoais, privados, internos da empresa ou comerciais',
                                     ),
@@ -96,11 +96,11 @@ class LicensePage extends StatelessWidget {
                                 'Ele proíbe você de:',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• Responsabilize os autores e proprietários de licenças por danos, pois o Bootstrap é fornecido sem garantia',
                                     ),
@@ -124,11 +124,11 @@ class LicensePage extends StatelessWidget {
                                 'Não exige que você:',
                                 style: GetBootstrap.typography.headline2,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       '• Inclua a fonte do próprio Bootstrap, ou de quaisquer modificações que você possa ter feito nele, em qualquer redistribuição que você possa montar que o inclua',
                                     ),

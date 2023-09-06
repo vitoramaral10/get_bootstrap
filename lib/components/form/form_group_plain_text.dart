@@ -1,4 +1,4 @@
-part of get_bootstrap;
+part of '../../get_bootstrap.dart';
 
 class FormGroupPlainText extends StatelessWidget {
   final String? title;
@@ -7,38 +7,36 @@ class FormGroupPlainText extends StatelessWidget {
   final String value;
 
   const FormGroupPlainText({
+    required this.value,
     super.key,
     this.title,
     this.titleStyle,
-    required this.value,
     this.required = false,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        if (title != null)
-          Row(
-            children: [
-              Text(
-                title!,
-                style: titleStyle,
-              ),
-              if (required)
-                const Padding(
-                  padding: EdgeInsets.only(left: 4.0),
-                  child: Text(
-                    '*',
-                    style: TextStyle(color: BTColors.red),
-                  ),
+  Widget build(final BuildContext context) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (title != null)
+            Row(
+              children: [
+                Text(
+                  title!,
+                  style: titleStyle,
                 ),
-            ],
-          ),
-        if (title != null) const SizedBox(height: 4),
-        SelectableText(value),
-      ],
-    );
-  }
+                if (required)
+                  const Padding(
+                    padding: EdgeInsets.only(left: 4),
+                    child: Text(
+                      '*',
+                      style: TextStyle(color: BTColors.red),
+                    ),
+                  ),
+              ],
+            ),
+          if (title != null) const SizedBox(height: 4),
+          SelectableText(value),
+        ],
+      );
 }
