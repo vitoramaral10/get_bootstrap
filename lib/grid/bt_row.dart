@@ -66,11 +66,13 @@ _GridTier _currentSize(final BuildContext context) {
 class BTRow extends StatelessWidget {
   final List<BTCol> children;
   final CrossAxisAlignment crossAxisAlignment;
+  final MainAxisAlignment mainAxisAlignment;
   final int rowSegments;
 
   const BTRow({
     required this.children,
     this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.mainAxisAlignment = MainAxisAlignment.start,
     this.rowSegments = 12,
     super.key,
   });
@@ -96,6 +98,7 @@ class BTRow extends StatelessWidget {
         rows.add(
           Row(
             crossAxisAlignment: crossAxisAlignment,
+            mainAxisAlignment: mainAxisAlignment,
             children: cols,
           ),
         );
@@ -119,6 +122,7 @@ class BTRow extends StatelessWidget {
       rows.add(
         Row(
           crossAxisAlignment: crossAxisAlignment,
+          mainAxisAlignment: mainAxisAlignment,
           children: cols,
         ),
       );
