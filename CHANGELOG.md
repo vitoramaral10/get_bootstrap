@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.14.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.1...v0.14.0) - 16 January 2024
+
+### Features
+
+*  Add mainAxisAlignment property to BTRow ([`c88f12d`](https://github.com/vitoramaral10/get_bootstrap/commit/c88f12d489edddad349742ae1fe102379892459c))
+
 ## [v0.13.1](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.0...v0.13.1) - 6 September 2023
 
 ### Fixes
