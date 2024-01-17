@@ -1,6 +1,8 @@
 # Changelog
 
-## [v0.14.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.1...v0.14.0) - 16 January 2024
+## [0.14.1](https://github.com/vitoramaral10/get_bootstrap/compare/0.14.0...0.14.1) - 17 January 2024
+
+## [0.14.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.1...0.14.0) - 16 January 2024
 
 ### Features
 
