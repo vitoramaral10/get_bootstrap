@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../get_bootstrap.dart';
 
+/// A class that defines the typography styles used in the Bootstrap theme.
 class BTTypography {
   TextStyle? headline1;
   TextStyle? headline2;
@@ -25,6 +26,10 @@ class BTTypography {
 
   //
   // ignore: long-method
+  /// Creates a new instance of [BTTypography].
+  ///
+  /// The [BTTypography] class defines the typography styles used in the Bootstrap theme.
+  /// Each style is represented by a [TextStyle] object.
   BTTypography({
     this.headline1,
     this.headline2,
