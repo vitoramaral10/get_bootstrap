@@ -2,6 +2,24 @@ import 'package:flutter/material.dart';
 
 import '../../get_bootstrap.dart';
 
+/// A widget that represents the body of a card.
+///
+/// The [Body] widget is used to display the main content of a card. It provides
+/// options to customize the padding, background color, and dark mode. The body
+/// can have a header and a footer as well.
+///
+/// Example usage:
+///
+/// ```dart
+/// Body(
+///   bodyPadding: EdgeInsets.all(16),
+///   head: Text('Card Header'),
+///   footer: Text('Card Footer'),
+///   bodyBackground: Colors.blue,
+///   body: Text('Card Body'),
+/// )
+/// ```
+
 class Body extends StatelessWidget {
   final EdgeInsetsGeometry? bodyPadding;
   final Widget? head;
@@ -10,6 +28,10 @@ class Body extends StatelessWidget {
   final Widget body;
   final bool darkMode;
 
+  /// Creates a [Body] widget.
+  ///
+  /// The [bodyPadding], [head], [footer], [bodyBackground], and [body] parameters
+  /// are required. The [darkMode] parameter is optional and defaults to `false`.
   const Body({
     required this.bodyPadding,
     required this.head,

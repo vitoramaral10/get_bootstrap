@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../get_bootstrap.dart';
 
+/// A widget that represents the head section of a card.
 class Head extends StatelessWidget {
   final EdgeInsetsGeometry? headPadding;
   final Color? headBackground;
@@ -10,6 +11,10 @@ class Head extends StatelessWidget {
   final Widget? footer;
   final bool darkMode;
 
+  /// Creates a [Head] widget.
+  ///
+  /// The [headPadding], [headBackground], [head], [body], and [footer] parameters are required.
+  /// The [darkMode] parameter is optional and defaults to `false`.
   const Head({
     required this.headPadding,
     required this.headBackground,
