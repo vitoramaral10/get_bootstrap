@@ -75,8 +75,7 @@ class BTButton extends StatelessWidget {
                   .withOpacity(onPressed != null ? 1 : 0.65),
             ),
             elevation: WidgetStateProperty.all(0),
-            padding:
-                !square ? null : WidgetStateProperty.all(EdgeInsets.zero),
+            padding: !square ? null : WidgetStateProperty.all(EdgeInsets.zero),
             side: WidgetStateProperty.all(
               BorderSide(
                 color: (backgroundColor ?? BTColors.primary)
