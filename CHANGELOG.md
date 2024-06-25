@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.14.3] - 25 June 2024
+
+### What's Changed
+- docs: update documentations in classes by @vitoramaral10 in #21
+
 ## [0.14.2] - 25 June 2024
 
 ### What's Changed
