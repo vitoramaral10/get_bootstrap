@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.14.1] - 25 June 2024
+
+### What's Changed
+- refactor: background form-group by @ailtonmacedo in #18
+- Merge tag '0.14.0' into develop by @vitoramaral10 in #19
+- Hotfix/CVE 2024 4068 by @vitoramaral10 in #20
+
+### New Contributors
+
+- @ailtonmacedo made their first contribution in #18
+
+Full Changelog: 0.14.0...0.14.1
+
 ## [0.14.1](https://github.com/vitoramaral10/get_bootstrap/compare/0.14.0...0.14.1) - 17 January 2024
 
 ## [0.14.0](https://github.com/vitoramaral10/get_bootstrap/compare/v0.13.1...0.14.0) - 16 January 2024
