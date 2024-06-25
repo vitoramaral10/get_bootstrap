@@ -55,35 +55,35 @@ class BTButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onPressed,
           style: ButtonStyle(
-            textStyle: MaterialStateProperty.resolveWith(
+            textStyle: WidgetStateProperty.resolveWith(
               (final states) => GetBootstrap.typography.button!.copyWith(
                 color: (backgroundColor ?? BTColors.primary)
                     .withOpacity(onPressed != null ? 1 : 0.65),
               ),
             ),
-            backgroundColor: MaterialStateProperty.all(
+            backgroundColor: WidgetStateProperty.all(
               (backgroundColor ?? BTColors.primary)
                   .withOpacity(onPressed != null ? 1 : 0.65),
             ),
-            foregroundColor: MaterialStateProperty.all(
+            foregroundColor: WidgetStateProperty.all(
               (backgroundColor ?? BTColors.primary).computeLuminance() > 0.5
                   ? BTColors.dark
                   : BTColors.light,
             ),
-            overlayColor: MaterialStateProperty.all(
+            overlayColor: WidgetStateProperty.all(
               (backgroundColor ?? BTColors.primary)
                   .withOpacity(onPressed != null ? 1 : 0.65),
             ),
-            elevation: MaterialStateProperty.all(0),
+            elevation: WidgetStateProperty.all(0),
             padding:
-                !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
-            side: MaterialStateProperty.all(
+                !square ? null : WidgetStateProperty.all(EdgeInsets.zero),
+            side: WidgetStateProperty.all(
               BorderSide(
                 color: (backgroundColor ?? BTColors.primary)
                     .withOpacity(onPressed != null ? 1 : 0.0),
               ),
             ),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
               const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(6)),
               ),
