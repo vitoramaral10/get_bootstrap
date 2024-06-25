@@ -60,29 +60,29 @@ class BTButtonOutline extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          textStyle: MaterialStateProperty.resolveWith(
+          textStyle: WidgetStateProperty.resolveWith(
             (final states) => GetBootstrap.typography.button!.copyWith(
               color: (backgroundColor ?? BTColors.primary)
                   .withOpacity(onPressed != null ? 1 : 0.65),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all(Colors.transparent),
-          foregroundColor: MaterialStateProperty.all(
+          backgroundColor: WidgetStateProperty.all(Colors.transparent),
+          foregroundColor: WidgetStateProperty.all(
             backgroundColor ?? BTColors.primary,
           ),
-          overlayColor: MaterialStateProperty.all(
+          overlayColor: WidgetStateProperty.all(
             (backgroundColor ?? BTColors.primary)
                 .withOpacity(onPressed != null ? 1 : 0.65),
           ),
-          elevation: MaterialStateProperty.all(0),
-          padding: !square ? null : MaterialStateProperty.all(EdgeInsets.zero),
-          side: MaterialStateProperty.all(
+          elevation: WidgetStateProperty.all(0),
+          padding: !square ? null : WidgetStateProperty.all(EdgeInsets.zero),
+          side: WidgetStateProperty.all(
             BorderSide(
               color: (backgroundColor ?? BTColors.primary)
                   .withOpacity(onPressed != null ? 1 : 0.0),
             ),
           ),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             roundedRectangleBorder,
           ),
         ),
