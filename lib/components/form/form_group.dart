@@ -105,7 +105,8 @@ class FormGroup extends StatelessWidget {
               ),
               suffixIcon: suffixIcon,
               filled: true,
-              fillColor: disabled || readonly && keyboardType != TextInputType.datetime
+              fillColor:
+                  disabled || readonly && keyboardType != TextInputType.datetime
                       ? BTColors.gray200
                       : backgroundColor,
               errorBorder: OutlineInputBorder(
