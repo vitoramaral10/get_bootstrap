@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.14.1] - 25 June 2024
+## [0.14.2] - 25 June 2024
 
 ### What's Changed
 - refactor: background form-group by @ailtonmacedo in #18
